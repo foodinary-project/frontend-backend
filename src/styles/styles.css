@@ -171,3 +171,85 @@
             height: 100%;
             object-fit: cover;
         }
+
+        /* Animasi Modern - Durasi 0.5s */
+@keyframes slideFadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideFadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Container animasi masuk */
+.container {
+    animation: slideFadeInUp 0.5s ease-out both;
+}
+
+/* Form section dari kiri */
+.form-section {
+    animation: slideFadeInRight 0.5s ease-out 0.1s both;
+}
+
+/* Image section dari bawah */
+.image-section {
+    animation: slideFadeInUp 0.5s ease-out 0.2s both;
+}
+
+/* Input focus border pulse */
+.form-group input:focus {
+    animation: pulseBorder 0.3s ease-out;
+}
+
+/* Border effect saat input aktif */
+@keyframes pulseBorder {
+    0% {
+        box-shadow: 0 0 0 0 rgba(122, 18, 23, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 0 4px rgba(122, 18, 23, 0);
+    }
+}
+
+/* Tombol efek hover modern */
+button {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: skewX(-20deg);
+    z-index: 0;
+    transition: left 0.5s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:hover::before {
+    left: 100%;
+}
