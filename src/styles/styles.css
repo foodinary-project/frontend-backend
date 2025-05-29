@@ -1,255 +1,1196 @@
-        @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+/* header */
 
-        body {
-            font-family: "Inter", sans-serif;
-            background-color: #ffffff;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  background: none;
+  -webkit-font-smoothing: antialiased;
+}
 
-        .container {
-            max-width: 64rem;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 0.5rem;
-            overflow: hidden;
-        }
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
 
-        @media (min-width: 768px) {
-            .container {
-                flex-direction: row;
-            }
-        }
+/* Navigation */
+.navigation {
+  background: #ffffff;
+  height: 85px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
 
-        .form-section {
-            width: 100%;
-            background-color: #ffffff;
-            display: flex;
-            align-items: center;
-            padding: 2rem;
-        }
+.logo a {
+  color: inherit; /* Mewarisi warna teks dari parent */
+  text-decoration: none; /* Menghilangkan underline */
+  display: inline-block; /* Memastikan anchor mengisi seluruh area logo jika diperlukan */
+}
 
-        @media (min-width: 768px) {
-            .form-section {
-                width: 50%;
-            }
-        }
+.nav-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
 
-        .form-content {
-            width: 100%;
-        }
+.logo {
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
 
-        .form-content h2 {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #7a1217;
-            margin-bottom: 0.25rem;
-        }
+.nav-menu {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+}
 
-        .form-content p {
-            font-size: 0.875rem;
-            color: #4b5563;
-            margin-bottom: 1.5rem;
-        }
+.nav-item {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
 
-        .form-group {
-            margin-bottom: 1rem;
-        }
+.nav-item:hover,
+.nav-item.active {
+  color: #800e13;
+}
 
-        .form-group label {
-            display: block;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-        }
+.nav-buttons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
 
-        .form-group input {
-            width: 100%;
-            border: 1px solid #d1d5db;
-            border-radius: 0.375rem;
-            font-size: 0.875rem;
-            padding: 0.5rem 1rem;
-            color: #1f2937;
-        }
+.btn-outline {
+  border: 2px solid #800e13;
+  color: #800e13;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
 
-        .form-group input::placeholder {
-            color: #9ca3af;
-        }
+.btn-outline:hover {
+  background: #800e13;
+  color: white;
+  transform: translateY(-2px);
+}
 
-        .form-group input:focus {
-            outline: none;
-            border-color: #7a1217;
-            box-shadow: 0 0 0 2px rgba(122, 18, 23, 0.2);
-        }
+.btn-primary {
+  background: #800e13;
+  color: white;
+  padding: 13px 26px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(128, 14, 19, 0.3);
+}
 
-        .checkbox-group {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.75rem;
-            color: #6b7280;
-            margin-bottom: 1rem;
-        }
+#capture-btn {
+  background: #800e13;
+  color: white;
+  padding: 13px 26px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(128, 14, 19, 0.3);
+  margin-bottom: 40px;
+}
 
-        .checkbox-group label {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+.btn-primary:hover {
+  background: #640d14;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(128, 14, 19, 0.4);
+}
 
-        .checkbox-group input[type="checkbox"] {
-            width: 1rem;
-            height: 1rem;
-        }
+/* Hero Section */
+.hero-section {
+  margin-top: 110px;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  overflow: hidden;
+}
 
-        .checkbox-group a {
-            color: #2563eb;
-            text-decoration: none;
-        }
+.hero-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
 
-        .checkbox-group a:hover {
-            text-decoration: underline;
-        }
+.hero-content {
+  z-index: 2;
+}
 
-        button {
-            width: 100%;
-            background-color: #7a1217;
-            color: #ffffff;
-            font-size: 0.875rem;
-            font-weight: 600;
-            border-radius: 0.375rem;
-            padding: 0.5rem;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
+.hero-title {
+  font-family: "Biryani", sans-serif;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 40px;
+}
+.hero-title span {
+  display: block;
+  margin-bottom: -40px; /* tambahkan jarak antar tulisan atas dan bawah */
+}
+.hero-title span:last-child {
+  margin-bottom: 0;
+}
 
-        button:hover {
-            background-color: #5a0e13;
-        }
+.hero-title .text-primary {
+  color: #640d14;
+}
 
-        .signup-text {
-            text-align: center;
-            font-size: 0.875rem;
-            color: #4b5563;
-            margin-top: 1.5rem;
-        }
+.hero-title .text-dark {
+  color: #000000;
+}
 
-        .signup-text a {
-            color: #2563eb;
-            text-decoration: none;
-            font-weight: 600;
-        }
+.hero-description {
+  color: rgba(0, 0, 0, 0.75);
+  font-family: "Biryani", sans-serif;
+  font-size: 20px;
+  line-height: 150%;
+  margin-bottom: 40px;
+  max-width: 500px;
+}
 
-        .signup-text a:hover {
-            text-decoration: underline;
-        }
+.hero-button {
+  background: #800e13;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 25px rgba(128, 14, 19, 0.3);
+  display: inline-block;
+}
 
-        .image-section {
-            display: none;
-            width: 50%;
-        }
+.hero-button:hover {
+  background: #640d14;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(128, 14, 19, 0.4);
+}
 
-        @media (min-width: 768px) {
-            .image-section {
-                display: block;
-            }
-        }
+.hero-images {
+  position: relative;
+  height: 600px;
+}
 
-        .image-section img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+.food-image {
+  position: absolute;
+  margin-left: 90px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
 
-        /* Animasi Modern - Durasi 0.5s */
+.food-image:hover {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  margin-left: 90px;
+  width: 90%;
+  height: 90%;
+  inset: 0;
+  background: rgba(173, 40, 49, 0.5);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.hero-images:hover .overlay {
+  background: rgba(173, 40, 49, 0.2);
+}
+
+/* Popular Cuisine Section */
+.cuisine-section {
+  padding: 50px 0;
+  background: #ffffff;
+}
+
+.section-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
+  font-weight: 630;
+  color: #000000;
+  margin-bottom: 5px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  margin-left: 60px;
+}
+
+/* .section-divider {
+            width: 80px;
+            height: 4px;
+            background: #640d14;
+            margin: 0 auto;
+        } */
+
+.cuisine-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+  margin-left: 60px;
+  margin-right: 20px;
+}
+
+.cuisine-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.cuisine-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.cuisine-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.cuisine-card:hover .cuisine-image {
+  transform: scale(1.1);
+}
+
+.cuisine-info {
+  padding: 32px;
+}
+
+.cuisine-name {
+  font-family: "Biryani", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.cuisine-description {
+  color: #828282;
+  font-family: "Biryani", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.see-more {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.see-more-link {
+  color: #800e13;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.see-more-link:hover {
+  color: #640d14;
+}
+
+.dietary-section {
+  padding: 120px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.dietary-title-lp {
+  font-family: "Inter", sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.dietary-title-desc-lp {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  color: #716f6f;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: -0.02em;
+}
+
+.dietary-divider {
+  width: 300px;
+  height: 4px;
+  background: #640d14;
+  margin: 0 auto 60px;
+}
+
+#dietary-next-btn {
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #800e13;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.tab-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 12px 24px;
+  border-radius: 24px;
+  border: 2px solid transparent;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab.active {
+  background: #800e13;
+  color: white;
+  border-color: #262522;
+}
+
+.tab:not(.active) {
+  background: transparent;
+  color: rgba(38, 37, 34, 0.6);
+  border-color: rgba(38, 37, 34, 0.3);
+}
+
+.tab:hover {
+  transform: translateY(-2px);
+}
+
+.dietary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.dietary-card {
+  text-align: center;
+  position: relative;
+}
+
+.dietary-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.dietary-card:hover .dietary-image {
+  transform: scale(1.05);
+}
+
+.dietary-name {
+  color: #000000;
+  font-family: "Biryani", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+/* camera */
+
+.upload-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+#drop-area {
+  border: 2px dashed #ad2831;
+  border-radius: 16px;
+  width: 340px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff7f7;
+  color: #ad2831;
+  font-size: 18px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  text-align: center;
+}
+
+btn-primary {
+  display: none;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #ad2831;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.icon-upload {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.hidden-input {
+  display: none;
+}
+
+.upload-btn-group {
+  display: flex;
+  gap: 16px;
+}
+
+.custom-outline-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 2px solid #ad2831;
+  background: white;
+  color: #ad2831;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.selected-file-name {
+  margin-top: 8px;
+  color: #800e13;
+  font-size: 15px;
+}
+
+.camera-stream {
+  display: none;
+  border-radius: 12px;
+  margin-top: 12px;
+}
+
+.camera-canvas {
+  display: none;
+}
+
+/* Popular Indonesian Food Section */
+.dietary-section {
+  background: #ffffff;
+  padding: 0 64px;
+  position: relative;
+}
+
+.section-container {
+  margin-bottom: 40px;
+}
+
+.dietary-title {
+  color: var(--dark, #262522);
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 120%;
+  margin-bottom: 16px;
+  margin-top: 130px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.dietary-title-desc {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  color: #716f6f;
+  text-align: center;
+  margin-bottom: 90px;
+  letter-spacing: -0.02em;
+}
+
+.tab-wrapper {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.tab {
+  padding: 12px 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(38, 37, 34, 0.16);
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab:not(.active):hover {
+  background: rgba(38, 37, 34, 0.08);
+}
+
+/* Recipe Cards Section */
+.detail-page-popular-indonesian-food-from-see-more {
+  padding: 20px 0;
+}
+
+.recipes-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.card-wrapper {
+  flex: 1 1 calc(33.333% - 24px);
+  min-width: 300px;
+  max-width: 427px;
+}
+
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--light, #fffbf2);
+  border: 1px solid rgba(38, 37, 34, 0.16);
+}
+
+.image {
+  width: 100%;
+  height: 234px;
+  object-fit: cover;
+  background: linear-gradient(135deg, #8b4513, #d2691e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.text-wrapper {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.header {
+  color: var(--dark, #262522);
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.paragraph {
+  color: var(--dark, #262522);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 140%;
+}
+
+.info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  border-radius: 24px;
+  border: 1px solid var(--dark, #262522);
+  padding: 12px 24px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.info-wrapper {
+  display: flex;
+  justify-content: center; /* Pusatkan horizontal */
+  margin-top: 16px; /* Jarak dari teks di atasnya */
+}
+
+.button-learn-more {
+  border-radius: 24px;
+  border: 1px solid var(--dark, #262522);
+  padding: 12px 24px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Animasi perubahan warna */
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #262522; /* Warna teks default (hitam) */
+}
+
+/* Efek hover */
+.button-learn-more:hover {
+  background-color: #800e13; /* Warna merah tua saat hover */
+  color: white; /* Teks putih agar kontras */
+  border-color: #800e13; /* Border ikut berubah warna */
+}
+
+.button-learn-more .text {
+  display: inline-block; /* Memastikan teks bisa diatur lebar jika diperlukan */
+}
+
+.button:hover {
+  background: var(--dark, #800e13);
+  color: var(--light, #fffbf2);
+}
+
+.button .text {
+  color: var(--dark, #262522);
+  transition: color 0.3s ease;
+}
+
+.button:hover .text {
+  color: var(--light, #fffbf2);
+}
+
+.load-more {
+  margin: 40px 0;
+  padding: 12px 50px;
+  text-align: center;
+  border: 2px solid #800e13;
+  border-radius: 24px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: transparent;
+  color: #800e13;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.load-more:hover {
+  background: #800e13;
+  color: white;
+}
+.load-more .button {
+  width: 267px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .card-wrapper {
+    flex: 1 1 calc(50% - 24px);
+  }
+}
+
+@media (max-width: 768px) {
+  .dietary-section {
+    padding: 0 32px;
+  }
+
+  .card-wrapper {
+    flex: 1 1 100%;
+  }
+}
+
+/* footer */
+
+.footer {
+  background: #ad2831;
+  color: white;
+  padding: 40px 0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.footer-container {
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 0 80px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 60px;
+  align-items: start;
+  box-sizing: border-box;
+}
+.footer-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  grid-column: 7 / 8;
+  justify-self: end;
+  margin-right: 90px;
+}
+
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+  .footer-menu {
+    grid-column: auto;
+    justify-self: stretch;
+  }
+}
+
+.footer-brand {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-link {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 20px;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .section-container {
+    padding: 0 20px;
+  }
+
+  .cuisine-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    gap: 40px;
+  }
+
+  .tab-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 64rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+.form-section {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+@media (min-width: 768px) {
+  .form-section {
+    width: 50%;
+  }
+}
+
+.form-content {
+  width: 100%;
+}
+
+.form-content h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #7a1217;
+  margin-bottom: 0.25rem;
+}
+
+.form-content p {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.form-group input {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  color: #1f2937;
+}
+
+.form-group input::placeholder {
+  color: #9ca3af;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #7a1217;
+  box-shadow: 0 0 0 2px rgba(122, 18, 23, 0.2);
+}
+
+.checkbox-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+}
+
+.checkbox-group a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.checkbox-group a:hover {
+  text-decoration: underline;
+}
+
+button {
+  width: 100%;
+  background-color: #7a1217;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #5a0e13;
+}
+
+.signup-text {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-top: 1.5rem;
+}
+
+.signup-text a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+
+.image-section {
+  display: none;
+  width: 50%;
+}
+
+@media (min-width: 768px) {
+  .image-section {
+    display: block;
+  }
+}
+
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Animasi Modern - Durasi 0.5s */
 @keyframes slideFadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes slideFadeInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Container animasi masuk */
 .container {
-    animation: slideFadeInUp 0.5s ease-out both;
+  animation: slideFadeInUp 0.5s ease-out both;
 }
 
 /* Form section dari kiri */
 .form-section {
-    animation: slideFadeInRight 0.5s ease-out 0.1s both;
+  animation: slideFadeInRight 0.5s ease-out 0.1s both;
 }
 
 /* Image section dari bawah */
 .image-section {
-    animation: slideFadeInUp 0.5s ease-out 0.2s both;
+  animation: slideFadeInUp 0.5s ease-out 0.2s both;
 }
 
 /* Input focus border pulse */
 .form-group input:focus {
-    animation: pulseBorder 0.3s ease-out;
+  animation: pulseBorder 0.3s ease-out;
 }
 
 /* Border effect saat input aktif */
 @keyframes pulseBorder {
-    0% {
-        box-shadow: 0 0 0 0 rgba(122, 18, 23, 0.3);
-    }
-    100% {
-        box-shadow: 0 0 0 4px rgba(122, 18, 23, 0);
-    }
+  0% {
+    box-shadow: 0 0 0 0 rgba(122, 18, 23, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 4px rgba(122, 18, 23, 0);
+  }
 }
 
 /* Tombol efek hover modern */
 button {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    transition: transform 0.2s ease, background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.1);
-    transform: skewX(-20deg);
-    z-index: 0;
-    transition: left 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: skewX(-20deg);
+  z-index: 0;
+  transition: left 0.5s;
 }
 
 button:hover {
-    transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 button:hover::before {
-    left: 100%;
+  left: 100%;
 }
