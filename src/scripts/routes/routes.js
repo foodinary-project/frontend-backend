@@ -8,6 +8,8 @@ import DashboardPage from "../pages/dashboard/dashboard-page";
 import HistoryPage from "../pages/history/history-page";
 import FavoritePage from "../pages/favorite/favorite-page";
 import AccountSettingsPage from "../pages/accountSettings/account-settings-page";
+import AboutPage from "../pages/about/about-page";
+import RecipePage from "../pages/recipe/recipe-page";
 
 const routes = {
   "/": new LandingPage(),
@@ -22,6 +24,9 @@ const routes = {
   "/history": new HistoryPage(),
   "/favorite": new FavoritePage(),
   "/account-settings": new AccountSettingsPage(),
+
+  "/about": new AboutPage(),
+  "/recipe": new RecipePage(),
 };
 
 export default routes;
