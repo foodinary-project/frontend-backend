@@ -34,6 +34,11 @@ export default class LoginPage {
               Already have account?
               <a href="#/login">Log In</a>
             </p>
+            
+                                    <p class="signup-text">
+              Want to return to the homepage?
+              <a href="#/">Go back to Home</a>
+            </p>
           </div>
         </div>
 

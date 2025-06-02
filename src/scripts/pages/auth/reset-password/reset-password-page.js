@@ -1,7 +1,7 @@
 export default class LoginPage {
-    async render() {
-        // Gunakan backtick (`) untuk template literal dan tambahkan return
-        return `
+  async render() {
+    // Gunakan backtick (`) untuk template literal dan tambahkan return
+    return `
       <section class="container login-container">
         <div class="form-section">
           <div class="form-content">
@@ -28,26 +28,26 @@ export default class LoginPage {
         </div>
       </section>
     `;
+  }
+
+  async afterRender() {
+    // Tambahkan event listener untuk form login
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+      loginForm.addEventListener('submit', (event) => {
+        event.preventDefault(); // Mencegah submit form bawaan
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        console.log('Login attempt:', { email, password });
+
+        // TODO: Tambahkan logika login sesungguhnya di sini
+        // (Contoh: Kirim data ke API, validasi, dll.)
+        alert('Login button clicked! Implement login logic here.');
+
+        // Jika login berhasil, arahkan ke halaman lain
+        // window.location.hash = '#/dashboard';
+      });
     }
-
-    async afterRender() {
-        // Tambahkan event listener untuk form login
-        const loginForm = document.getElementById('loginForm');
-        if (loginForm) {
-            loginForm.addEventListener('submit', (event) => {
-                event.preventDefault(); // Mencegah submit form bawaan
-                const email = document.getElementById('email').value;
-                const password = document.getElementById('password').value;
-
-                console.log('Login attempt:', { email, password });
-
-                // TODO: Tambahkan logika login sesungguhnya di sini
-                // (Contoh: Kirim data ke API, validasi, dll.)
-                alert('Login button clicked! Implement login logic here.');
-
-                // Jika login berhasil, arahkan ke halaman lain
-                // window.location.hash = '#/dashboard';
-            });
-        }
-    }
+  }
 }
