@@ -13,7 +13,7 @@ class App {
     const page = routes[url];
 
     this.#content.innerHTML = await page.render();
-    await page.afterRender();
+    // await page.afterRender();
   }
 }
 

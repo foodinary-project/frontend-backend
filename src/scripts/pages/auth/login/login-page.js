@@ -5,6 +5,7 @@ export default class LoginPage {
       <section class="container login-container">
         <div class="form-section">
           <div class="form-content">
+
             <h2>Welcome back!</h2>
             <p>Enter your credentials to access your account</p>
 
@@ -31,6 +32,13 @@ export default class LoginPage {
               Don't have an account?
               <a href="#/register">Sign up</a>
             </p>
+            
+            <p class="signup-text">
+              Want to return to the homepage?
+              <a href="#/">Go back to Home</a>
+            </p>
+
+            
           </div>
         </div>
 
