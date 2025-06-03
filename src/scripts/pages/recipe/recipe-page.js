@@ -1,17 +1,19 @@
 export default class LandingPage {
-    async render() {
-        // Gunakan backtick (`) untuk template literal dan tambahkan return
-        return `    
+  async render() {
+    // Gunakan backtick (`) untuk template literal dan tambahkan return
+    return `    
 
  <!-- Navigation -->
     <nav class="navigation">
     <div class="nav-container">
         <div class="logo">
-            <a href="/">Foodinary</a>  <!-- Tambahkan tag anchor di sini -->
+            <a href="/">
+                <img src="/images/logo.png" alt="Foodinary Logo">
+            </a>
         </div>
         <div class="nav-menu">
             <div class="nav-item"><a href="/">Home</a></div>
-            <div class="nav-item active"><a href="#/recipes">Recipe</a></div>
+            <div class="nav-item active"><a href="#/recipe">Recipe</a></div>
             <div class="nav-item"><a href="#/about">About</a></div>
         </div>
         <div class="nav-buttons">
@@ -265,5 +267,5 @@ export default class LandingPage {
         </div>
     </footer>
   `;
-    }
+  }
 }

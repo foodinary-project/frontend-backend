@@ -5,8 +5,10 @@ export default class LandingPage {
       <nav class="navigation">
         <div class="nav-container">
           <div class="logo">
-            <a href="/">Foodinary</a>
-          </div>
+            <a href="/">
+                <img src="/images/logo.png" alt="Foodinary Logo">
+            </a>
+        </div>
           <div class="nav-menu">
             <div class="nav-item"><a href="/">Home</a></div>
             <div class="nav-item"><a href="#/recipe">Recipe</a></div>
@@ -24,7 +26,7 @@ export default class LandingPage {
         <div class="about2">
           <div class="judul-about">About</div>
           <div class="what-is-foodinary">What is foodinary?</div>
-          <div class="paragraph">
+          <div class="paragraph-about">
             The lack of public awareness especially among both domestic and
             international tourists about Indonesia's traditional cuisine often poses a
             challenge in recognizing the rich diversity of regional dishes. This is
