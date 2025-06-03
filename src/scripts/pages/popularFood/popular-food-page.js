@@ -7,12 +7,14 @@ export default class LandingPage {
     <nav class="navigation">
     <div class="nav-container">
         <div class="logo">
-            <a href="/">Foodinary</a>  <!-- Tambahkan tag anchor di sini -->
+            <a href="/">
+                <img src="/images/logo.png" alt="Foodinary Logo">
+            </a>
         </div>
         <div class="nav-menu">
-            <div class="nav-item active">Home</div>
-            <div class="nav-item">Recipe</div>
-            <div class="nav-item">About</div>
+            <div class="nav-item active"><a href="/">Home</a></div>
+            <div class="nav-item"><a href="#/recipe">Recipe</a></div>
+            <div class="nav-item"><a href="#/about">About</a></div>
         </div>
         <div class="nav-buttons">
             <a href="#/login" class="btn-outline">Login</a>
@@ -22,11 +24,10 @@ export default class LandingPage {
     </nav>
 
     <!-- Dietary Preferences Section -->
-    <section id="popular-food" class="dietary-section">
+    <section id="popular-food" class="dietary-section-popular-indonesian-food">
         <div class="section-container">
             <h2 class="dietary-title">Popular <br> Indonesian Food</h2>
-            <p class="dietary-title-desc">Dengan koleksi resep kami yang beragam, kami punya sesuatu untuk <br> memuaskan setiap selera</p>              
-            
+            <p class="dietary-title-desc-pf">With our diverse recipe collection, we have something to satisfy every taste</p>     
             <div class="tab-wrapper">
                 <div class="tab active">Vegetarian</div>
                 <div class="tab">Vegan</div>
@@ -37,7 +38,6 @@ export default class LandingPage {
         <div class="detail-page-popular-indonesian-food-from-see-more">
           <div class="recipes-section">
             <div class="recipe-cards-wrapper">
-              <!-- First Row -->
               <div class="card-row">
                 <div class="card-wrapper">
                   <div class="recipe-card">
@@ -167,9 +167,7 @@ export default class LandingPage {
                   </div>              
                   <div class="vaadin-pointer"></div>
                 </div>
-              </div>
-              
-              <!-- Second Row (if needed) would go here -->
+              </div>            
             </div>
             <div class="button load-more">
               <div class="text">Load more</div>
