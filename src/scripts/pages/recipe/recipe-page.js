@@ -1,7 +1,7 @@
-export default class LandingPage {
-  async render() {
-    // Gunakan backtick (`) untuk template literal dan tambahkan return
-    return `    
+export default class RecipePage {
+    async render() {
+        // Gunakan backtick (`) untuk template literal dan tambahkan return
+        return `    
 
  <!-- Navigation -->
     <nav class="navigation">
@@ -14,6 +14,7 @@ export default class LandingPage {
         <div class="nav-menu">
             <div class="nav-item"><a href="/">Home</a></div>
             <div class="nav-item active"><a href="#/recipe">Recipe</a></div>
+            <div class="nav-item"><a href="#/cek-resep">Check Recipe</a></div>
             <div class="nav-item"><a href="#/about">About</a></div>
         </div>
         <div class="nav-buttons">
@@ -236,36 +237,37 @@ export default class LandingPage {
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
+      <!-- Footer -->
+      <footer class="footer">
         <div class="footer-container">
-            <div>
-                <div class="footer-brand">Foodinary</div>                
-            </div>
-            <div class="footer-menu">
-                <div class="footer-column">
-                    <h4>Cuisine</h4>
-                    <div class="footer-links">
-                        <div class="footer-link">Indonesian Cuisine</div>
-                        <div class="footer-link">Tempe Mendoan</div>
-                        <div class="footer-link">Rawon</div>
-                        <div class="footer-link">Sate</div>
-                    </div>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Challenge</h4>
-                    <div class="footer-links">
-                        <div class="footer-link">Challenge</div>
-                        <div class="footer-link">90 Days of Cooking</div>
-                        <div class="footer-link">Page</div>
-                    </div>
-                </div>
+          <div>
+            <div class="footer-brand">Foodinary</div>                
+          </div>
+          <div class="footer-menu">
+            <div class="footer-column">
+              <h4>Cuisine</h4>
+              <div class="footer-links">
+                <div class="footer-link">Indonesian Cuisine</div>
+                <div class="footer-link">Tempe Mendoan</div>
+                <div class="footer-link">Rawon</div>
+                <div class="footer-link">Sate</div>
+              </div>
             </div>
             
-            <div></div>
+            <div class="footer-column">
+              <h4>Challenge</h4>
+              <div class="footer-links">
+                <div class="footer-link">Challenge</div>
+                <div class="footer-link">90 Days of Cooking</div>
+                <div class="footer-link">Page</div>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
+      </footer>
   `;
-  }
+    }
+    async afterRender() {
+        // Dibiarkan kosong karena belum ada interaksi JS
+    }
 }

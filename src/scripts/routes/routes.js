@@ -10,14 +10,20 @@ import FavoritePage from "../pages/favorite/favorite-page";
 import AccountSettingsPage from "../pages/accountSettings/account-settings-page";
 import AboutPage from "../pages/about/about-page";
 import RecipePage from "../pages/recipe/recipe-page";
+import NotFoundPage from "../pages/notfound/notfound-page";
 
 const routes = {
+  // public routes
   "/": new LandingPage(),
+  "/cek-resep": new CekResepPage(),
+  "/popular-food": new PopularFoodPage(),
+  "/about": new AboutPage(),
+  "/recipe": new RecipePage(),
+
+  // authentication routes
   "/login": new LoginPage(),
   "/register": new RegisterPage(),
   "/reset-password": new ResetPasswordPage(),
-  "/cek-resep": new CekResepPage(),
-  "/popular-food": new PopularFoodPage(),
 
   // dashboard routes
   "/dashboard": new DashboardPage(),
@@ -25,8 +31,8 @@ const routes = {
   "/favorite": new FavoritePage(),
   "/account-settings": new AccountSettingsPage(),
 
-  "/about": new AboutPage(),
-  "/recipe": new RecipePage(),
+  // fallback route
+  "*": new NotFoundPage(), 
 };
 
 export default routes;
