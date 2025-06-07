@@ -1,14 +1,29 @@
+import RegisterPresenter from './register-presenter';
+import * as FoodinaryAPI from '../../../data/api';
+
 export default class LoginPage {
-    async render() {
-        // Gunakan backtick (`) untuk template literal dan tambahkan return
-        return `
-      <section class="container login-container">
+  #presenter = null;
+  async render() {
+    // Gunakan backtick (`) untuk template literal dan tambahkan return
+    return `
+          <section class="container login-container">
+            <div id="error-popup" class="popup hidden">
+      <div class="popup-content">
+        <p id="popup-message"></p>
+        <button id="close-popup" class="button-popup">OK</button>
+      </div>
+    </div>
+
         <div class="form-section">
           <div class="form-content">
             <h2>Welcome back!</h2>
             <p>Enter your credentials to access your account</p>
 
-            <form id="loginForm">
+            <form id="registerForm">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="name" id="name" placeholder="Enter your name" required />
+              </div>
               <div class="form-group">
                 <label for="email">Email address</label>
                 <input type="email" id="email" placeholder="Enter your email" required />
@@ -17,7 +32,7 @@ export default class LoginPage {
                 <label for="password">Password</label>
                 <input type="password" id="password" placeholder="Password" required />
               </div>
-                                  <div class="form-group">
+                    <div class="form-group">
                         <label for="confirm-password">Confirm Password</label>
                         <input type="password" id="confirm-password" placeholder="Confirm your password" />
                     </div>
@@ -27,7 +42,7 @@ export default class LoginPage {
                             <span>I’m not a robot</span>
                         </label>
                     </div>
-              <button type="submit">Login</button>
+              <button type="submit">Register</button>
             </form>
 
             <p class="signup-text">
@@ -36,7 +51,7 @@ export default class LoginPage {
             </p>
             
                                     <p class="signup-text">
-              Want to return to the homepage?
+              Back to homepage?
               <a href="#/">Go back to Home</a>
             </p>
           </div>
@@ -47,26 +62,62 @@ export default class LoginPage {
         </div>
       </section>
     `;
-    }
+  }
 
-    async afterRender() {
-        // Tambahkan event listener untuk form login
-        const loginForm = document.getElementById('loginForm');
-        if (loginForm) {
-            loginForm.addEventListener('submit', (event) => {
-                event.preventDefault(); // Mencegah submit form bawaan
-                const email = document.getElementById('email').value;
-                const password = document.getElementById('password').value;
+  async afterRender() {
+    this.#presenter = new RegisterPresenter({
+      view: this,
+      model: FoodinaryAPI,
+    });
 
-                console.log('Login attempt:', { email, password });
+    this.#setupForm();
+  }
 
-                // TODO: Tambahkan logika login sesungguhnya di sini
-                // (Contoh: Kirim data ke API, validasi, dll.)
-                alert('Login button clicked! Implement login logic here.');
+  #setupForm() {
+    const form = document.getElementById('registerForm');
+    const submitBtn = form.querySelector('button[type="submit"]');
 
-                // Jika login berhasil, arahkan ke halaman lain
-                // window.location.hash = '#/dashboard';
-            });
-        }
-    }
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Loading...';
+
+      const data = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        password: document.getElementById('password').value,
+        confirmPassword: document.getElementById('confirm-password').value,
+      };
+
+      try {
+        await this.#presenter.getRegistered(data);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    });
+  }
+
+  registeredSuccessfully(message) {
+    // Simpan pesan sukses ke localStorage
+    localStorage.setItem('registrationSuccess', 'Registrasi berhasil! Silakan login.');
+
+    // Redirect ke halaman login
+    location.hash = '/login';
+  }
+
+  registeredFailed(message) {
+    const popup = document.getElementById('error-popup');
+    const messageContainer = document.getElementById('popup-message');
+    const closeBtn = document.getElementById('close-popup');
+
+    messageContainer.textContent = message;
+    popup.classList.remove('hidden');
+
+    closeBtn.onclick = () => {
+      popup.classList.add('hidden');
+    };
+  }
 }

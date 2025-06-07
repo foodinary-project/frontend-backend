@@ -10,10 +10,10 @@ class App {
 
   async renderPage() {
     const url = getActiveRoute();
-    const page = routes[url];
+    const page = routes[url] || routes["*"]; // fallback jika tidak cocok
 
     this.#content.innerHTML = await page.render();
-    // await page.afterRender();
+    await page.afterRender();
   }
 }
 

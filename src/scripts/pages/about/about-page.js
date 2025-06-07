@@ -1,25 +1,27 @@
-export default class LandingPage {
+
+export default class AboutPage {
   async render() {
     return `
       <!-- Navigation -->
-      <nav class="navigation">
-        <div class="nav-container">
-          <div class="logo">
+    <nav class="navigation">
+    <div class="nav-container">
+        <div class="logo">
             <a href="/">
                 <img src="/images/logo.png" alt="Foodinary Logo">
             </a>
         </div>
-          <div class="nav-menu">
+        <div class="nav-menu">
             <div class="nav-item"><a href="/">Home</a></div>
             <div class="nav-item"><a href="#/recipe">Recipe</a></div>
+            <div class="nav-item"><a href="#/cek-resep">Check Recipe</a></div>
             <div class="nav-item active"><a href="#/about">About</a></div>
-          </div>
-          <div class="nav-buttons">
+        </div>
+        <div class="nav-buttons">
             <a href="#/login" class="btn-outline">Login</a>
             <a href="#/register" class="btn-primary">Sign Up</a>
-          </div>
         </div>
-      </nav>
+    </div>
+    </nav>
 
       <div class="about">
         <!-- About Section -->
@@ -88,47 +90,47 @@ export default class LandingPage {
               </div>
             </div>
             <div class="team-card">
-              <div class="profile-image" style="background-image: url('/images/meet-our-team/dani.png');"></div>
+              <div class="profile-image" style="background-image: url('/images/meet-our-team/hapid.png');"></div>
               <h3>Hapid Ramdani</h3>
               <div class="role">Back End Developer</div>
               <p class="description">Enjoy Coding process and always lack of knowledge</p>
               <div class="social-links">
-                <a href="mailto:"><i class="fas fa-envelope"></i></a>
-                <a href=""><i class="fab fa-github"></i></a>
-                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:hapidr24@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/hpdrr"><i class="fab fa-github"></i></a>
+                <a href="http://www.linkedin.com/in/hapid-ramdani"><i class="fab fa-linkedin-in"></i></a>
               </div>
             </div>
             <div class="team-card">
-              <div class="profile-image" style="background-image: url('/images/meet-our-team/dani.png');"></div>
+              <div class="profile-image" style="background-image: url('/images/meet-our-team/laras.png');"></div>
               <h3>Dwi Laras Setyadita</h3>
               <div class="role">Project Manager</div>
               <p class="description">Enjoys adventurous travel, seeks new cultures and offbeat destinations</p>
               <div class="social-links">
-                <a href="mailto:"><i class="fas fa-envelope"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:larassetyadita@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/LarasSetyadita"><i class="fab fa-github"></i></a>
+                <a href="http://www.linkedin.com/in/dwi-laras-setyadita-36b829268"><i class="fab fa-linkedin-in"></i></a>
               </div>
             </div>
             <div class="team-card">
-              <div class="profile-image" style="background-image: url('/images/meet-our-team/dani.png');"></div>
-              <h3>Naia Shaffa Camila</h3>
-              <div class="role">Machine Learning Engineer</div>
-              <p class="description">Enjoys adventurous travel, seeks new cultures and offbeat destinations</p>
-              <div class="social-links">
-                <a href="mailto:"><i class="fas fa-envelope"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              </div>
-            </div>
-            <div class="team-card">
-              <div class="profile-image" style="background-image: url('/images/meet-our-team/dani.png');"></div>
+              <div class="profile-image" style="background-image: url('/images/meet-our-team/NovrianPratama.jpg');"></div>
               <h3>Novrian Pratama</h3>
               <div class="role">Machine Learning Engineer</div>
               <p class="description">Enjoys adventurous travel, seeks new cultures and offbeat destinations</p>
               <div class="social-links">
-                <a href="mailto:"><i class="fas fa-envelope"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:novrianprtama2@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/NovrianPratama"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/novrianpratama/"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+            <div class="team-card">
+              <div class="profile-image" style="background-image: url('/images/meet-our-team/naia.png');"></div>
+              <h3>Naia Shaffa Camila</h3>
+              <div class="role">Machine Learning Engineer</div>
+              <p class="description">Enjoys adventurous travel, seeks new cultures and offbeat destinations</p>
+              <div class="social-links">
+                <a href="mailto:naiashaffa@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/ShaffaCamila"><i class="fab fa-github"></i></a>
+                <a href="http://linkedin.com/in/naia-shaffa"><i class="fab fa-linkedin-in"></i></a>
               </div>
             </div>
           </div>
@@ -164,5 +166,8 @@ export default class LandingPage {
         </div>
       </footer>
     `;
+  }
+  async afterRender() {
+    // Dibiarkan kosong karena belum ada interaksi JS
   }
 }

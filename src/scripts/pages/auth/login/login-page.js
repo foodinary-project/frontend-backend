@@ -1,11 +1,31 @@
+import LoginPresenter from './login-presenter';
+import * as FoodinaryAPI from '../../../data/api';
+import * as AuthModel from '../../../utils/auth';
+
 export default class LoginPage {
-    async render() {
-        // Gunakan backtick (`) untuk template literal dan tambahkan return
-        return `
+  #presenter = null;
+
+  async render() {
+    return `
+      <!-- Success Popup -->
+      <div id="success-popup" class="popup hidden">
+        <div class="popup-content">
+          <p id="success-popup-message"></p>
+          <button id="close-success-popup" class="button-popup">OK</button>
+        </div>
+      </div>
+
+      <!-- Error Popup -->
+      <div id="login-error-popup" class="popup hidden">
+        <div class="popup-content">
+          <p id="login-popup-message"></p>
+          <button id="close-login-error-popup" class="button-popup">Close</button>
+        </div>
+      </div>
+
       <section class="container login-container">
         <div class="form-section">
           <div class="form-content">
-
             <h2>Welcome back!</h2>
             <p>Enter your credentials to access your account</p>
 
@@ -32,13 +52,11 @@ export default class LoginPage {
               Don't have an account?
               <a href="#/register">Sign up</a>
             </p>
-            
+
             <p class="signup-text">
-              Want to return to the homepage?
+              Back to homepage?
               <a href="#/">Go back to Home</a>
             </p>
-
-            
           </div>
         </div>
 
@@ -47,26 +65,87 @@ export default class LoginPage {
         </div>
       </section>
     `;
+  }
+
+  async afterRender() {
+    // Tampilkan popup sukses jika ada dari registrasi
+    const successMessage = localStorage.getItem('registrationSuccess');
+    if (successMessage) {
+      this.#showSuccessPopup(successMessage);
+      localStorage.removeItem('registrationSuccess');
     }
 
-    async afterRender() {
-        // Tambahkan event listener untuk form login
-        const loginForm = document.getElementById('loginForm');
-        if (loginForm) {
-            loginForm.addEventListener('submit', (event) => {
-                event.preventDefault(); // Mencegah submit form bawaan
-                const email = document.getElementById('email').value;
-                const password = document.getElementById('password').value;
+    // Inisialisasi presenter & setup form
+    this.#presenter = new LoginPresenter({
+      view: this,
+      model: FoodinaryAPI,
+      authModel: AuthModel,
+    });
 
-                console.log('Login attempt:', { email, password });
+    this.#setupForm();
+  }
 
-                // TODO: Tambahkan logika login sesungguhnya di sini
-                // (Contoh: Kirim data ke API, validasi, dll.)
-                alert('Login button clicked! Implement login logic here.');
+#setupForm() {
+  const form = document.getElementById('loginForm');
+  const loginButton = form.querySelector('button[type="submit"]');
+  const originalBtnText = loginButton.textContent;
 
-                // Jika login berhasil, arahkan ke halaman lain
-                // window.location.hash = '#/dashboard';
-            });
-        }
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    // Disable tombol dan tampilkan loading
+    loginButton.disabled = true;
+    loginButton.textContent = 'Loading...';
+
+    const data = {
+      email: document.getElementById('email').value,
+      password: document.getElementById('password').value,
+    };
+
+    try {
+      await this.#presenter.getLogin(data);
+    } finally {
+      // Aktifkan kembali tombol dan kembalikan teks
+      loginButton.disabled = false;
+      loginButton.textContent = originalBtnText;
     }
+  });
+}
+
+
+  loginSuccessfully(message, userData) {
+    console.log('Login success:', message, userData);
+
+    // Simpan data user jika diperlukan
+    localStorage.setItem('user', JSON.stringify(userData.user));
+
+    // Redirect ke dashboard
+    location.hash = '#/dashboard';
+  }
+
+  loginFailed(message) {
+    const popup = document.getElementById('login-error-popup');
+    const messageContainer = document.getElementById('login-popup-message');
+    const closeBtn = document.getElementById('close-login-error-popup');
+
+    messageContainer.textContent = message;
+    popup.classList.remove('hidden');
+
+    closeBtn.onclick = () => {
+      popup.classList.add('hidden');
+    };
+  }
+
+  #showSuccessPopup(message) {
+    const popup = document.getElementById('success-popup');
+    const messageEl = document.getElementById('success-popup-message');
+    const closeBtn = document.getElementById('close-success-popup');
+
+    messageEl.textContent = message;
+    popup.classList.remove('hidden');
+
+    closeBtn.onclick = () => {
+      popup.classList.add('hidden');
+    };
+  }
 }

@@ -1,5 +1,3 @@
-const CONFIG = {
-  BASE_URL: 'API_BASE_URL',
-};
+export const ACCESS_TOKEN_KEY = 'accessToken';
 
-export default CONFIG;
+export const BASE_URL = 'https://backend-4lij.onrender.com';
