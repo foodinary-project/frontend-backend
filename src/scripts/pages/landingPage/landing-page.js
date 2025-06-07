@@ -1,7 +1,7 @@
 export default class LandingPage {
-    async render() {
-        // Gunakan backtick (`) untuk template literal dan tambahkan return
-        return `    
+  async render() {
+    // Gunakan backtick (`) untuk template literal dan tambahkan return
+    return `    
 
 <!-- Navigation -->
     <nav class="navigation">
@@ -93,7 +93,7 @@ export default class LandingPage {
     <!-- Dietary Preferences Section -->
     <section class="dietary-section">
         <div class="section-container-2">
-            <h2 class="dietary-title-lp">Recipes Based on Dietary Preferences</h2>
+            <h2 class="dietary-title-lp">Preferences</h2>
             <div class="dietary-divider"></div>
             
             <div class="tab-wrapper">
@@ -127,38 +127,61 @@ export default class LandingPage {
         </div>        
     </section>
 
-      <!-- Footer -->
-      <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer">
         <div class="footer-container">
-          <div>
-            <div class="footer-brand">Foodinary</div>                
+        <div class="footer-main">
+            <div class="footer-brand">              
+              <h2>Foodinary - Discover the taste of Indonesia</h2>                        
+            </div><br><br><br>
+            <div class="footer-social">
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            </div>
           </div>
+
           <div class="footer-menu">
             <div class="footer-column">
-              <h4>Cuisine</h4>
-              <div class="footer-links">
-                <div class="footer-link">Indonesian Cuisine</div>
-                <div class="footer-link">Tempe Mendoan</div>
-                <div class="footer-link">Rawon</div>
-                <div class="footer-link">Sate</div>
+              <h4>Popular Recipe</h4>
+              <div class="footer-links">                
+                <a href="/#/tempe-mendoan" class="footer-link">Rendang Daging <span class="badge-hot">Hot</span></a>
+                <a href="/#/rawon" class="footer-link">Nasi Goreng</a>
+                <a href="/#/sate" class="footer-link">Bakso</a>
               </div>
             </div>
             
             <div class="footer-column">
               <h4>Challenge</h4>
-              <div class="footer-links">
-                <div class="footer-link">Challenge</div>
-                <div class="footer-link">90 Days of Cooking</div>
-                <div class="footer-link">Page</div>
+              <div class="footer-links">                
+                <a href="/#/90-days-cooking" class="footer-link">90 Days of Cooking <span class="badge-hot">New</span></a>                
               </div>
+            </div>
+
+            <div class="footer-column">
+              <h4>Contact</h4>
+              <div class="footer-links">
+                <a href="mailto:foodinary.project@gmail.com" class="footer-link">foodinary.project@gmail.com</a>                
+                <p class="footer-address">Indonesia</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p>&copy; 2025 Foodinary. All rights reserved.</p>
+            <div class="footer-legal">
+              <a href="/#/privacy" class="legal-link">Privacy Policy</a>
+              <a href="/#/terms" class="legal-link">Terms of Service</a>
+              <a href="/#/about" class="legal-link">About Foodinary</a>
             </div>
           </div>
         </div>
       </footer>
 `;
-    }
+  }
 
-    async afterRender() {
-        // Dibiarkan kosong karena belum ada interaksi JS
-    }
+  async afterRender() {
+    // Dibiarkan kosong karena belum ada interaksi JS
+  }
 }

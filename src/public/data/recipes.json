@@ -1,0 +1,1276 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Bakso",
+      "rasa_dominan": "asin",
+      "asal_daerah": "Solo, Malang, Wonogiri",
+      "deskripsi": "Terbuat dari daging sapi giling yang dicampur dengan bumbu dan tepung tapioka, bakso kaya akan protein dan cocok dinikmati kapan saja.",
+      "alat": [],
+      "bahan": ["500 gram daging sapi giling", "100 gram es batu (dihancurkan kecil-kecil)"],
+      "cara_membuat": [
+        "Masukkan daging sapi, bawang putih, garam, lada, putih telur, dan es batu ke dalam blender atau food processor. Haluskan hingga lembut"
+      ],
+      "sumber": "https://www.masakapahariini.com/resep/bakso-sapi/",
+      "gambar": "https://awsimages.detik.net.id/community/media/visual/2019/08/12/dca21bf3-923c-486f-bc2e-a3dcd759b1df_43.jpeg?w=600&q=90"
+    },
+    {
+      "id": 2,
+      "name": "Ayam Goreng Lengkuas",
+      "rasa_dominan": "Gurih",
+      "asal_daerah": "Jawa Tengah",
+      "deskripsi": "Ayam Goreng Lengkuas adalah ayam khas Indonesia yang direbus dengan bumbu rempah dan parutan lengkuas, lalu digoreng hingga renyah. Ciri utamanya adalah aroma lengkuas yang kuat dan bumbunya yang kriuk.",
+      "alat": [
+        "Wajan",
+        "Kompor",
+        "Pisau",
+        "Talenan",
+        "Blender atau ulekan",
+        "Panci",
+        "Saringan/minyak tirisan"
+      ],
+      "bahan": [
+        "1 ekor ayam di potong jadi 12 potong",
+        "3 siung bawang putih",
+        "4 siung Bawang Merah",
+        "1 sdm ketumbar",
+        "5 butir kemiri",
+        "2 cm kunyit",
+        "1/2 ruas jahe",
+        "4 lembar daun salam",
+        "2 batang sereh",
+        "2 ruas lengkuas (parut & sisihkan)",
+        "100 ml air, garam dan kaldu bubuk"
+      ],
+      "cara_membuat": [
+        "1. Haluskan bumbu : bawang putih merah,ketumbar,kemiri,kunyit, jahe",
+        "2. Tumis bumbu halus bersama dg lengkuas parut, daun salam, sereh sampai harum. Tambahkan rasa & sdkit air.",
+        "3. Masak sampai ayam empuk & bumbu meresap, air mengering dan sesekali di aduk",
+        "4. Goreng semua ayam dengan minyak panas dgn api sedang.",
+        "5. Goreng sisa bumbu ungkepan sampai kering dan kecoklatan. Tiriskan untuk taburan diatas ayam goreng.",
+        "6. Sajikan bersama nasi uduk, tempe, tahu & sambal (untuk menambah selera makan hiasi piring beralas daun pisang)."
+      ],
+      "sumber": "https://cookpad.com/id/resep/2275913-ayam-goreng-lengkuas-kremes",
+      "gambar": "https://cnc-magazine.oramiland.com/parenting/original_images/Ayam_Bumbu_Lengkuas.webp"
+    },
+    {
+      "id": 3,
+      "name": "Gulai Tunjang",
+      "rasa_dominan": "Gurih dan pedas",
+      "asal_daerah": "Sumatera Barat",
+      "deskripsi": "Gulai Tunjang adalah gulai khas Minangkabau dari kaki sapi yang dimasak dengan santan dan rempah kaya rasa. Teksturnya kenyal-empuk dengan kuah gurih pedas, biasa disajikan bersama nasi Padang.",
+      "alat": [
+        "Panci presto atau panci biasa",
+        "Wajan",
+        "Kompor",
+        "Blender atau ulekan",
+        "Pisau dan talenan",
+        "Sendok dan saringan"
+      ],
+      "bahan": [
+        "1/2 kg tunjang",
+        "1/4 kg rebung",
+        "1,5 Liter santan",
+        "4 sdt pemasak kambing",
+        "60 gram cabe giling",
+        "5 siung bawang putih",
+        "8 siung bawang merah",
+        "1 cm jahe",
+        "1 cm lengkuas",
+        "1 cm kunyit",
+        "1 batang sere",
+        "1 lembar daun kunyit",
+        "3 lembar daun jeruk",
+        "1 lembar daun salam"
+      ],
+      "cara_membuat": [
+        "1. Tumis bumbu halus sampai harum.",
+        "2. Haluskan semua bumbu, lalu tumis bersama daun jeruk, daun salam, serai, dan lengkuas hingga harum dan matang.",
+        "3. Masukkan tunjang, aduk hingga terbalut bumbu.",
+        "4. Tuangkan santan, masak dengan api kecil sambil sesekali diaduk agar santan tidak pecah.",
+        "5. Tambahkan garam dan gula secukupnya, koreksi rasa.",
+        "6. Masak hingga kuah menyusut dan mengental, dan bumbu meresap ke dalam tunjang.",
+        "7. Sajikan hangat bersama nasi."
+      ],
+      "sumber": "https://cookpad.com/id/resep/24558051-gulai-tunjang-masakan-minang?ref=search&search_term=Gulai+Tunjang",
+      "gambar": "https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2023/05/10/gulai-tunjang-1706334246.png"
+    },
+    {
+      "id": 4,
+      "name": "Telur Balado",
+      "rasa_dominan": "Gurih dan pedas",
+      "asal_daerah": "Sumatera Barat",
+      "deskripsi": "Telur Balado adalah masakan khas Minang yang menggunakan telur rebus yang digoreng hingga kecokelatan, lalu ditumis dengan sambal balado merah khas yang pedas dan menggugah selera. Menu ini sangat populer di rumah makan Padang dan juga sering dibuat sebagai lauk harian karena simpel, tahan lama, dan rasanya nikmat.",
+      "alat": [
+        "Wajan",
+        "Panci",
+        "Kompor",
+        "Blender atau ulekan",
+        "Pisau dan talenan",
+        "Sendok dan saringan minyak"
+      ],
+      "bahan": [
+        "6 butir telur rebus",
+        "8 buah cabe merah besar(sesuai selera)",
+        "20 buah cabe rawit (sesuai selera)",
+        "3 buah tomat",
+        "6 siung bawang putih (sy pakai 3 siung)",
+        "8 siung bawang merah",
+        "Secukupnya gula",
+        "Secukupnya garam"
+      ],
+      "cara_membuat": [
+        "1. Rebus telur, kupas dan goreng hingga berkulit.",
+        "2. Potong - potong terung sesuai selera. Cuci bersih, goreng sesuai dengan selera masing-masing.",
+        "3. Haluskan semua bumbu boleh juga diUlek kasar semua bumbu kecuali Serai. Panaskan minyak,masukkan serai,masukkan bumbu halus,tumis sampai harum, pake api sedang,lalu kecilkan..lalu tambahkan bumbu Garam.masako.gula sampai pass rasanya.",
+        "4. Setelah matang+rasa uda pas,masukkan telur, terong goreng,aduk2 sebentar aja..Angkat,sajikan..disantap dengan nasi putih panas2+kerupuk",
+        "5. Sajikan hangat dengan nasi putih."
+      ],
+      "sumber": "https://cookpad.com/id/resep/24688975-balado-telur-dan-terong?ref=search&search_term=telur+balado+padang",
+      "gambar": "https://poshjournal.com/wp-content/uploads/2021/05/telur-balado-recipe.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Ayam Pop",
+      "rasa_dominan": "Gurih",
+      "asal_daerah": "Sumatera Barat",
+      "deskripsi": "Ayam Pop adalah hidangan khas Padang yang unik. Ayam tanpa kulit direbus dengan bumbu, lalu digoreng sebentar hingga lembut di dalam dengan warna pucat khas. Disajikan dengan sambal pedas segar yang menggugah selera.",
+      "alat": [
+        "Wajan",
+        "Panci",
+        "Kompor",
+        "Blender atau ulekan",
+        "Pisau dan talenan",
+        "Sendok dan saringan minyak"
+      ],
+      "bahan": [
+        "8 potong ayam pejantan",
+        "6 siung bawang putih",
+        "3 lbr daun salam",
+        "4 lbr daun jeruk",
+        "1 batang sereh",
+        "1 ruas jahe",
+        "50 ml santan kental",
+        "1 sdm garam",
+        "1 sdm kaldu jamur",
+        "1/2 sdt merica bubuk",
+        "1 liter air kelapa",
+        "8 cabe merah",
+        "1 sdt garam",
+        "4 siung bawang putih",
+        "4 siung bawang merah",
+        "300 ml air ungkepan ayam",
+        "1 buah tomat",
+        "1 sdm gula pasir",
+        "150 ml air dingin"
+      ],
+      "cara_membuat": [
+        "1. Ayam cuci bersih dan diungkep menggunakan bumbu ungkepan. Masak hingga ayam matang",
+        "2. Blender semua bahan2 saus kemudian tumis saus dengan menggunakan sedikit minyak",
+        "3. Sebelum disajikan celup ayam di minyak panas sebentar tapu jika tidak ingin berminyak bisa langsung disantap",
+        "4. Untuk sambal: rebus semua bahan sambal sebentar, lalu ulek kasar dan beri garam, gula, dan air jeruk nipis.",
+        "5. Sajikan Ayam Pop dengan nasi putih hangat, sambal, dan lalapan."
+      ],
+      "sumber": "https://cookpad.com/id/resep/24712047-ayam-pop-simpang-raya?ref=search&search_term=ayam+pop+padang+asli",
+      "gambar": "https://asset.kompas.com/crops/yle4Cz_p6uECkrSjSdiPUTn9bXo=/0x22:968x667/1200x800/data/photo/2023/03/31/64267c2231cf7.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Dendeng Batokok",
+      "rasa_dominan": "Gurih dan pedas",
+      "asal_daerah": "Sumatera Barat",
+      "deskripsi": "Dendeng Batokok adalah sajian khas Minangkabau yang terbuat dari irisan tipis daging sapi yang digoreng kering, lalu \"ditokok\" atau dipukul hingga pipih dan empuk, lalu disiram sambal hijau yang segar dan pedas. Hidangan ini punya tekstur yang renyah di luar tapi lembut di dalam, dan aroma cabai hijaunya sangat khas. Cocok banget disantap bareng nasi hangat.",
+      "alat": [
+        "Wajan",
+        "Panci",
+        "Palu daging atau ulekan",
+        "Kompor",
+        "Pisau dan talenan",
+        "Blender atau ulekan",
+        "Penjepit makanan"
+      ],
+      "bahan": [
+        "1/2 kg daging sapi khas dalam",
+        "8 siung Bawang merah",
+        "4 siung bawang putih",
+        "1 ruas jahe",
+        "1 ruas kunyit",
+        "1 butir kemiri",
+        "1 sdt ketumbar",
+        "1 ruas lengkuas geprek",
+        "4 lembar daun salam",
+        "1 batang sereh geprek",
+        "20 buah cabai merah besar",
+        "10 buah cabai merah kriting",
+        "5 buah cabai rawit",
+        "8 siung bawang merah",
+        "Secukup nya minyak goreng",
+        "Secukup nya royco",
+        "Secukup nya garam"
+      ],
+      "cara_membuat": [
+        "1. Potong2 daging, aku potong menjadi 10 slice. Cuci bersih. Haluskan bumbu halus, lalu tumis dengan minyak goreng. Tambahkan air, rebus daging. Masukan lengkuas geprek, sereh, dan daun salam.. rebus daging hingga empuk",
+        "2. Setelah daging empuk angkat daging lalu geprek menggunkan ulekan, agar bumbu meresap. Kemudian goreng daging di minyak panas hingga kecokelatan.",
+        "3. Haluskan cabai merah sebagian menggunkan blender, sebagian lagi di tumbuk kasar dengan bawang merah, lalu masak sampai harum, setelah harum masukan daging aduk hingga rata.",
+        "4. Setelah bumbu menyusut angkat dan hidangkan dendeng batokok sambal merah."
+      ],
+      "sumber": "https://cookpad.com/id/resep/24711265-dendeng-sapi-batokok-sambal-merah?ref=search&search_term=dendeng+batokok",
+      "gambar": "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/74/2024/10/13/Resep-Dendeng-Batokok-yang-Gurih-dan-Pedas-3220476050.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Telur Dadar Padang",
+      "rasa_dominan": "Gurih",
+      "asal_daerah": "Sumatera Barat",
+      "deskripsi": "Telur Dadar Padang adalah olahan telur khas rumah makan Padang yang dikenal dengan bentuknya tebal, berisi banyak bumbu dan daun bawang, serta tekstur bagian luar yang renyah. Biasanya dihidangkan sebagai lauk pelengkap rendang atau sambal hijau. Meski sederhana, rasa rempahnya kuat dan khas.",
+      "alat": [
+        "Wajan datar",
+        "Mangkuk/mixing bowl",
+        "Kompor",
+        "Sendok sayur",
+        "Pisau dan talenan",
+        "Saringan minyak"
+      ],
+      "bahan": [
+        "3 butir telur bebek, me: skip",
+        "2 butir telur ayam, me: 5 telur ayam",
+        "4 sdm tepung beras",
+        "5 sdm kelapa parut, sangrai",
+        "100 ml minyak goreng",
+        "5 butir bawang merah",
+        "3 buah cabe keriting merah",
+        "2 batang daun bawang",
+        "1 batang seledri",
+        "1 lembar daun kunyit muda, buang tulangnya,me: skip",
+        "1 lembar daun jeruk muda, buang tulangnya",
+        "1/2 sdt garam",
+        "1/4 sdt kaldu jamur",
+        "2 siung bawang putih",
+        "1 butir kemiri, sangrai",
+        "1/2 sdt ketumbar bubuk",
+        "1/4 sdt kunyit bubuk",
+        "1/4 sdt merica bubuk"
+      ],
+      "cara_membuat": [
+        "1. Campurkan telur bebek dan ayam, me: telur ayam semua dalam satu wadah. Kemudian aduk dengan whisker hingga rata saja, ga perlu sampai berbuih agar setelah digoreng tidak kempes.",
+        "2. Setelah itu tambahkan tepung beras, aduk rata kembali",
+        "3. Selanjutnya masukkan kelapa sangrai, semua bumbu iris, seasoning, serta bumbu halus. Aduk rata.",
+        "4. Kemudian goreng adonan dengan api sedang cenderung kecil hingga sisi bawah cukup kokoh. Lalu balik. Goreng hingga matang. Atau seperti saya pakai bantuan pan 1 lagi untuk membalik telur dadarnya. Tapi hati-hati karena minyaknya cukup banyak....yah...agak tumpah dikit hehe..gpp ya...saya pakai pan diameter 20 cm untuk membentuknya.",
+        "5. Setelah matang, angkat, tiriskan dan potong-potong sesuai selera. Siap disajikan"
+      ],
+      "sumber": "https://cookpad.com/id/resep/24676533-telur-dadar-khas-padang?ref=search&search_term=telur+dadar+padang",
+      "gambar": "https://cdn1-production-images-kly.akamaized.net/9rfj0ncirBaUeM0SfqGCv23zgLY=/1200x675/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4754081/original/023746300_1708954501-Resep_Telur_Dadar_Padang_Lengkap_dan_Tebal_-_TOPWISATA.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Gulai Ikan",
+      "rasa_dominan": "Gurih dan pedas",
+      "asal_daerah": "Sumatera Barat",
+      "deskripsi": "Gulai Ikan adalah salah satu hidangan tradisional Minang yang sangat populer. Menggunakan ikan segar seperti ikan kakap, tongkol, atau patin, gulai ini dimasak dalam kuah santan yang kaya rempah dengan cita rasa gurih pedas yang meresap ke dalam daging ikan. Biasanya disantap bersama nasi hangat dan sambal lado mudo.",
+      "alat": [
+        "Wajan atau panci",
+        "Kompor",
+        "Blender atau ulekan",
+        "Pisau dan talenan",
+        "Sendok sayur"
+      ],
+      "bahan": [
+        "2 kg Kepala Ikan Kakap (potong jadi 2 bagian)",
+        "1 Liter santan kental sedang",
+        "4 siung bawang merah besar",
+        "5 siung bawang putih",
+        "2 ruas jari kunyit",
+        "4 ruas jari jahe",
+        "1 jari telunjuk lengkuas",
+        "5 butir kemiri",
+        "2 lembar daun kunyit",
+        "3 lembar daun salam",
+        "2 batang serai, geprek",
+        "3 tangkai daun ruku2",
+        "5 buah asam kandis",
+        "2 st garam halus",
+        "2 jeruk nipis tuk cuci Kepala ikan",
+        "1 genggam cabe rawit utuh"
+      ],
+      "cara_membuat": [
+        "1. Siapkan bahan2nya",
+        "2. Cuci bersih ikan dg garam dan air jeruk nipis lalu tiriskan. Kupas bumbu laku iris2 dan tumis sebentar sampai harum, sisihkan.",
+        "3. Blender halus bumbu, lalu tumis sampai harum. Tambahkan daun2an, aduk rata sampai layu. Baru masukkan santan dan cabe rawit utuh, beri garam, cek rasa lalu aduk terus sampai mendidih",
+        "4. Setelah santan mendidih, masukkan Kepala ikan, aduk jangan dibalik2 biar tak hancur dagingnya nanti lepas, cukup kuahnya saja yg disiram2kan ke Kepala ikan, masak sampai harum dan keluar minyak.",
+        "5. Sajikan masih panas malah nikmat banget Moms. Pendampingnya : sambal bawang tomat rebus, lalapan rebus daun singkong dan daun pepaya, tahu tempe goreng. Sedapnyaaa."
+      ],
+      "sumber": "https://cookpad.com/id/resep/24673199-gulai-kuning-kepala-ikan-kakap-khas-rm-padang?ref=search&search_term=gulai+ikan+asli+padang",
+      "gambar": "https://assets.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/akurat/gallery/2021/12/big/gal_61c54ec62618e7-09724849-10822195.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Daging Rendang",
+      "rasa_dominan": "Gurih dan pedas",
+      "asal_daerah": "Sumatera Barat",
+      "deskripsi": "Daging Rendang adalah masakan tradisional Minangkabau yang dimasak dalam waktu lama hingga bumbu dan santan menyerap sempurna ke dalam daging sapi. Rendang memiliki cita rasa gurih pedas dengan aroma rempah yang kuat, dan teksturnya empuk serta kering berminyak. Masakan ini tidak hanya menjadi ikon kuliner Indonesia, tapi juga simbol kehormatan dalam adat Minang.",
+      "alat": [
+        "Wajan besar atau kuali",
+        "Kompor",
+        "Blender atau ulekan",
+        "Pisau dan talenan",
+        "Sendok kayu untuk mengaduk"
+      ],
+      "bahan": [
+        "1/4 kg daging sapi",
+        "500 gr kentang",
+        "1/4 bh nanas",
+        "Bumbu giling rendang Rp 10.000 ps Kranggan",
+        "Bumbu instan Rendang indofood",
+        "6 lbr daun salam",
+        "6 lbr daun jeruk",
+        "5 cm Laos geprek",
+        "1 keping gula jawa",
+        "6 biji kapulaga",
+        "2 biji bunga lawang",
+        "1 sdt jinten",
+        "1 sachet ladaku",
+        "3 sachet santan instan",
+        "250 gr serundeng",
+        "3 gelas belimbing air mengencerkan santan"
+      ],
+      "cara_membuat": [
+        "1. Siapkan bahan dan bumbunya.Potong tipis sesuai serat dagingnya.Cuci bersih kentang.Cairkan santan instan dengan 3 gelas air.",
+        "2. Tumis bumbu giling dan bumbu instan hingga benar2 matang dan harum.Masukan daging aduk\"Hingga tercampur,masukan juga parutan nanas lalu aduk\" Lagi.",
+        "3. Masukan santan dan bumbu\" Lainnya,aduk2 hingga tercampur,diamkan sejenak.",
+        "4. Setelah mulai berkurang airnya,masukan kentang dan gula Jawa serta kemudian serundeng,aduk2 hingga rata.",
+        "5. Setelah benar2 asat airnya,matikan api dan diamkan hingga benar2 dingin.Setelah dingin plastikin sesuai selera porsi ya biar gak bolak balik manasin,kita ambil sesuai kebutuhan aja.Kita simpan di freezer biar awet"
+      ],
+      "sumber": "https://cookpad.com/id/resep/24603405-rendang-padang?ref=search&search_term=rendang+daging",
+      "gambar": "https://www.astronauts.id/blog/wp-content/uploads/2023/03/Resep-Rendang-Daging-Sapi-Untuk-Lebaran-Gurih-dan-Nikmat-1024x683.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Tahu Gejrot",
+      "rasa_dominan": "Pedas, manis, dan asam",
+      "asal_daerah": "Cirebon, Jawa Barat",
+      "deskripsi": "Tahu Gejrot adalah makanan khas Cirebon yang terdiri dari potongan tahu goreng (biasanya tahu sumedang) yang disiram dengan kuah asam-manis-pedas yang segar. Disajikan dengan bawang merah, bawang putih, dan cabai rawit yang diulek kasar, makanan ini cocok jadi camilan sore atau jajanan kaki lima favorit.",
+      "alat": [
+        "Cobek dan ulekan",
+        "Pisau dan talenan",
+        "Wajan",
+        "Kompor",
+        "Panci kecil",
+        "Saringan"
+      ],
+      "bahan": [
+        "10 buah Tahu Goreng atau Secukupnya,bisa menggunakan tahu goreng biasa/tahu sumedang",
+        "100-150 ml air",
+        "50 gr gulamerah",
+        "1 sdt gulapasir",
+        "1 sdm kecap manis",
+        "2 sdm kental air asam jawa",
+        "Secukupnya garam",
+        "2 siung bawang putih",
+        "4 siung bawangmerah",
+        "10 buah cabe rawit ijo atau pedas sesuai selera"
+      ],
+      "cara_membuat": [
+        "1. Untuk kuahnya : rebus air,gulamerah,gulapasir,kecapmanis,garam,air asam,smpai mendidih,saring bila perlu,dinginkan.",
+        "2. Masukan/campurkan bumbu yang sudah diulek kasar ke air kuah(air gula) aduk rata,cek rasa manis asem pedasnya.",
+        "3. Penyajian : dalam wadah,potong2 tahu goreng siram dengan kuah gulamerah berbumbu,siap disantap."
+      ],
+      "sumber": "https://cookpad.com/id/resep/1207409-tahu-gejrot",
+      "gambar": "https://antarpapua.com/wp-content/uploads/2025/05/bb0fa115-2e2e-4542-9801-54a9d07a1017.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Kerak Telor",
+      "rasa_dominan": "Gurih dan manis",
+      "asal_daerah": "Jakarta",
+      "deskripsi": "Kerak Telor adalah makanan khas Betawi yang terbuat dari telur (bebek atau ayam), beras ketan putih, kelapa parut sangrai, dan bumbu halus, dimasak tanpa minyak hingga membentuk kerak di bagian bawahnya. Rasanya gurih, aromanya harum kelapa sangrai dan ebi, serta teksturnya unik, lembut di tengah dan renyah di tepinya. Makanan ini dulu dianggap sebagai jajanan orang elite Jakarta zaman kolonial.",
+      "alat": [
+        "Wajan datar",
+        "Kompor arang (bisa pakai kompor biasa)",
+        "Sendok sayur",
+        "Pisau dan talenan",
+        "Mangkuk"
+      ],
+      "bahan": [
+        "2 genggam Beras Ketan",
+        "1 butir Telur Bebek",
+        "1 sdm Serundeng Kelapa (aku pakai yang sudah jadi)",
+        "2 sdm Serundeng Kelapa",
+        "1 sdm Bawang goreng",
+        "1/4 sdt garam",
+        "1/4 sdt lada bubuk"
+      ],
+      "cara_membuat": [
+        "1. Rendam beras ketan minimal 3 jam. Lalu siapkan bahan-bahan Kerak Telor.",
+        "2. Masak beras ketan dengan menambahkan sedikit air, asal ketan nya terendam. Masak di wajan teflon dengan api sedang cenderung kecil dan masak sampai air kering. Kemudian kocok telur dengan 1 sdm serundeng, lada bubuk dan garam. Kocok sampai tercampur rata.",
+        "3. Tuang telor kocok di atas ketan yg sudah kering. Setelah bagian bawah ketan benar-benar kering, balik kerak telor dengan cara di pindahkan dulu ke piring seukuran teflon, kemudian dibalik bagian atas ke bagian bawah agar sisi telor nya matang.",
+        "4. Setelah sisi lainnya sudah benar-benar kering dan matang, angkat lalu taburi Kerak Telor dengan Serundeng Kelapa dan Bawang Goreng. Selanjutnya siap disajikan."
+      ],
+      "sumber": "https://cookpad.com/id/resep/24001773-kerak-telor-betawi?ref=search&search_term=kerak+telor",
+      "gambar": "https://indonesiakaya.com/wp-content/uploads/2023/04/kt_Artboard_4.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Bebek Betutu",
+      "rasa_dominan": "pedas, gurih",
+      "asal_daerah": "Bali",
+      "deskripsi": "Betutu adalah lauk yang terbuat dari bebek atau ayam utuh. Dimasak dengan diisi kelapa parut atau daun singkong dan aneka rempah.\n\nBebek betutu dimasak dengan cara dipanggang dalam api sekam delama enam sampai delapan jam. Proses pemanggangan yang lama dapat membuat daging bebek lebih empuk dan bumbunya meresap. Namun, dalam jaman modern, bebek betutu biasanya dipanggang menggunakan oven.",
+      "alat": ["wajan", "tusuk gigi", "daun pisang", "tali", "oven"],
+      "bahan": {
+        "Bahan": [
+          "1 ekor bebek, kurang lebih 2 kg",
+          "2 batang serai, memarkan",
+          "1/2 butir kelapa parut kasar",
+          "Daun pisang untuk membungkus"
+        ],
+        "Bumbu Halus": [
+          "10 buah cabai merah",
+          "15 siung bawang merah",
+          "5 siung bawang putih",
+          "5 cm kunyit",
+          "5 cm kencur",
+          "5 buah cabai rawit merah",
+          "5 lembar daun jeruk purut",
+          "5 butir kemiri",
+          "2 sdt terasi bakar",
+          "4 cm jahe",
+          "1 sdt ketumbar",
+          "1 sdt merica",
+          "1 sdt garam"
+        ]
+      },
+      "cara_membuat": [
+        "langkah-langkah",
+        "1. Cuci dan bersihkan bebek, keluarkan isi perut dan bersihkan. Buang cakarnya.",
+        "2. Tumis bumbu sampai harum dan kering. Angkat dan dinginkan. Bagi menjadi dua bagian.",
+        "3. Campur satu bagian bumbu dengan kelapa parut. Masukkan dalam rongga bebek, sematkan lubang dengan tusuk gigi. Lumuri sisa bumbu pada permukaan bebek dan bawah kulit.",
+        "4. Bungkus dengan beberapa lapis daun pisang. Ikat erat menggunakan tali. Panggang dalam oven dengan suhu 180 derajat celcius selama dua jam atau sampai matang.  Angkat lalu sajikan."
+      ],
+      "sumber": "https://www.kompas.com/food/read/2021/03/09/093400975/resep-bebek-betutu-bali-ala-rumahan-panggang-pakai-oven",
+      "gambar": "https://asset.kompas.com/crops/bEP7VvJTaFCEb2U-_xZgUMiXA20=/0x0:1000x667/1200x800/data/photo/2020/06/20/5eecf73cbbd07.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Gado-Gado",
+      "rasa_dominan": "Manis, Pedas",
+      "asal_daerah": "Jawa Timur",
+      "deskripsi": "Resep gado-gado sudah dikenal sejak lama sebagai salad-nya orang Indonesia. Kombinasi sayuran segar, kentang, tempe, dan tahu berpadu lezat dengan bumbu gado-gado yang khas dibuat dari kacang.",
+      "alat": ["wajan, Cobek dan ulekan, spatula"],
+      "bahan": {
+        "Bahan": [
+          "350 g kentang, kukus, kupas, potong-potong",
+          "350 g tahu putih",
+          "350 g tempe",
+          "7 lembar daun selada hijau, sobek-sobek",
+          "2 buah mentimun, iris tipis",
+          "100 g tauge, rebus",
+          "200 g kol, iris kasar, rebus",
+          "minyak goreng, untuk menumis dan menggoreng"
+        ],
+        "Bumbu untuk merendam tempe dan tahu": [
+          "3 siung bawang putih, halus",
+          "1 sdt ketumbar bubuk",
+          "1 sdt garam",
+          "200 ml air"
+        ],
+        "Bumbu Kacang": [
+          "200 g kacang tanah kulit, goreng, haluskan",
+          "3 buah daun jeruk, buang tulang daunnya",
+          "2 sdm Bango kecap manis",
+          "1 sdt garam",
+          "3 sdt gula merah",
+          "300 ml santan encer",
+          "300 ml air",
+          "1 sdt asam jawa, larutkan dengan 2 sdm air"
+        ],
+        "Bumbu Halus": [
+          "5 buah cabai merah besar, buang biji",
+          "3 buah cabai merah keriting",
+          "5 cm kencur",
+          "4 siung bawang putih",
+          "1/2 sdt terasi goreng",
+          "Garnish  dan Pelengkap",
+          "6 buah telur rebus, kupas, potong-potong",
+          "2 buah tomat, potong-potong",
+          "3 sdm bawang merah goreng",
+          "kerupuk dan emping"
+        ]
+      },
+      "cara_membuat": [
+        "1. Rendam Tahu dan Tempe. Campurkan tempe dan tahu dengan bumbu perendam. Diamkan minimal 15–30 menit agar bumbu meresap.",
+        "2. Goreng Tahu dan Tempe. Panaskan minyak, goreng tahu dan tempe hingga matang dan berwarna keemasan. Tiriskan dan sisihkan.",
+        "3. Buat Bumbu Kacang. Panaskan 2–3 sdm minyak, tumis bumbu halus dan daun jeruk sampai harum.",
+        "4. Masukkan kacang tanah halus dan kecap manis, aduk rata. Tambahkan garam, gula merah, santan encer, air, dan air asam jawa. Masak dengan api kecil sambil diaduk hingga mengental dan matang. Angkat dan dinginkan.",
+        "5. Penyajian. Di atas piring saji, tata sayuran (selada, kol, tauge, mentimun), kentang, tempe, dan tahu. Siram dengan bumbu kacang secukupnya.",
+        "6. Tambahkan potongan telur, tomat, dan taburi dengan bawang merah goreng.",
+        "7. Sajikan bersama kerupuk dan emping."
+      ],
+      "sumber": "https://www.bango.co.id/r/resep-gado-gado.html/242811",
+      "gambar": "https://www.rukita.co/stories/wp-content/uploads/2022/04/gadogadopadang_bango.png"
+    },
+    {
+      "id": 14,
+      "name": "Gudeg",
+      "rasa_dominan": "Manis",
+      "asal_daerah": "DI Yogyakarta",
+      "deskripsi": "Rasa kangen kota Jogja bisa kamu tebus dengan menikmati gudeg. Makanan khas Jogja ini bisa dibuat sendiri dengan bumbu segar dan sedap.\nGudeg yang dibuat dari nangka muda merupakan makanan ikonik Jogjakarta. Dimasak dengan bumbu dan santan hingga warnanya kecokelatan dan manis gurih rasanya.\nMembuat gudeg sendiri tak sesulit yang dibayangkan. Asalkan memakai nangka muda yang bagus kualitasnya dan bumbu komplet, gudeg enak bisa kamu dapatkan. Bisa dibuat versi kering atau mau yang sedikit berkuah.\nSatu lagi resep rahasianya adalah kesabaran. Karena memasak gudeg merupakan 'slow cooking' yang perlu waktu lama. Kalau ingin membuat gudeg sendiri ikuti resep dan tips berikut ini.",
+      "alat": ["pisau", "panci", "blender", "ulekan", "kompor"],
+      "bahan": {
+        "Bahan": [
+          "1 kg nangka muda",
+          "5 butir telur ayam rebus, kupas",
+          "2 lembar daun salam",
+          "3 lembar daun jeruk",
+          "3 cm lengkuas, memarkan",
+          "120 g gula Jawa yang cokelat tua",
+          "1.5 liter santan sedang",
+          "500 ml santan kental"
+        ],
+        "Bumbu": [
+          "8 butir bawang merah",
+          "5 siung bawang putih",
+          "5 butir kemiri",
+          "1 sdm ketumbar",
+          "1 potong terasi",
+          "1/4 sdt jintan",
+          "2 sdt garam"
+        ],
+        "Pelengkap Penyajian": ["Sambal goreng krecek", "Opor ayam", "Sambal bajak"]
+      },
+      "cara_membuat": [
+        "1. Untuk membuat gudeg yang enak pilih jenis nangka muda yang merah. Teksturnya kokoh dengan warna agak cokelat kemerahan. Potong nangka muda berbentuk dadu besar. Rebus nangka muda dalam air atau air kelapa tua secukupnya hingga lunak. Angkat dan tiriskan nangka muda.",
+        "2. Untuk mendapatkan warna merah cokelat, bisa dipakai daun jati atau daun jambu biji yang ditaruh di bagian bawah panci.",
+        "3. Bumbu Halus: Haluskan semua bahan bumbu dengan blender atau ulekan hingga halus benar.",
+        "4. Masukkan nangka muda dan telur ke dalam panci. Tuangi santan, masukkan bumbu halus, daun salam, daun jeruk, lengkuas dan gula merah.",
+        "5. Masak dengan api sedang hingga bumbu meresap dan kuahnya susut.",
+        "6. Tuangkan santan kental. Masak dengan api hingga kuah benar-benar susut.",
+        "7. Jika suka gudeg kering, masak gudeg hingga airnya benar-benar habis atau hampir kering.",
+        "8. Matikan api. Sajikan gudeg dengan pelengkapnya.",
+        "9. Untuk sisa gudeg bisa disimpan dalam wadah bertutup dan taruh di lemari es. Hangatkan kembali dengan cara dikukus."
+      ],
+      "sumber": "https://food.detik.com/sayur/d-5272175/resep-gudeg-jogja-yang-sedap-ngangeni",
+      "gambar": "https://st4.depositphotos.com/24130704/29526/i/450/depositphotos_295269516-stock-photo-nasi-gudeg-a-signature-rice.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Pempek",
+      "rasa_dominan": "asin, gurih, pedas",
+      "asal_daerah": "Palembang",
+      "deskripsi": "Pempek merupakan hidangan khas yang berasal dari Palembang dan menjadi favorit banyak orang. Makanan ini mudah ditemukan, baik di pedagang kaki lima maupun di restoran.\n\nTerbuat dari daging ikan giling halus—biasanya ikan tenggiri—yang dicampur dengan tepung kanji, telur, bawang putih, garam, dan penyedap rasa, pempek digemari masyarakat luas dan kini telah tersebar ke berbagai wilayah di Indonesia.\n\nBiasanya, pempek Palembang disajikan bersama cuko, saus berwarna cokelat yang dibuat dari campuran cuka, asam jawa, gula merah, cabai tumbuk, dan garam.",
+      "alat": [
+        "Panci",
+        "Wajan/penggorengan",
+        "Kompor",
+        "Blender atau food processor",
+        "Baskom/wadah besar",
+        "Sendok/Sutil",
+        "Saringan atau peniris",
+        "Pisau dan talenan"
+      ],
+      "bahan": {
+        "bahan kuah cuko": [
+          "3/4 liter air bersih",
+          "150 gr bawang putih (cincang halus)",
+          "60 gr air asam jawa",
+          "250 gr gula merah (sisir halus)",
+          "1 sdm ebi kering bubuk",
+          "100 gr cabe rawit (haluskan)"
+        ]
+      },
+      "cara_membuat": [
+        "langkah-langkah membuat cuko",
+        "1.  Siapkan panci, lalu masukkan air, air asam jawa, dan gula merah, rebus sampai mendidih.",
+        "2.  Masukkan cabe rawit, bawang putih, ebi, dan garam, lalu aduk sampai tercampur merata.",
+        "3.  Angkat dari kompor, lalu biarkan hingga menjadi hangat."
+      ],
+      "sumber": "https://www.batamnews.co.id/berita-100117-rahasia-membuat-pempek-palembang-yang-enak-dan-empuk-intip-resepnya.html",
+      "gambar": "https://img.freepik.com/premium-photo/pempek-empek-empek-traditional-food-from-south-sumatra-indonesia-fish-based-food_583400-4589.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Rawon",
+      "rasa_dominan": "asin",
+      "asal_daerah": "Surabaya",
+      "deskripsi": "Rawon Surabaya adalah varian rawon yang berasal dari kota Surabaya, Jawa Timur. Ciri khasnya terletak pada kuah hitam pekat yang berasal dari bumbu utama bernama kluwek atau kluwak, yang memberikan cita rasa dan warna yang unik. Dibandingkan dengan jenis rawon lainnya, rawon Surabaya biasanya memiliki tekstur kuah yang lebih kental dan pekat.\n\nBerikut ini merupakan bumbu-bumbu yang digunakan dalam pembuatan rawon daging sapi khas Surabaya, beserta langkah-langkah memasaknya.",
+      "alat": [
+        "Panci besar",
+        "Wajan",
+        "Blender atau cobek (ulekan)",
+        "Pisau",
+        "Talenan",
+        "Saringan",
+        "Sendok sayur",
+        "Mangkuk saji"
+      ],
+      "bahan": {
+        "Bahan": [
+          "500 gram daging sandung lamur (brisket)",
+          "6 lembar daun jeruk",
+          "3 batang serai, memarkan",
+          "3 liter air",
+          "1 ruas lengkuas, memarkan"
+        ],
+        "Bumbu Halus": [
+          "8 siung bawang merah",
+          "5 siung bawang putih",
+          "4 buah kluwek ukuran sedang, ambil isinya",
+          "4 butir kemiri, sangrai",
+          "2 cm kunyit",
+          "1½ sdt ketumbar bubuk",
+          "1 sdt merica bubuk",
+          "1 cm jahe",
+          "1 batang daun bawang, iris",
+          "Garam secukupnya",
+          "Gula secukupnya",
+          "Bahan Pelengkap :",
+          "Bawang goreng",
+          "Tauge pendek",
+          "Sambal terasi",
+          "Kerupuk udang",
+          "Telur asin"
+        ]
+      },
+      "cara_membuat": [
+        "1. Rebus daging dalam air mendidih hingga setengah empuk, lalu angkat dan potong-potong seukuran satu suapan.",
+        "2. Saring kaldu hasil rebusan, kemudian masukkan kembali potongan daging bersama serai, daun jeruk, dan lengkuas.",
+        "3. Tumis bumbu halus dengan sedikit minyak hingga harum, lalu tuang ke dalam rebusan daging.",
+        "4. Masak hingga daging benar-benar empuk. Jika air mulai menyusut sementara daging belum lunak, tambahkan air dan lanjutkan memasak.",
+        "5. Menjelang matang, tambahkan irisan daun bawang.",
+        "6. Sajikan rawon bersama nasi hangat dan pelengkap seperti tauge pendek, sambal terasi, bawang goreng, kerupuk udang, dan telur asin."
+      ],
+      "sumber": "https://www.liputan6.com/hot/read/5332751/4-bumbu-rawon-daging-sapi-khas-jawa-timur-lengkap-dengan-resep-dan-cara-memasak?page=2",
+      "gambar": "https://asset.kompas.com/crops/hNtKM00giVbyEov1LyRMTB65YP8=/0x38:1000x705/1200x800/data/photo/2023/09/08/64faa742ca9ae.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Nasi Goreng",
+      "rasa_dominan": "asin, manis",
+      "asal_daerah": "Umum di Indonesia",
+      "deskripsi": "Menurut CNN dalam \"Best Rice Dishes: 20 Delicious Specialties from Around the World\" yang dirilis pada Kamis (4/5/2023). Dalam daftar tersebut, nasi goreng dari Indonesia terpilih sebagai salah satu dari 20 hidangan nasi terenak di dunia.\n\nDi Indonesia, nasi goreng merupakan sajian yang sangat populer. Hidangan ini dapat dengan mudah ditemukan, mulai dari warung pinggir jalan hingga restoran mewah. Selain itu, nasi goreng juga mudah dibuat di rumah dan bisa dikreasikan dengan berbagai bahan sesuai selera.\n\nKali ini, kamu bisa mencoba resep nasi goreng spesial dengan tambahan udang dan bakso, dilengkapi dengan telur mata sapi dan kerupuk sebagai pelengkap.",
+      "alat": ["Wajan", "Spatula/Sodet", "Pisau", "Talenan", "Kompor"],
+      "bahan": {
+        "Bahan": [
+          "2 porsi nasi putih",
+          "3 sdm minyak untuk menumis",
+          "1 siung bawang putih, cincang halus",
+          "3 sdm bawang bombai, cincang kasar",
+          "2 buah cabai merah, buang bijinya, iris serong tipis",
+          "50 gram udang kecil, kupas",
+          "6 butir bakso ikan, iris tipis",
+          "1 sdm kecap ikan",
+          "2 sdm kecap manis",
+          "1/2 sdm minyak wijen",
+          "1 butir bawang merah, iris halus",
+          "1 sdt merica bubuk",
+          "Garam secukupnya"
+        ],
+        "Pelengkap": ["2 butir telur mata sapi", "Irisan tomat", "Irisan mentimun", "Kerupuk udang"]
+      },
+      "cara_membuat": [
+        "1. Panaskan minyak dalam wajan, tumis bawang putih, bawang bombai, dan cabai merah hingga harum.",
+        "2. Masukkan bakso ikan dan udang, tumis hingga udang berubah warna.",
+        "3. Tambahkan nasi, kecap manis, kecap ikan, minyak wijen, merica bubuk, dan garam. Aduk rata hingga semua bahan tercampur sempurna dan nasi matang.",
+        "4. Angkat dan sajikan nasi goreng dengan telur mata sapi, irisan tomat, mentimun, dan kerupuk udang."
+      ],
+      "sumber": "Hidangan Lezat Aneka Nasi Goreng (2016) oleh Tim Dapur Esensi, terbitan Penerbit Erlangga.",
+      "gambar": "https://awsimages.detik.net.id/community/media/visual/2020/08/18/nasi-goreng-pedas_43.jpeg?w=600&q=90"
+    },
+    {
+      "id": 18,
+      "name": "Sate kambing",
+      "rasa_dominan": "asin, pedas, manis",
+      "asal_daerah": "Jawa Tengah dan Jawa Timur",
+      "deskripsi": "Sate kambing merupakan salah satu olahan daging yang sangat populer, terutama saat perayaan Iduladha. Daging kambing yang diperoleh dari hewan kurban sering diolah menjadi berbagai hidangan lezat, dan sate menjadi pilihan favorit banyak orang. Namun, daging kambing dikenal memiliki tekstur yang lebih alot dan aroma khas yang bisa mengganggu jika tidak diolah dengan baik. Oleh karena itu, diperlukan tips khusus agar daging menjadi empuk dan tidak berbau. Penggunaan bumbu khas Nusantara seperti bumbu kecap, kacang, hingga racikan rempah-rempah lainnya menjadi kunci dalam menghasilkan cita rasa sate kambing yang menggugah selera.",
+      "alat": [
+        "Pisau",
+        "Talenan",
+        "Parutan",
+        "Wadah",
+        "Tusuk sate",
+        "Blender atau cobek",
+        "Kuas atau sendok kecil",
+        "Alat pemanggang"
+      ],
+      "bahan": [
+        "500 gram daging kambing",
+        "1 sdt ketumbar",
+        "2 butir kemiri",
+        "6 siung bawang merah",
+        "6 siung bawang putih",
+        "1 ruas jahe",
+        "Kecap, garam secukupnya",
+        "Parutan nanas, perasan lemon, dan daun jeruk (untuk merendam)"
+      ],
+      "cara_membuat": [
+        "1. Rendam daging kambing dalam campuran parutan nanas, air lemon, dan daun jeruk selama 20–30 menit untuk mengurangi bau prengus.",
+        "2. Potong daging menjadi bentuk dadu dan tusuk dengan tusuk sate.",
+        "3. Haluskan bumbu: bawang merah, bawang putih, kemiri, jahe, dan ketumbar.",
+        "4. Lumuri daging dengan bumbu halus, lalu diamkan 10 menit agar meresap.",
+        "5. Bakar sate hingga setengah matang, lalu olesi kembali dengan sisa bumbu.",
+        "6. Saat hampir matang, olesi dengan kecap dan panggang hingga daging matang sempurna dan empuk.",
+        "7. Sajikan sate kambing selagi hangat."
+      ],
+      "sumber": "https://chatgpt.com/c/68233ddc-0ff0-800b-91bf-cdbd1d3526a3",
+      "gambar": "https://assets.unileversolutions.com/recipes-v2/252624.png"
+    },
+    {
+      "id": 19,
+      "name": "Soto",
+      "rasa_dominan": "gurih",
+      "asal_daerah": "jawa timur",
+      "deskripsi": "Soto ayam kuning memiliki cita rasa gurih dan segar yang menggugah selera. Isian berupa ayam suwir dan sayuran menjadikannya hidangan yang mengenyangkan, apalagi saat disantap bersama nasi hangat. Di daerah Jawa Tengah, soto ayam umumnya memiliki kuah bening, namun ada juga yang menggunakan kuah kuning seperti pada varian ini.\n\nWarna kuning pada kuah berasal dari kunyit, yang tak hanya memperkaya aroma dan rasa kaldu, tetapi juga bermanfaat untuk meningkatkan daya tahan tubuh. Dibandingkan membeli di luar, membuat soto ayam sendiri di rumah memungkinkan seluruh keluarga bisa ikut menikmati. Sajikan dengan nasi atau lontong, serta pelengkap seperti tempe goreng, sate usus, atau perkedel kentang untuk sensasi makan yang lebih lengkap.",
+      "alat": [
+        "Panci",
+        "Wajan",
+        "Kompor",
+        "Pisau",
+        "Talenan",
+        "Saringan",
+        "Mangkuk saji",
+        "Sendok sayur"
+      ],
+      "bahan": {
+        "Bahan": [
+          "1/2 ekor ayam kampung, potong dua",
+          "1,5 liter air",
+          "3 sdm minyak sayur",
+          "1 batang serai, memarkan",
+          "2 lembar daun salam",
+          "2 lembar daun jeruk"
+        ],
+        "Bumbu Halus": [
+          "5 siung bawang putih",
+          "3 siung bawang merah",
+          "4 butir kemiri",
+          "3 cm kunyit",
+          "1 cm jahe",
+          "1/2 sdt merica butiran",
+          "2 sdt garam"
+        ],
+        "Pelengkap": [
+          "100 g tauge",
+          "100 g suun, seduh air panas",
+          "2 butir telur rebus",
+          "2 sdm daun bawang",
+          "4 sdm bawang merah goreng",
+          "4 sdm sambal rawit",
+          "2 butir jeruk nipis, potong-potong"
+        ]
+      },
+      "cara_membuat": [
+        "1. Didihkan air dalam panci. Rebus ayam dengan api kecil hingga daging hampir lunak. (Jika menggunakan ayam negeri, cukup rebus sebentar karena ayam negeri lebih cepat empuk dan mengandung banyak air. Kurangi jumlah air perebus jika perlu.)",
+        "2. Panaskan minyak, tumis bumbu halus bersama daun salam, daun jeruk, dan serai hingga harum dan matang.",
+        "3. Masukkan tumisan bumbu ke dalam rebusan ayam. Lanjutkan merebus dengan api kecil hingga ayam benar-benar lunak dan bumbu meresap.",
+        "4. Angkat ayam dan tiriskan hingga agak kering.",
+        "5. Goreng ayam sebentar saja agar bagian luarnya kering dan renyah. Tiriskan dan suwir kasar-kasar.",
+        "6. Siapkan mangkuk saji, susun suwiran ayam, suun, dan tauge di dalamnya.",
+        "7. Siram dengan kaldu panas.",
+        "8. Sajikan soto ayam kuning dalam keadaan panas bersama pelengkap: daun bawang, bawang goreng, sambal rawit, telur rebus, dan perasan jeruk nipis."
+      ],
+      "sumber": "https://food.detik.com/ayam/d-5250526/resep-soto-ayam-kuning-berkuah-bening-segar",
+      "gambar": "https://img.freepik.com/premium-photo/soto-ayam-indonesian-traditional-chicken-soup-wooden-table-selected-focus_358675-461.jpg"
+    },
+    {
+      "id": 21,
+      "name": "Onde-Onde",
+      "rasa_dominan": "manis",
+      "asal_daerah": "Umum di Indonesia",
+      "deskripsi": "Onde-onde adalah camilan klasik khas peranakan yang bentuknya menyerupai bola dengan taburan wijen di permukaannya. Onde-onde klasik memiliki isian kacang hijau yang dihaluskan, namun kamu juga bisa berkreasi dengan isi keju, cokelat, atau ubi. Berikut adalah resep onde-onde yang mudah dibuat tanpa menggunakan oven, cukup digoreng saja.",
+      "alat": [
+        "Panci pengukus",
+        "Wadah pencampur bahan",
+        "Sendok pengukur",
+        "Wajan penggoreng",
+        "Sumpit atau sendok pengaduk",
+        "Mangkuk untuk air",
+        "Piring atau wadah penampung",
+        "Penjepit atau saringan"
+      ],
+      "bahan": [
+        "Bahan Isian:",
+        "75 gram kacang hijau kupas, rendam selama 1 jam",
+        "50 gram gula pasir",
+        "1 lembar daun pandan, simpulkan",
+        "1/4 sendok teh garam",
+        "200 ml santan dari 1/4 butir kelapa",
+        "Bahan Kulit:",
+        "250 gram tepung ketan putih",
+        "50 gram kentang kukus, dihaluskan",
+        "65 gram gula pasir halus",
+        "1/2 sendok teh garam",
+        "120 ml air hangat",
+        "75 gram wijen untuk pelapis",
+        "800 ml minyak padat untuk menggoreng"
+      ],
+      "cara_membuat": [
+        "1. Membuat Isian: Kukus kacang hijau selama 20 menit, kemudian angkat. Tambahkan gula pasir, daun pandan, garam, dan santan pada kacang hijau. Masak sambil diaduk hingga kalis, kemudian angkat dan biarkan dingin. Setelah dingin, timbang masing-masing 10 gram dan bulatkan.",
+        "2. Membuat Kulit: Campurkan tepung ketan, kentang halus, gula pasir halus, dan garam. Aduk rata. Tambahkan air hangat sedikit-sedikit sambil diuleni hingga kalis dan licin.",
+        "3. Timbang adonan kulit masing-masing 20 gram. Pipihkan, beri isi kacang hijau, bentuk bulat, celupkan ke dalam air, lalu gulingkan di atas wijen.",
+        "4. Menggoreng: Panaskan minyak dengan api kecil. Goreng onde-onde sambil diaduk-aduk hingga mengembang. Setelah itu, naikkan api menjadi sedang dan goreng hingga matang dan berwarna kecokelatan."
+      ],
+      "sumber": "https://www.kompas.com/food/read/2020/12/21/130900775/resep-onde-onde-kue-goreng-isi-kacang-hijau",
+      "gambar": "https://www.unileverfoodsolutions.co.id/dam/global-ufs/mcos/SEA/calcmenu/recipes/ID-recipes/desserts-&-bakery/onde-onde/main-header.jpg"
+    },
+    {
+      "id": 22,
+      "name": "Kue Klepon",
+      "rasa_dominan": "Manis",
+      "asal_daerah": "Jawa Timur",
+      "deskripsi": "Kue tradisional khas Jawa yang mungil dan menjadi kue favorit banyak kalangan. Kue klepon merupakan makanan tradisional Indonesia terkenal. Kue ini biasanya terbuat dari tepung ketan yang dibentuk menjadi bulatan kecil dan diisi dengan gula merah cair, kemudian digelindingkan dalam kelapa parut. Kue klepon sering disajikan sebagai makanan ringan atau camilan tradisional di Indonesia, dan juga sering ditemui di pasar tradisional dan acara-acara khusus.  Rasanya yang manis dan teksturnya yang kenyal membuat kue klepon populer di kalangan orang Indonesia, dan kini juga mulai dikenal di luar negeri sebagai salah satu hidangan Indonesia yang lezat dan unik. Buku Indisch leven in Nederland karya J. M. Meulenhoff menuliskan jika klepon sudah ada sejak tahun 1950-an. Awalnya kue tradisional ini diperkenalkan di Belanda oleh seorang imigran Indonesia yang berasal dari Pasuruan, Jawa Timur.\n\nSejak saat itu kue klepon sudah tersedia di toko-toko dan restoran di seluruh Indonesia dan juga Belanda.",
+      "alat": [
+        "1. Mangkok besar",
+        "2. Panci",
+        "3. Alat kukus",
+        "4. Parutan",
+        "5. Spatula",
+        "6. Pisau",
+        "7. Talenan",
+        "8. Peniris"
+      ],
+      "bahan": [
+        "Bahan adonan:",
+        "200 gr tepung beras ketan",
+        "50 gr tepung beras",
+        "250 ml air",
+        "30 gr gula pasir",
+        "⅛ sdt perisa pandan",
+        "1 tetes pewarna kuning, opsional",
+        "1 tetes pewarna merah, opsional",
+        "Bahan isian:",
+        "150 gr gula merah",
+        "Bahan lainnya:",
+        "250 gr kelapa parut",
+        "½ sdt garam",
+        "2 lembar daun pandan"
+      ],
+      "cara_membuat": [
+        "1. Di dalam mangkuk campurkan kelapa parut dengan garam, aduk rata. Pindahkan ke dalam loyang tahan panas lalu masukkan daun pandan di atasnya. Kukus selama 15-20 menit. Angkat dan pindahkan ke dalam mangkuk",
+        "2. Parut gula merah lalu bentuk bulat kecil kurang lebih 3-4 gram",
+        "3. Di dalam wajan campurkan air, tepung beras, gula pasir, perisa pandan, sedikit pewarna kuning, dan pewarna merah, aduk rata lalu masak hingga mengental",
+        "4. Masukkan adonan yang telah dimasak ke dalam tepung beras ketan lalu aduk hingga rata dan menyatu",
+        "5. Bentuk memanjang adonan lalu potong-potong kurang lebih 12-15 gram per satu pcs klepon",
+        "6. Didihkan air lalu bentuk klepon seperti mangkuk kemudian isi dengan gula merah, bentuk bulat",
+        "7. Rebus klepon di api sedang kecil hingga mengapung dan matang, tiriskan",
+        "8. Balurkan klepon ke dalam kelapa parut",
+        "9. Klepon siap disajikan"
+      ],
+      "sumber": "https://cookpad.com/id/resep/16844410-kue-klepon-devina-hermawan?ref=youtube_devina",
+      "gambar": "https://insanmandiri.id/wp-content/uploads/2024/12/IMG_1762.webp"
+    },
+    {
+      "id": 23,
+      "name": "Kue Dadar Gulung",
+      "rasa_dominan": "Manis",
+      "asal_daerah": "",
+      "deskripsi": "Dadar gulung berasal dari tradisi kuliner Jawa yang kaya akan olahan berbahan dasar kelapa dan gula merah. Dalam sejarahnya, kue ini sudah ada sejak zaman kerajaan-kerajaan Nusantara, seperti Kerajaan Majapahit dan Mataram.\nMasyarakat pada masa itu sering menggunakan kelapa dan gula merah sebagai bahan utama dalam berbagai kudapan karena ketersediaannya yang melimpah.\nNama \"dadar gulung\" berasal dari proses pembuatannya yaitu \"dadar\" yang berarti adonan tipis yang dimasak seperti crepe, dan \"gulung\" yang merujuk pada cara penyajiannya yang digulung setelah diisi dengan parutan kelapa dan gula merah.",
+      "alat": [
+        "1. Mangkok besar",
+        "2. Teflon",
+        "3. Sendok sayur",
+        "4. Sendok makan",
+        "5. Saringan"
+      ],
+      "bahan": {
+        "Bahan isian kelapa": [
+          "200 gr kelapa parut",
+          "100 gr gula merah",
+          "2 sdm gula pasir",
+          "100 ml air",
+          "Sedikit garam"
+        ],
+        "Bahan kulit dadar": [
+          "100 gr tepung terigu",
+          "65 ml santan (merk kara)",
+          "250 ml air",
+          "Sedikit garam",
+          "3 tetes pasta pandan",
+          "1 butir telur"
+        ]
+      },
+      "cara_membuat": [
+        "1. Cara membuat isian kelapa :",
+        "Rebus air hingga mendidih lalu masukan gula merah, gula putih dan garam aduk terus hingga larut, setelah itu masukan kelapa parut dan terus di aduk hingga tercampur rata dan kering.",
+        "2. Cara membuat kulit dadar gulung :",
+        "Campur tepung terigu, garam dan telur, santan kemudian masukkan air secara bertahap keadonan, dan aduk adonan hingga tercampur rata dan tidak ada gumpalan. Setelah itu tuangkan pasta pandan, dan aduk lagi hingga tercampur rata. Saring adonan untuk memastikan tidak bergindil.",
+        "3. Panaskan wajan anti lengket (saya pakai teflon maxim yg diameter 20cm) hingga panas. Tuang 1 sendok sayur adonan (bisa disesuaikan denga lebar wajan) ratakan dan masak hingga matang, angkat dan ulangi terus hingga adonan habis.",
+        "4. Isi kulit dengan kelapa lalu gulung dan hidangkan.",
+        "5. Dadar gulung siap disajikan."
+      ],
+      "sumber": "https://cookpad.com/id/resep/5223730-dadar-gulung-isi-kelapa",
+      "gambar": "https://indiekraf.com/wp-content/uploads/2024/10/Sampul.jpg"
+    },
+    {
+      "id": 24,
+      "name": "Kue Serabi",
+      "rasa_dominan": "Gurih, Manis",
+      "asal_daerah": "Solo",
+      "deskripsi": "Serabi khas Solo yang diperkirakan sudah ada sejak zaman Kerajaan Mataram Islam pada abad ke-16. Nama serabi sendiri berasal dari bahasa Jawa, yaitu sre yang berarti menggoreng dan abi berarti tepung beras. Jadi, jika digabungkan, nama serabi dapat diartikan sebagai makanan yang dimasak dengan digoreng dan berasal dari tepung beras.\nSerabi menjadi makanan tradisional yang populer di Jawa pada abad ke-19, ketika para pedagang dan penjual makanan mulai menjual serabi di pasar-pasar tradisional. Pada saat itu, serabi disajikan dengan berbagai topping, seperti gula merah, kelapa, dan kacang.\nSaat ini, serabi dapat ditemukan dalam berbagai variasi, seperti serabi Solo, serabi Yogyakarta, dan serabi Bandung. Masing-masing variasi memiliki ciri khas dan rasa yang unik.\nPada saat itu, serabi disajikan sebagai makanan ringan untuk para bangsawan dan tamu-tamu kerajaan.",
+      "alat": [
+        "1. Mangkok besar",
+        "2. Teflon dan tutup",
+        "3. Sendok sayur",
+        "4. Whisker / Sendok makan",
+        "5. Panci"
+      ],
+      "bahan": {
+        "Bahan adonan": [
+          "200 ml santan instan",
+          "450 ml air",
+          "1 sdt garam",
+          "2 lembar daun pandan",
+          "75 gr gula pasir",
+          "1 butir telur",
+          "185 gr tepung beras",
+          "75 gr tepung tapioka",
+          "¾ sdt ragi instan"
+        ],
+        "Bahan siraman santan": [
+          "200 ml santan",
+          "100 ml air",
+          "1 sdt garam",
+          "2 lembar daun pandan",
+          "1 sdm cokelat bubuk",
+          "2 sdm air panas",
+          "45-60 ml Indomilk Kental Manis Plain",
+          "45-60 ml Indomilk Kental Manis Swiss Choco"
+        ],
+        "Topping": ["Meses", "Keju parut"]
+      },
+      "cara_membuat": [
+        "1. Masak air, santan, daun pandan dan garam hingga mendidih selama 2 menit lalu tuang ke dalam mangkuk, diamkan hingga hangat, buang daun pandan",
+        "2. Masukkan tepung beras, tepung tapioka, telur, gula dan ragi, aduk rata, tutup dengan cling wrap diamkan selama 30 menit",
+        "3. Untuk siraman santan, masak santan, air, daun pandan dan garam hingga mendidih lalu tuang ke dalam 2 wadah",
+        "4. Masukkan Indomilk Kental Manis Plain dan Indomilk Kental Manis Swiss Choco ke dalam masing-masing wadah",
+        "5. Seduh bubuk cokelat dengan air panas, aduk rata kemudian masukkan ke dalam siraman santan cokelat, aduk rata",
+        "6. Panaskan wajan, tuang adonan serabi, putar sedikit lalu tuang 2-3 sdm masing-masing siraman kuah santan, masak hingga matang",
+        "7. Untuk serabi putih, tambahkan topping Indomilk Kental Manis Plain dan keju parut lalu untuk serabi cokelat tambahkan Indomilk Kental Manis Swiss Choco dan meses sebagai topping",
+        "8. Simpan serabi di atas daun pisang kemudian gulung",
+        "9. Serabi solo siap dihidangkan"
+      ],
+      "sumber": "https://youtu.be/tckxD5TmAsc?feature=shared",
+      "gambar": "https://asset.kompas.com/crops/AlIMFvzx9LOpoPuXsjTsuTV0tPY=/53x0:1000x631/1200x800/data/photo/2021/05/22/60a8d4f15321a.jpg"
+    },
+    {
+      "id": 25,
+      "name": "Kue Lumpur",
+      "rasa_dominan": "Manis",
+      "asal_daerah": "Surabaya",
+      "deskripsi": "Kue lumpur merupakan jajanan tradisional yang mudah kita jumpai di pasar atau toko kue tradisonal. Makanan ini terbuat dari bahan utama yakni kentang, tepung terigu, gula, dan telur. Dahulu, kelapa parut menjadi hiasan yang diletakkan di atas kue. Kini kismis telah menjadi topping baru untuk kue lumpur. Karena kue ini tergolong kue basah, sehingga tida dapat bertahan lama.",
+      "alat": [
+        "1. Mangkok besar",
+        "2. Panci",
+        "3. Alat kukus",
+        "4. Blender",
+        "5. Cetakan Kue Lumpur",
+        "6. Sendok sayur"
+      ],
+      "bahan": [
+        "250 gram kentang",
+        "250 gram tepung terigu",
+        "2 butir telur ayam",
+        "550 ml santan kelapa",
+        "3 sdm mentega",
+        "10 sdm gula pasir",
+        "1/2 sdt garam",
+        "1/4 sdm vanili bubuk"
+      ],
+      "cara_membuat": [
+        "1. Kukus kentang sampai empuk.",
+        "2. Rebus santan dengan mentega dan garam sampai mendidih, lalu biarkan dingin.",
+        "3. Kentang yang sudah dikukus potong-potong kecil. Campurkan kentang dan air rebusan santan. Haluskan dengan blender sampai menyatu.",
+        "4. Kocok telur dan gula pasir hingga gula larut. Tak perlu sampai berbusa. Setelah itu, campurkan adonan yang sudah diblender ke kocokan telur. Aduk rata.",
+        "5, Pastikan tidak ada bagian yang bergerindil. Aduk sambil agak ditekan-tekan untuk menghasilkan kue yang teksturnya lembut.",
+        "6. Setelah adonan siap, panaskan cetakan. Oleskan mentega pada cetakan. Tuang adonan, tutup dan masak sampai matang. Kue lumpur kentang siap dinikmati."
+      ],
+      "sumber": "https://www.fimela.com/food/read/4642992/10-resep-kue-lumpur-manis-lembut-untuk-jualan-atau-ngemil-santai?page=4",
+      "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWNG6RulPkYu1h8jKgA5LPby_VXKuZEdi8AQ&s"
+    },
+    {
+      "id": 26,
+      "name": "Tempe Mendoan",
+      "rasa_dominan": "Asin, pedas",
+      "asal_daerah": "Banyumas",
+      "deskripsi": "Tempe mendoan berasal dari kata \"mendo\" yang berarti setengah matang dalam bahasa Jawa Banyumasan. Setengah matang tersebut diambil dari teknik dimasaknya tempe mendoan. Tempe mendoan digoreng setengah matang ternyata memiliki sejarah dibalik hal tersebut. Pada zaman dahulu tempe mendoan dibuat sebagai makanan cepat saji. Hal tersebut bertujuan untuk mempersingkat waktu pembuatan. Sehingga, waktu tidak habis terbuang untuk menunggu hingga tempe digoreng menjadi sangat kering. Tempe mendoan muncul ketika makanan berbahan baku kedelai yang bernama \"tempe\" mulai tumbuh dan banyak dikonsumsi di seputar Asia Tenggara, Wilayah China danIndocina. Kedelai dibawa oleh masyarakat Asia Tengah ketika bermigrasi ke Tenggara. Pada saat itulah tempe mendoan muncul dan menjadi kudapan yang nikmat untuk disantap. Tempe mendoan ternyata sudah ada dari satu abad. Pada awal tahun 1960-an tempe mendoan mulai menjadi komoditas ekonomis dan dikelola secara komersial dalam dunia kepariwisataan. Tempe mendoan bukan sekadar kudapan nikmat untuk menemai minum teh atau secangkir kopi, namun sudah menjadi ujung tombak dari pariwisata Kabupaten Banyumas.",
+      "alat": [
+        "1. Mangkok besar",
+        "2. Teflon / Wajan",
+        "3. Sendok sayur",
+        "4. Sendok makan",
+        "5. Cobek dan Uleg",
+        "6. Pisau",
+        "7. Talenan",
+        "8. Peniris"
+      ],
+      "bahan": {
+        "Bahan": ["350 gr tempe", "2-3 batang daun bawang"],
+        "Bahan adonan": [
+          "220 gr tepung terigu protein sedang",
+          "60 gr tepung beras",
+          "¼ sdt kunyit bubuk",
+          "1 butir telur",
+          "1 sdt baking powder",
+          "400 ml air",
+          "2 sdt kaldu jamur",
+          "1 sdt gula pasir",
+          "¼ sdt merica",
+          "2 sdt garam"
+        ],
+        "Bahan bumbu halus": [
+          "4 siung bawang putih",
+          "½ sdm ketumbar, sangrai",
+          "Bahan sambal kecap:",
+          "1 siung bawang putih",
+          "6 buah cabai rawit merah",
+          "10 buah cabai rawit hijau",
+          "¼ sdt garam",
+          "½ sdt MSG",
+          "6 sdm kecap manis",
+          "1 sdm bawang merah goreng",
+          "1 buah jeruk limau"
+        ],
+        "Pelengkap": ["cabai rawit hijau"]
+      },
+      "cara_membuat": [
+        "1. Potong tipis tempe",
+        "2. Di dalam ulekan masukkan bawang putih, ketumbar dan garam, ulek hingga halus",
+        "3. Di dalam mangkuk, campurkan tepung terigu, tepung beras, bumbu halus, kunyit bubuk, kaldu jamur, gula pasir, merica, baking powder, telur dan air, aduk rata",
+        "4. Iris daun bawang kemudian masukkan ke dalam adonan, aduk rata",
+        "5. Masukkan tempe ke dalam adonan kemudian goreng tempe di api besar beberapa saat, tiriskan",
+        "6. Di dalam ulekan, masukkan bawang putih, cabai rawit hijau, cabai rawit merah garam dan MSG, ulek kasar kemudian pindahkan ke dalam mangkuk",
+        "7. Tambahkan kecap manis, perasan jeruk limau dan bawang merah goreng, aduk rata",
+        "8. Mendoan siap disajikan"
+      ],
+      "sumber": "https://youtu.be/faLhrTgIECY?feature=shared",
+      "gambar": "https://www.finnafood.com/blog/wp-content/uploads/2023/01/cara-membuat-tempe-mendoan.webp"
+    },
+    {
+      "id": 27,
+      "name": "Bubur Ayam",
+      "rasa_dominan": "Gurih",
+      "asal_daerah": "",
+      "deskripsi": "Sejarah munculnya bubur ayam ke Indonesia dari berbagai sumber yang diperoleh berasal dari Tiongkok. Hidangan ini dibawa ke Indonesia oleh pedagang Tionghoa yang bermigrasi ke nusantara pada abad ke 16. \n\nAwalnya bubur ayam hanya di sajikan pada masyarakat Tionghoa namun seiiring perkembangannya mulai di kenalkan ke masayarakat pribumi dan akhirnya populer dan cocok di lidah masayarakat Indonesia hingga sekarang. \n\nAwalnya penyajian bubur ayam sangat sederhana, hanya bubur nasi ditambah suwiran ayam dan sambal. Namun seiring perkembangan dan inovasi penjualnya, saat ini bubur ayam disajikan dengan aneka topping seperti sate telur puyuh, sate ati ampela, ada yang menambahkan cakwe juga aneka kerupuk yang menambah tampilan bubur ayam menggugah selera.",
+      "alat": [],
+      "bahan": {
+        "Bahan": [
+          "200 gram beras, cuci bersih",
+          "1 liter santan dari 1 1/2 butir kelapa",
+          "1 liter air kaldu",
+          "1 sdm garam",
+          "3 lembar daun salam"
+        ],
+        "Bahan ayam bumbu": [
+          "1 ekor ayam, rebus, ambil dagingnya, potong kotak-kotak",
+          "8 siung bawang putih, haluskan",
+          "5 sdm kecap manis 2 sdm kecap asin",
+          "2 sdt merica",
+          "1/2 sdt garam",
+          "150 ml air"
+        ],
+        "Pelengkap": [
+          "100 gram kacang kedelai, rendam, goreng",
+          "50 gram daun seledri, cincang halus",
+          "6 buah cakwe, potong-potong",
+          "100 gram kerupuk kanji, goreng",
+          "50 gram bawang goreng",
+          "Sambal cabai rawit"
+        ]
+      },
+      "cara_membuat": [
+        "1. Rebus beras bersama santan, air kaldu, garam, dan daun salam sampai mengental dan menjadi bubur.",
+        "2. Buat tumisan ayam: panaskan minyak goreng, tumis bawang putih sampai harum, masukkan ayam, tambahkan kecap manis, kecap asin, merica, dan garam, aduk rata, tuangi air. Masak sampai matang.",
+        "3. Sajikan bubur dengan tumisan ayam, kedelai, seledri, cakwe, bawang goreng, dan kerupuk serta sambal."
+      ],
+      "sumber": "https://www.kompas.com/food/read/2023/02/26/070300475/resep-bubur-ayam-gurih-hangat-untuk-sarapan?page=1",
+      "gambar": "https://asset.kompas.com/crops/J9i3gx83AaKCDJ-u5TIZk3-Yzv0=/0x10:1000x677/1200x800/data/photo/2021/07/29/61019f07ef1ac.jpg"
+    },
+    {
+      "id": 28,
+      "name": "Lumpia",
+      "rasa_dominan": "Asin",
+      "asal_daerah": "Semarang",
+      "deskripsi": "Lumpia menjadi makanan khas Semarang bermula dari perkawinan kuliner Tiongkok dan Jawa sejak ratusan lalu.\nSajian bercitarasa manis nan gurih berisi rebung, ayam, udang dan digulung kulit tipis berbahan dasar terigu ini menghiasi di setiap sudut ibu kota Provinsi Jawa Tengah, Semarang. Kudapan ini begitu populer dari dijajakan di kaki lima, restoran, hingga menjadi buah tangan khas kota ini.\n\nPenamaan lumpia atau lunpia berasal dari dialek Hokkian, “lun” atau “lum” berarti lunak dan “pia” artinya kue. Pada awalnya lumpia Semarang tidak digoreng, sehingga sesuai dengan makna lumpia, kue yang lunak.\n\nModifikasi ini terjadi ketika kuliner Tiongkok dan Jawa berpadu. Citarasa lumpia yang manis juga bagian dari penyesuaian lidah masyarakat setempat. Dirangkum dari banyak sumber, makanan khas kota Semarang ini hadir pertama kali pada abad ke 19 dan merupakan salah satu contoh perpaduan budaya asli Tiong Hoa-Jawa yang serasi dalam cita rasa.",
+      "alat": [
+        "1. Wajan",
+        "2. Spatula / Sutil",
+        "3. Pisau",
+        "4. Talenan",
+        "5. Mangkuk / Wadah",
+        "6. Sendok / Garpu",
+        "7. Piring datar / Alas gulung",
+        "8. Saringan minyak atau alas tisu"
+      ],
+      "bahan": {
+        "Bahan": [
+          "15 lembar kulit lumpia",
+          "Bahan isian lumpia :",
+          "500 gram rebung (potong tipis lalu rebus dahulu beri daun salam dan jahe)",
+          "100 gram daging ayam (cincang halus)",
+          "100 gram udang (cincang halus)",
+          "2 butir telur",
+          "300 ml air"
+        ],
+        "Bumbu isian lumpia": [
+          "5 siung bawang putih",
+          "2 sdt kaldu ayam bubuk",
+          "1 sdt kecap asin",
+          "1 sdm gula pasir",
+          "3 sdm kecap manis"
+        ],
+        "Resep saus coklat": [
+          "200 ml air",
+          "2 siung bawang putih (geprek)",
+          "50 gram gula merah/aren",
+          "1 buah bunga lawang",
+          "1/2 sdt garam",
+          "1 sdm tepung tapioka (larutkan dengan air)"
+        ],
+        "Pelengkap": ["cabai rawit hijau", "daun bawang merah muda"]
+      },
+      "cara_membuat": {
+        "Menyiapkan Bahan Isian": [
+          "Rendam ebi (udang kering) hingga lunak, lalu haluskan.",
+          "Siapkan telur, ayam, dan udang sebagai bahan utama isian."
+        ],
+        "Memasak Isian": [
+          "Tumis ebi hingga harum.",
+          "Masukkan telur dan orak-arik hingga matang.",
+          "Tambahkan ayam dan udang yang telah dipotong kecil-kecil.",
+          "Masak hingga semua bahan matang dan tercampur rata."
+        ],
+        "Membungkus Lumpia": [
+          "Ambil selembar kulit lumpia.",
+          "Letakkan isian di tengah kulit lumpia.",
+          "Lipat sisi kiri dan kanan kulit ke arah tengah, lalu gulung dari bawah ke atas hingga membentuk silinder.",
+          "Rekatkan ujung kulit dengan larutan tepung agar tidak terbuka saat digoreng."
+        ],
+        "Menggoreng Lumpia": [
+          "Panaskan minyak dalam wajan.",
+          "Goreng lumpia hingga berwarna keemasan dan renyah.",
+          "Angkat dan tiriskan."
+        ],
+        "Penyajian": [
+          "Sajikan lumpia hangat dengan saus khas lumpia Semarang atau saus sambal sesuai selera."
+        ]
+      },
+      "sumber": "https://youtu.be/1nWAMTgvjP4?feature=shared",
+      "gambar": "https://www.masakapahariini.com/wp-content/uploads/2022/03/cara-membuat-lumpia-a-la-resto.jpg"
+    },
+    {
+      "id": 29,
+      "name": "Martabak Telur",
+      "rasa_dominan": "Asin",
+      "asal_daerah": "Tegal",
+      "deskripsi": "Martabak telur merupakan panganan dengan rasa gurih. Sayur, daging, dan berbagai bumbu lainnya digabung menjadi satu dalam sebuah kulit adonan padat yang ditipiskan secukupnya, kemudian dilipat, kemudian digoreng hingga matang. Panganan ini cukup digemari di Indonesia dan banyak dijual mulai dari tempat makan hingga di gerobak pinggir jalan.\n\nKisah penciptaan martabak telur konon berasal dari persahabatan seorang pemuda dari Semarang, Jawa Tengah, yang berdagang dan bertemu dengan teman baru dari India pada 1930. Teman yang berasal dari India tersebut sangat pintar memasak, salah satunya adalah martabak telur.\n\nPanganan tersebut dimasak dari terigu. Hingga kemudian mereka membuat sebuah martabak telur versi Indonesia. Tentu saja isinya sudah disesuaikan dengan lidah orang Indonesia pula –terutama Jawa.",
+      "alat": [
+        "1. Mangkuk besar",
+        "2. Wadah",
+        "3. Wajan atau teflon",
+        "4. Spatula / sutil",
+        "5. Pisau",
+        "6. Talenan",
+        "7. Wajan kecil",
+        "8. Sendok sayur",
+        "9. Rolling pin / botol kaca"
+      ],
+      "bahan": {
+        "Bahan Kulit": [
+          "200 gram tepung terigu protein tinggi",
+          "1/4 sendok teh garam",
+          "140 ml air",
+          "30 gram minyak goreng",
+          "500 ml minyak goreng untuk merendam",
+          "500 ml minyak untuk menggoreng"
+        ],
+        "Bahan Isian": [
+          "500 gram daging giling",
+          "100 gram ayam giling",
+          "3 siung bawang putih, iris tipis",
+          "6 butir bawang merah, iris tipis",
+          "2 buah cabai merah, cincang halus",
+          "2 sendok teh kari bubuk",
+          "1 sendok teh garam",
+          "1/4 sendok teh merica bubuk",
+          "1/2 sendok teh gula pasir",
+          "1 batang daun bawang, diiris halus",
+          "1 sendok makan minyak untuk menumis"
+        ],
+        "Bahan Campuran per Porsi (aduk rata)": [
+          "25 gram daun bawang, iris halus",
+          "1 butir telur bebek, kocok lepas",
+          "1 butir telur ayam, kocok lepas",
+          "1/2 buah (50 gram) bawang bombay, cincang halus",
+          "1/4 sendok teh garam",
+          "1/8 sendok teh merica bubuk",
+          "50 gram bahan tumisan daging"
+        ]
+      },
+      "cara_membuat": [
+        "1. Buat kulit martabak terlebih dahulu, campur tepung terigu dan garam. Tuang air sedikit demi sedikit sambil diuleni sampai kalis. Tambahkan minyak goreng. Uleni sampai elastis. Baca juga: Resep Martabak Manis Rumahan, Pakai Takaran Sendok",
+        "2. Timbang masing-masing 75 gram. Bulatkan. rendam dalam minyak goreng selama dua jam.",
+        "3. Buat isian martabak, tumis bawang putih, bawang merah, dan cabai merah sampai harum. Tambahkan daging giling dan ayam giling. Aduk sampai berubah warna.",
+        "4. Masukkan kari bubuk, garam, merica bubuk, dan gula pasir. Aduk sampai meresap. Tambahkan daun bawang. Aduk rata. Sisihkan.",
+        "5. Pipihkan kulit dan giling tipis. Sisihkan. Baca juga: Resep Kue Pukis Rumahan buat Sarapan, Bisa Tanpa Cetakan",
+        "6. Panaskan minyak dalam teflon. Letakkan selembar kulit. Beri campuran isi. Lipat. Goreng dengan sedikit minyak (jangan sampai terendam) sambil disiram-siram minyak sampai matang.",
+        "7. Martabak telur siap disajikan"
+      ],
+      "sumber": "https://www.kompas.com/food/read/2020/12/08/191200875/resep-martabak-telur-teflon-camilan-malam-yang-lezat",
+      "gambar": "https://asset-2.tstatic.net/tribunnews/foto/bank/images/martabak-telur-kulit-lumpia-yang-mudah-dibuat-di-rumah.jpg"
+    },
+    {
+      "id": 30,
+      "name": "Lemper",
+      "rasa_dominan": "Gurih",
+      "asal_daerah": "Jawa",
+      "deskripsi": "Lemper merupakan salah satu jenis jajanan tradisional Indonesia yang sudah ada sejak lama dan diyakini berasal dari Jawa. Awalnya, lemper dibuat dengan ketan putih yang direbus dan dibungkus dengan daging ayam yang dimasak dengan santan dan rempah-rempah seperti daun salam, serai, dan bumbu lainnya. \n\nLemper awalnya dibungkus dengan daun pisang untuk menjaga kelembapannya dan memberikan aroma alami.Kini, lemper telah mengalami berbagai modifikasi dan variasi, tetapi tetap mempertahankan cita rasanya yang khas.\n\nLemper ayam sering disajikan dalam acara-acara spesial seperti lebaran atau perayaan keluarga. Rasanya yang gurih dan teksturnya yang lembut membuatnya disukai oleh banyak orang dari segala usia.",
+      "alat": [
+        "1. Mangkuk",
+        "2. Wajan",
+        "3. Pisau",
+        "4. Talenan",
+        "5. Pengukus",
+        "6. Lidi",
+        "7. Sendok",
+        "8.Cobek (untuk menghaluskan bumbu)"
+      ],
+      "bahan": {
+        "Bahan Ketan": ["1/2 kg beras ketan", "1 sdt garam", "1 saset santan instan"],
+        "Bahan Isian Ayam": [
+          "250 gr dada ayam fillet (direbus lalu disuwir)",
+          "3 siung bawang merah",
+          "3 siung bawang putih",
+          "3 lembar daun jeruk",
+          "1 batang serai",
+          "1 sdt ketumbar",
+          "2 buah kemiri",
+          "1 saset santan instan",
+          "1/2 sdt garam",
+          "1 sdt kaldu ayam",
+          "1/2 sdt merica",
+          "1 1/2 sdt gula pasir"
+        ]
+      },
+      "cara_membuat": {
+        "Menyiapkan Ketan": [
+          "Cuci bersih beras ketan, lalu rendam dalam air dingin selama 3 jam.",
+          "Tiriskan ketan, kemudian kukus selama 30 menit hingga setengah matang.",
+          "Didihkan santan bersama garam dan daun pandan.",
+          "Tuangkan santan ke dalam ketan, aduk hingga santan terserap.",
+          "Kukus kembali ketan selama 30 menit hingga matang."
+        ],
+        "Menyiapkan Isian Ayam": [
+          "Haluskan bawang merah, bawang putih, kemiri, ketumbar, merica, garam, dan gula pasir.",
+          "Tumis bumbu halus hingga harum.",
+          "Tambahkan daun salam, daun jeruk, lengkuas, dan serai, aduk rata.",
+          "Masukkan ayam suwir dan santan, masak hingga bumbu meresap dan isian mengering."
+        ],
+        "Membentuk Lemper": [
+          "Ambil selembar daun pisang, letakkan sejumput ketan, pipihkan.",
+          "Tambahkan isian ayam di tengah ketan, lalu tutup dengan ketan dan bentuk lonjong.",
+          "Bungkus dengan daun pisang dan sematkan lidi."
+        ],
+        "Penyajian": ["Lemper siap disajikan."]
+      },
+      "sumber": "https://youtu.be/K2tDjNKyfX4?feature=shared",
+      "gambar": "https://asset.kompas.com/crops/GLtNe54eeZHCZkBFnlO6-zKm7bU=/0x292:1000x959/1200x800/data/photo/2021/08/02/61081f8d3a20b.jpg"
+    }
+  ]
+}
