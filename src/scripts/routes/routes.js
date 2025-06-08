@@ -11,6 +11,8 @@ import AccountSettingsPage from "../pages/accountSettings/account-settings-page"
 import AboutPage from "../pages/about/about-page";
 import RecipePage from "../pages/recipe/recipe-page";
 import DetailPage from "../pages/detail/detail-page";
+import PrivacyPage from "../pages/privacy/privacy-page";
+import TermsPage from "../pages/terms/terms-page";
 import NotFoundPage from "../pages/notfound/notfound-page";
 
 const routes = {
@@ -21,6 +23,8 @@ const routes = {
   "/about": new AboutPage(),
   "/recipe": new RecipePage(),
   "/detail": new DetailPage(),
+  "/privacy": new PrivacyPage(),
+  "/terms": new TermsPage(),
 
   // authentication routes
   "/login": new LoginPage(),

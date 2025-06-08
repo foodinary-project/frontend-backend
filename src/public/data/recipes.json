@@ -2,7 +2,7 @@
   "recipes": [
     {
       "id": 1,
-      "name": "Bakso Sapi",
+      "name": "bakso",
       "rasa_dominan": "Asin",
       "asal_daerah": "Solo, Malang, Wonogiri",
       "deskripsi": "Bakso sapi adalah makanan khas Indonesia yang dibuat dari daging sapi giling, bumbu, dan tepung tapioka. Hidangan ini memiliki tekstur kenyal dan cita rasa gurih, cocok disajikan dengan kuah hangat, mi, dan pelengkap lainnya.",
@@ -35,7 +35,7 @@
     },
     {
       "id": 2,
-      "name": "Ayam Goreng Lengkuas",
+      "name": "Ayam Goreng Lengkuas Kremes",
       "rasa_dominan": "Gurih",
       "asal_daerah": "Jawa Tengah",
       "deskripsi": "Ayam Goreng Lengkuas adalah ayam khas Indonesia yang direbus dengan bumbu rempah dan parutan lengkuas, lalu digoreng hingga renyah. Ciri utamanya adalah aroma lengkuas yang kuat dan bumbunya yang kriuk.",
@@ -760,7 +760,7 @@
     },
     {
       "id": 19,
-      "name": "Soto Ayam Kuning",
+      "name": "Soto",
       "rasa_dominan": "Gurih",
       "asal_daerah": "Jawa Timur",
       "deskripsi": "Soto ayam kuning memiliki cita rasa gurih dan segar yang menggugah selera. Isian berupa ayam suwir dan sayuran menjadikannya hidangan yang mengenyangkan, apalagi saat disantap bersama nasi hangat. Warna kuning pada kuah berasal dari kunyit, yang tak hanya memperkaya aroma dan rasa kaldu, tetapi juga bermanfaat untuk meningkatkan daya tahan tubuh.",
@@ -1115,7 +1115,7 @@
     },
     {
       "id": 28,
-      "name": "Lumpia Semarang",
+      "name": "Lumpia",
       "rasa_dominan": "Manis, Gurih",
       "asal_daerah": "Semarang",
       "deskripsi": "Lumpia Semarang adalah makanan khas hasil akulturasi budaya Tionghoa-Jawa. Berisi rebung, ayam dan udang dengan saus coklat khas yang manis gurih.",
@@ -1218,7 +1218,7 @@
     },
     {
       "id": 30,
-      "name": "Lemper Ayam",
+      "name": "Lemper",
       "rasa_dominan": "Gurih",
       "asal_daerah": "Jawa",
       "deskripsi": "Lemper adalah jajanan tradisional Jawa berisi ayam suwir bumbu yang dibungkus ketan. Biasanya dibungkus daun pisang dan sering disajikan dalam acara spesial.",
