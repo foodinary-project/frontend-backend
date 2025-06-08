@@ -1,6 +1,7 @@
 import { getLogout, checkAuthenticatedRoute } from '../../utils/auth';
 import { getMyUserInfo } from '../../data/api';
 import Swal from 'sweetalert2';
+import FavoritePagePresenter from './favorite-page-presenter';
 
 export default class FavoritesPage {
   async render() {
@@ -61,26 +62,13 @@ export default class FavoritesPage {
               </p>
             </div>
             <div class="db-header-right">
-              <div class="db-user-greeting" id="user-greeting">
-              </div>
+              <div class="db-user-greeting" id="user-greeting"></div>
               <img src="images/users.jpeg" alt="User Avatar" class="db-user-avatar" id="user-avatar" role="button" aria-label="Toggle sidebar">
             </div>
           </header>
 
           <section class="db-dashboard-overview">
-            <div class="db-overview-card">
-              <img src="images/food1.png" alt="Food Image" class="db-overview-image">
-              <div class="db-overview-content">
-                <p class="db-overview-title">Batagor</p>
-                <p class="db-overview-details">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry's standard dummy text.
-                </p>
-                <button class="db-delete-button" title="Delete Favorite">
-                  View Details
-                </button>
-              </div>
-            </div>
+            <!-- Favorite cards akan di-render presenter di sini -->
           </section>
         </main>
       </div>
@@ -157,27 +145,28 @@ export default class FavoritesPage {
       overlay.classList.remove('active');
     };
 
-    // Function to manage avatar clickability based on screen size
     const manageAvatarClick = () => {
       const isMobile = window.matchMedia('(max-width: 768px)').matches;
-      // Remove existing listeners to prevent duplicates
       avatar.removeEventListener('click', toggleSidebar);
       overlay.removeEventListener('click', closeSidebar);
 
       if (isMobile && avatar && sidebar) {
-        avatar.style.cursor = 'pointer'; // Ensure cursor indicates clickability
+        avatar.style.cursor = 'pointer';
         avatar.addEventListener('click', toggleSidebar);
         overlay.addEventListener('click', closeSidebar);
       } else {
-        avatar.style.cursor = 'default'; // Non-clickable on desktop
-        closeSidebar(); // Ensure sidebar is closed if resizing to desktop
+        avatar.style.cursor = 'default';
+        closeSidebar();
       }
     };
 
-    // Initial check
     manageAvatarClick();
-
-    // Add resize listener to handle screen size changes
     window.addEventListener('resize', manageAvatarClick);
+
+    // Init presenter untuk render daftar favorite
+    const favoritePresenter = new FavoritePagePresenter({
+      containerSelector: '.db-dashboard-overview',
+    });
+    await favoritePresenter.init();
   }
 }

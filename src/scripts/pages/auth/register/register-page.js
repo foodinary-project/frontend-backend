@@ -3,16 +3,16 @@ import * as FoodinaryAPI from '../../../data/api';
 
 export default class LoginPage {
   #presenter = null;
+
   async render() {
-    // Gunakan backtick (`) untuk template literal dan tambahkan return
     return `
-          <section class="container login-container">
-            <div id="error-popup" class="popup hidden">
-      <div class="popup-content">
-        <p id="popup-message"></p>
-        <button id="close-popup" class="button-popup">OK</button>
-      </div>
-    </div>
+      <section class="container login-container">
+        <div id="error-popup" class="popup hidden">
+          <div class="popup-content">
+            <p id="popup-message"></p>
+            <button id="close-popup" class="button-popup">OK</button>
+          </div>
+        </div>
 
         <div class="form-section">
           <div class="form-content">
@@ -31,32 +31,32 @@ export default class LoginPage {
               <div class="form-group">
                 <label for="password">Password</label>
                 <div class="password-wrapper">
-  <input type="password" id="password" placeholder="Password" required />
-  <i id="toggle-password" class="fa-solid fa-eye toggle-password"></i>
-</div>
-
+                  <input type="password" id="password" placeholder="Password" required />
+                  <i class="fa-solid fa-eye toggle-password" data-toggle="password"></i>
+                </div>
               </div>
-                    <div class="form-group">
-                        <label for="confirm-password">Confirm Password</label>
-                        
-  <input type="password" id="confirm-password" placeholder="Confirm your password" />
-  
-                    </div>
-                    <div class="checkbox-group">
-                        <label>
-                            <input type="checkbox" />
-                            <span>I’m not a robot</span>
-                        </label>
-                    </div>
+              <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <div class="password-wrapper">
+                  <input type="password" id="confirm-password" placeholder="Confirm your password" required />
+                  <i class="fa-solid fa-eye toggle-password" data-toggle="confirm-password"></i>
+                </div>
+              </div>
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox" />
+                  <span>I’m not a robot</span>
+                </label>
+              </div>
               <button type="submit">Register</button>
             </form>
 
             <p class="signup-text">
-              Already have account?
+              Already have an account?
               <a href="#/login">Log In</a>
             </p>
-            
-                                    <p class="signup-text">
+
+            <p class="signup-text">
               Back to homepage?
               <a href="#/">Go back to Home</a>
             </p>
@@ -71,17 +71,17 @@ export default class LoginPage {
   }
 
   async afterRender() {
-
-    const togglePassword = document.getElementById('toggle-password');
-const passwordInput = document.getElementById('password');
-
-togglePassword.addEventListener('click', () => {
-  const isPassword = passwordInput.type === 'password';
-  passwordInput.type = isPassword ? 'text' : 'password';
-
-  togglePassword.classList.toggle('fa-eye');
-  togglePassword.classList.toggle('fa-eye-slash');
-});
+    // Toggle visibility for all password fields
+    document.querySelectorAll('.toggle-password').forEach((icon) => {
+      icon.addEventListener('click', () => {
+        const inputId = icon.getAttribute('data-toggle');
+        const input = document.getElementById(inputId);
+        const isPassword = input.type === 'password';
+        input.type = isPassword ? 'text' : 'password';
+        icon.classList.toggle('fa-eye');
+        icon.classList.toggle('fa-eye-slash');
+      });
+    });
 
     this.#presenter = new RegisterPresenter({
       view: this,
@@ -119,10 +119,7 @@ togglePassword.addEventListener('click', () => {
   }
 
   registeredSuccessfully(message) {
-    // Simpan pesan sukses ke localStorage
     localStorage.setItem('registrationSuccess', 'Registrasi berhasil! Silakan login.');
-
-    // Redirect ke halaman login
     location.hash = '/login';
   }
 
