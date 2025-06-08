@@ -14,13 +14,18 @@ export default class AboutPage {
                 <img src="/images/logo.png" alt="Foodinary Logo">
             </a>
         </div>
-        <div class="nav-menu">
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </div>
+        <div class="nav-menu" id="nav-menu">
             <div class="nav-item"><a href="/">Home</a></div>
             <div class="nav-item"><a href="#/recipe">Recipe</a></div>
             <div class="nav-item"><a href="#/cek-resep">Check Recipe</a></div>
             <div class="nav-item active"><a href="#/about">About</a></div>
         </div>
-          <div class="nav-buttons">
+          <div class="nav-buttons" id="nav-buttons">
             ${isLoggedIn
         ? `<a href="#/dashboard" class="btn-primary">Dashboard</a>`
         : `
@@ -194,8 +199,42 @@ export default class AboutPage {
         </div>
       </footer>
     `;
-  }
-  async afterRender() {
-    // Dibiarkan kosong karena belum ada interaksi JS
+  }  async afterRender() {
+    // Hamburger menu functionality
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navMenu = document.getElementById('nav-menu');
+    const navButtons = document.getElementById('nav-buttons');
+
+    if (hamburgerMenu) {
+      // Toggle menu visibility on hamburger click
+      hamburgerMenu.addEventListener('click', (event) => {
+        event.stopPropagation(); // Prevent event from bubbling up
+        navMenu.classList.toggle('active');
+        navButtons.classList.toggle('active');
+        hamburgerMenu.classList.toggle('active');
+      });
+
+      // Close menu when clicking anywhere outside
+      document.addEventListener('click', (event) => {
+        const isClickInsideNav = event.target.closest('.nav-container');
+        if (!isClickInsideNav && navMenu.classList.contains('active')) {
+          navMenu.classList.remove('active');
+          navButtons.classList.remove('active');
+          hamburgerMenu.classList.remove('active');
+        }
+      });
+
+      // Close menu when clicking on a nav link (after content is loaded)
+      setTimeout(() => {
+        const navLinks = document.querySelectorAll('.nav-item a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            navButtons.classList.remove('active');
+            hamburgerMenu.classList.remove('active');
+          });
+        });
+      }, 100);
+    }
   }
 }

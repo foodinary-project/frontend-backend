@@ -1,110 +1,257 @@
+/*======================================================
+  RESPONSIVE STYLESHEET
+  This file contains all responsive styling for the website.
+  All media queries have been moved here from styles.css.
+  Organized by component/page section.
+========================================================*/
+
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
-/* ========================================
-   RESPONSIVE DESIGN FOR MOBILE DEVICES
-   ======================================== */
+/*------------------------------------------------------
+  NAVIGATION & HEADER RESPONSIVE STYLES
+--------------------------------------------------------*/
 
-/* Tablet/Medium devices (max-width: 992px) */
-@media (max-width: 992px) {
-  /* Navigation adjustments */
-  .nav-container {
-    padding: 0 40px;
-  }
-
-  .hero-container,
-  .section-container,
-  .section-container-2 {
-    padding: 0 40px;
-  }
-
-  /* Hero section adjustments */
-  .hero-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 40px;
-  }
-
-  .hero-title {
-    font-size: 48px;
-  }
-
-  .hero-description {
-    margin: 0 auto 40px;
-  }
-
-  .hero-images {
-    height: 400px;
-    margin-top: 40px;
-  }
-
-  /* Cuisine grid adjustments */
-  .cuisine-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-
-  /* Footer adjustments */
-  .footer-container {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  /* Dashboard stats container */
-  .db-stats-container {
-    flex-direction: column;
-  }
-
-  .db-stat-card {
-    width: 100%;
-  }
-
-  /* Recipe cards */
-  .card-wrapper {
-    flex: 1 1 calc(50% - 24px);
-  }
-}
-
-/* Mobile devices (max-width: 768px) */
 @media (max-width: 768px) {
-  /* Navigation mobile menu */
-  .mobile-menu-toggle {
-    display: block;
+  /* Navigation Container */
+  .nav-container {
+    padding: 0 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
   }
 
+  /* Hide desktop navigation */
   .nav-menu {
-    position: fixed;
-    top: 85px;
-    left: 0;
-    right: 0;
-    background: white;
-    flex-direction: column;
-    padding: 20px;
-    gap: 20px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    transform: translateY(-150%);
-    transition: transform 0.3s ease;
     display: none;
   }
 
-  .nav-menu.active {
-    transform: translateY(0);
-    display: flex;
-  }
-
   .nav-buttons {
+    display: none;
+  }
+
+  /* Show hamburger menu */
+  .hamburger-menu {
+    display: flex !important;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 32px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    margin-left: auto;
+    position: relative;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+
+  .hamburger-menu:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .hamburger-line {
     width: 100%;
-    gap: 10px;
+    height: 2px;
+    background-color: #000000;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
   }
 
-  .nav-container {
-    padding: 0 20px;
+  /* Hamburger Animation */
+  .hamburger-menu.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
   }
 
-  /* Hero section mobile */
+  .hamburger-menu.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  .hamburger-menu.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  } /* Navigation Menu - Mobile */
+  .nav-menu.active {
+    display: flex !important;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.95));
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    align-items: center;
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.12),
+      0 4px 16px rgba(0, 0, 0, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transform: translateY(0);
+    z-index: 999;
+    opacity: 1;
+    visibility: visible;
+    padding: 2px 0 2px;
+    gap: 0.2px;
+    margin-bottom: 3px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    animation: slideDownFade 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+
+  @keyframes slideDownFade {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .nav-buttons.active {
+    display: flex !important;
+    position: fixed;
+    margin-top: 28px;
+    top: calc(80px + 200px); /* Adjust based on nav-menu height */
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.95));
+    backdrop-filter: blur(20px);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.12),
+      0 4px 16px rgba(0, 0, 0, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transform: translateY(0);
+    z-index: 999;
+    opacity: 1;
+    visibility: visible;
+    padding: 20px 0 40px;
+    gap: 20px;
+    border-top: 1px solid rgba(148, 163, 184, 0.2);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    animation: slideUpFade 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) 0.1s backwards;
+  }
+
+  @keyframes slideUpFade {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .nav-item {
+    width: 100%;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    margin: 2px 16px;
+  }
+
+  .nav-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(220, 38, 38, 0.1), transparent);
+    transition: left 0.6s ease;
+  }
+
+  .nav-item:hover::before {
+    left: 100%;
+  }
+
+  .nav-item:hover {
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.08), rgba(248, 113, 113, 0.05));
+    box-shadow:
+      0 4px 20px rgba(220, 38, 38, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px) scale(1.02);
+    border: 1px solid rgba(220, 38, 38, 0.2);
+  }
+
+  .nav-item:active {
+    transform: translateY(0) scale(1);
+    box-shadow:
+      0 2px 10px rgba(220, 38, 38, 0.2),
+      inset 0 2px 4px rgba(220, 38, 38, 0.1);
+  }
+  .nav-item a {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+    text-decoration: none;
+    padding: 16px 24px;
+    display: block;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    letter-spacing: 0.025em;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-item a::after {
+    content: "";
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #dc2626, #b91c1c);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+
+  .nav-item:hover a {
+    color: #dc2626;
+    transform: translateY(-1px);
+    text-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
+  }
+
+  .nav-item:hover a::after {
+    width: 60%;
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.4);
+  }
+
+  .nav-item:active a {
+    transform: translateY(0);
+    color: #b91c1c;
+  }
+
+  /* Navigation Fixed Position */
+  .navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    margin-top: 85px;
+    padding: 40px 0;
+  }
+
   .hero-container {
     grid-template-columns: 1fr;
     padding: 0 20px;
     gap: 40px;
-    text-align: center;
   }
 
   .hero-title {
@@ -112,559 +259,1080 @@
     margin-bottom: 30px;
   }
 
+  .hero-title span {
+    margin-bottom: -20px;
+  }
+
   .hero-description {
     font-size: 18px;
+    max-width: 100%;
+  }
+  .hero-images {
+    display: none; /* Hide images on mobile */
+  }
+
+  .food-image,
+  .overlay {
+    border-radius: 16px;
+  }
+
+  .food-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 
   .hero-button {
-    padding: 16px 32px;
-    font-size: 18px;
+    padding: 15px 30px;
+    font-size: 16px;
   }
 
-  /* Section containers */
-  .section-container,
-  .section-container-2 {
-    padding: 0 20px;
-  }
-
+  /* Popular Cuisine Section */
   .section-title {
-    font-size: 32px;
-    margin-left: 20px;
+    font-size: 30px;
+    margin-left: 0;
+    text-align: center;
   }
 
-  /* Cuisine grid mobile */
   .cuisine-grid {
-    margin-left: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: 1fr;
+    margin-left: 0;
+    margin-right: 0;
     gap: 20px;
   }
 
-  /* Dietary grid mobile */
-  .dietary-grid {
-    grid-template-columns: 1fr 1fr;
+  .cuisine-image {
+    height: 200px;
+  }
+
+  .cuisine-info {
+    padding: 20px;
+  }
+
+  .cuisine-name {
+    font-size: 22px;
+  }
+
+  /* Foodinary Experience Section */
+  .foodinary-experience {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  .foodinary-left,
+  .foodinary-right {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .foodinary-right {
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .foodinary-title {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .foodinary-feature {
+    padding: 16px 20px;
+    font-size: 15px;
+    border-radius: 8px;
+    gap: 12px;
+    background-color: #faeceb;
+    margin-bottom: 8px;
+  }
+
+  .foodinary-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .foodinary-text {
+    line-height: 1.4;
+  }
+
+  .foodinary-badge {
+    font-size: 10px;
+    padding: 1px 6px;
+    margin-left: 6px;
+  }
+
+  .foodinary-soon {
+    opacity: 0.7;
+  }
+
+  /* Footer */
+  .footer-container {
+    padding: 0 20px;
+  }
+
+  .footer-menu {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-column {
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    margin: 5px 0;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+  }
+
+  .footer-column h4::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.2));
+    border-radius: 2px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .footer-legal {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 20px;
+  }
+
+  .footer-main {
+    text-align: center;
+  }
+
+  .footer-brand h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .footer-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-column h4 {
+    font-size: 16px;
+  }
+
+  .footer-links {
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+  }
+}
+
+/*------------------------------------------------------
+  SMALL SCREEN DEVICE STYLES
+--------------------------------------------------------*/
+/* Smaller Phones */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-images {
+    display: none; /* Ensure images are hidden on smaller screens */
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .cuisine-name {
+    font-size: 20px;
+  }
+
+  .btn-outline,
+  .btn-primary {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  #capture-btn {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  /* Upload section mobile styles */
+  .upload-section {
+    margin-top: 20px;
+    gap: 16px;
+    padding: 0 15px;
+  }
+
+  .upload-btn-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .upload-btn-group .btn-primary,
+  .upload-btn-group .custom-outline-btn {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  #drop-area {
+    width: 100%;
+    height: 180px;
+    font-size: 16px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .icon-upload {
+    font-size: 36px;
+    margin-bottom: 8px;
+  }
+
+  #preview-image,
+  #camera-stream {
+    width: 100% !important;
+    max-width: 280px;
+    height: auto !important;
+    margin-top: 8px;
+  }
+
+  #camera-canvas {
+    width: 100% !important;
+    max-width: 280px;
+    height: auto !important;
+  }
+
+  .selected-file-name {
+    font-size: 14px;
+    text-align: center;
+    word-break: break-word;
   }
 
   .dietary-section {
-    padding: 0 32px;
+    margin-top: 120px;
+    padding: 20px 15px;
   }
 
-  /* Tab wrapper mobile */
-  .tab-wrapper {
+  .dietary-title {
+    font-size: 22px;
+    text-align: center;
+    padding: 0 10px;
+    line-height: 1.3;
+  }
+
+  .dietary-title-desc {
+    font-size: 14px;
+    text-align: center;
+    padding: 0 10px;
+    margin-top: 10px;
+  }
+
+  .recipe-finder-upload-link {
+    text-align: center;
+    padding: 0 15px;
+    margin: 15px 0;
+  }
+
+  .recipe-finder-upload-link a {
+    font-size: 14px;
+  }
+
+  /* Foodinary Experience Section - Smaller Screens */
+  .foodinary-experience {
+    padding: 30px 15px;
+    gap: 25px;
+  }
+
+  .foodinary-right {
+    gap: 10px;
+  }
+
+  .foodinary-feature {
+    padding: 12px 16px;
+    font-size: 14px;
+    gap: 10px;
+    border-radius: 6px;
+  }
+
+  .foodinary-icon {
+    font-size: 16px;
+  }
+
+  .foodinary-title {
+    font-size: 24px;
+  }
+}
+
+/*------------------------------------------------------
+  RECIPE DETAIL RESPONSIVE STYLES
+--------------------------------------------------------*/
+/* Recipe Detail Mobile Responsive Styles */
+@media (max-width: 768px) {
+  /* Recipe Detail Page */
+  .recipe-detail-container {
+    margin: 4rem auto;
+    border-radius: 12px;
+  }
+
+  .recipe-detail-overlay {
+    padding: 2.5rem 1rem;
+  }
+
+  .recipe-detail-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .recipe-detail-meta {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .recipe-detail-origin {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .recipe-detail-content {
+    padding: 1.5rem;
+  }
+
+  .recipe-detail-section-title {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .recipe-detail-list,
+  .recipe-detail-steps {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .recipe-detail-list li,
+  .recipe-detail-steps li {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .recipe-detail-source {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Recipe Detail Page - Smaller Screens */
+  .recipe-detail-container {
+    margin: 2rem auto 3rem;
+    border-radius: 8px;
+  }
+
+  .recipe-detail-overlay {
+    padding: 2rem 0.75rem;
+  }
+
+  .recipe-detail-title {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .recipe-detail-meta {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .recipe-detail-origin {
+    font-size: 0.9rem;
+  }
+
+  .recipe-detail-content {
+    padding: 1rem;
+  }
+
+  .recipe-detail-section-title {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .recipe-detail-list,
+  .recipe-detail-steps {
+    padding: 0.8rem;
+  }
+
+  .recipe-detail-list li,
+  .recipe-detail-steps li {
+    font-size: 0.9rem;
+  }
+}
+
+/*------------------------------------------------------
+  RECIPE FINDER RESPONSIVE STYLES
+--------------------------------------------------------*/
+/* Recipe Finder Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .recipe-finder-container {
+    padding: 15px;
+    margin-top: 100px;
+  }
+
+  .recipe-finder-main-content {
     flex-direction: column;
-    align-items: center;
   }
 
-  /* Upload area mobile */
-  #drop-area {
+  .recipe-finder-sidebar {
+    flex: none;
+  }
+
+  .recipe-finder-recipes {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  .recipe-finder-filter-tabs {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  /* Search Box Mobile Responsive */
+  .recipe-finder-search-wrapper {
+    padding: 0 15px;
+    margin-bottom: 25px;
+  }
+
+  .recipe-finder-search-box {
     width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
   }
 
-  /* Footer mobile */
+  .recipe-finder-search-input {
+    padding: 14px 50px 14px 18px;
+    font-size: 16px;
+    border-radius: 30px;
+  }
+
+  .recipe-finder-search-btn {
+    right: 8px;
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Search Box - Smaller Screens */
+  .recipe-finder-search-wrapper {
+    padding: 0 10px;
+  }
+
+  .recipe-finder-search-input {
+    padding: 12px 45px 12px 16px;
+    font-size: 15px;
+  }
+
+  .recipe-finder-search-btn {
+    right: 6px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .recipe-finder-search-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/*------------------------------------------------------
+  FOOTER RESPONSIVE STYLES
+--------------------------------------------------------*/
+/* Footer Mobile Responsive Styles - Compact Version */
+@media (max-width: 768px) {
   .footer {
-    padding: 40px 0 20px;
+    padding: 30px 0 20px;
+    margin-top: 40px;
   }
 
   .footer-container {
-    grid-template-columns: 1fr;
+    gap: 20px;
     padding: 0 20px;
-    gap: 30px;
   }
 
   .footer-main {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 20px;
+    gap: 16px;
+  }
+
+  .footer-brand {
+    order: 1;
+    align-items: center;
+    max-width: 100%;
   }
 
   .footer-brand h2 {
     font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+
+  .footer-tagline {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 8px;
   }
 
   .footer-social {
-    margin-top: 10px;
+    order: 2;
+    margin-top: 0;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .social-link {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .social-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   }
 
   .footer-menu {
-    grid-template-columns: 1fr;
+    order: 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     text-align: center;
-    gap: 20px;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .footer-column {
+    width: 100%;
+    padding: 12px 8px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .footer-column h4 {
-    margin-bottom: 12px;
+    font-size: 15px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 4px;
   }
 
-  .footer-links {
-    gap: 8px;
+  .footer-column h4::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+    border-radius: 1px;
+  }
+  .footer-column .footer-link {
+    font-size: 16px;
+    padding: 2px 0;
+    transition: all 0.3s ease;
+    display: block;
+    line-height: 1.3;
+  }
+  .footer-column .footer-link:hover {
+    transform: translateX(3px);
+  }
+
+  .footer-address {
+    font-size: 16px;
   }
 
   .footer-bottom {
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
     text-align: center;
     margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .footer-bottom p {
+    font-size: 16px;
+    order: 2;
+    margin: 0;
   }
 
   .footer-legal {
     justify-content: center;
     flex-wrap: wrap;
+    gap: 8px;
+    order: 1;
+  }
+  .legal-link {
+    font-size: 16px;
+    padding: 3px 8px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+  }
+
+  .legal-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px 0 15px;
+    margin-top: 30px;
+  }
+
+  .footer-container {
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  .footer-main {
     gap: 12px;
   }
-
-  .legal-link {
-    font-size: 12px;
-  }
-
-  /* Dashboard mobile */
-  .db-main-content {
-    margin-left: 0;
-    width: 100%;
-    padding: 20px;
-  }
-
-  .db-sidebar {
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-  }
-
-  .db-sidebar.active {
-    transform: translateX(0);
-  }
-
-  .db-dashboard-subtitle {
-    display: none;
-  }
-
-  /* Recipe finder mobile */
-  .recipe-finder-main-content {
-    flex-direction: column;
-  }
-
-  .recipe-finder-sidebar {
-    flex: none;
-  }
-
-  .recipe-finder-recipes {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
-
-  .recipe-finder-filter-tabs {
-    flex-wrap: wrap;
-    gap: 5px;
-  }
-
-  /* Form sections mobile */
-  .form-section {
-    padding: 1.5rem;
-    width: 100%;
-  }
-
-  .container {
-    margin-left: 0;
-    box-shadow: none;
-    width: 100%;
-  }
-
-  .image-section {
-    display: block;
-  }
-
-  /* About page mobile */
-  .about {
-    padding-top: 40px;
-  }
-
-  .judul-about {
-    font-size: 32px;
-  }
-
-  .what-is-foodinary {
-    font-size: 24px;
-  }
-
-  .paragraph-about {
-    padding: 30px 20px;
-    font-size: 16px;
-  }
-
-  .team-header h1 {
-    font-size: 24px;
-  }
-
-  .team-header p {
-    font-size: 14px;
-  }
-
-  /* About 2 section mobile */
-  .about2 {
-    padding: 0 20px;
-  }
-
-  .paragraph {
-    font-size: 16px;
-    padding: 30px 20px;
-    text-align: left;
-  }
-
-  /* Card wrapper mobile */
-  .card-wrapper {
-    flex: 1 1 100%;
-  }
-
-  /* Recipe detail modal mobile */
-  .recipe-detail-body {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 20px;
-  }
-
-  /* Foodinary experience mobile */
-  .foodinary-experience {
-    flex-direction: column;
-    padding: 40px 20px;
-    gap: 20px;
-  }
-
-  /* Utility classes for mobile */
-  .hidden-mobile {
-    display: none;
-  }
-
-  .visible-mobile {
-    display: block;
-  }
-}
-
-/* Small mobile devices (max-width: 576px) */
-@media (max-width: 576px) {
-  .nav-menu {
-    display: none;
-  }
-
-  .nav-buttons {
-    gap: 10px;
-  }
-
-  .btn-outline,
-  .btn-primary {
-    padding: 8px 16px;
-    font-size: 14px;
-  }
-
-  .hero-title {
-    font-size: 28px;
-  }
-
-  .hero-description {
-    font-size: 16px;
-  }
-
-  .section-title {
-    font-size: 24px;
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .cuisine-grid {
-    grid-template-columns: 1fr;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .dietary-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .tab-wrapper {
-    flex-direction: column;
-  }
-
-  /* Team section mobile */
-  .team-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Recipe finder mobile */
-  .recipe-finder-filter-tabs {
-    flex-wrap: wrap;
-  }
-
-  .recipe-finder-recipe-grid {
-    padding: 0 10px;
-  }
-
-  .recipe-finder-recipes {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Extra small mobile devices (max-width: 480px) */
-@media (max-width: 480px) {
-  /* Form adjustments */
-  .form-section {
-    padding: 1.5rem;
-  }
-
-  .form-content h2 {
-    font-size: 1.25rem;
-  }
-
-  button {
-    padding: 0.75rem;
-  }
-
-  /* Dashboard adjustments */
-  .db-dashboard-overview {
-    grid-template-columns: 1fr;
-  }
-
-  /* Footer adjustments */
   .footer-brand h2 {
     font-size: 18px;
+    line-height: 1.1;
+    margin-bottom: 2px;
+  }
+  .footer-tagline {
+    font-size: 14px;
+    margin-bottom: 6px;
   }
 
   .footer-social {
-    gap: 8px;
+    gap: 10px;
   }
 
   .social-link {
-    width: 30px;
-    height: 30px;
-    font-size: 16px;
-  }
-
-  .footer-menu {
-    gap: 16px;
-  }
-
-  .footer-column h4 {
-    font-size: 14px;
-  }
-
-  .footer-link {
+    width: 28px;
+    height: 28px;
     font-size: 12px;
   }
 
-  .footer-bottom p {
-    font-size: 11px;
+  .footer-menu {
+    gap: 8px;
+    grid-template-columns: 1fr;
   }
 
-  /* About page adjustments */
-  .judul-about {
-    font-size: 28px;
+  .footer-column {
+    padding: 8px 6px;
+    margin: 2px 0;
+  }
+  .footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 6px;
+    padding-bottom: 3px;
   }
 
-  .what-is-foodinary {
-    font-size: 20px;
+  .footer-column h4::after {
+    width: 15px;
   }
-
-  .paragraph {
+  .footer-column .footer-link {
     font-size: 14px;
-    padding: 20px 15px;
+    padding: 1px 0;
+    line-height: 1.2;
+  }
+
+  .footer-address {
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    gap: 8px;
+    margin-top: 15px;
+    padding-top: 10px;
+  }
+  .footer-bottom p {
+    font-size: 14px;
+  }
+
+  .footer-legal {
+    gap: 6px;
+  }
+  .legal-link {
+    font-size: 14px;
+    padding: 2px 6px;
   }
 }
 
-/* Existing responsive styles (kept for compatibility) */
-@media (max-width: 992px) {
-  .db-stats-container {
-    flex-direction: column;
-  }
-  .db-stat-card {
-    width: 100%;
-  }
-}
+/*------------------------------------------------------
+  LEGAL PAGES RESPONSIVE STYLES
+  Privacy Policy and Terms of Service responsive design
+--------------------------------------------------------*/
 
 @media (max-width: 768px) {
-  .recipe-finder-main-content {
-    flex-direction: column;
+  .privacy-container,
+  .terms-container {
+    padding: 100px 30px 60px;
+    max-width: 100%;
   }
 
-  .recipe-finder-sidebar {
-    flex: none;
+  .privacy-content,
+  .terms-content {
+    padding: 40px 30px;
+    border-radius: 15px;
+    margin: 0;
   }
 
-  .recipe-finder-recipes {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  .privacy-title,
+  .terms-title {
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 15px;
   }
 
-  .recipe-finder-filter-tabs {
-    flex-wrap: wrap;
-    gap: 5px;
-  }
-}
-
-@media (min-width: 768px) {
-  .form-section {
-    width: 50%;
-  }
-}
-
-@media (max-width: 768px) {
-  .hidden-mobile {
-    display: none;
+  .privacy-subtitle,
+  .terms-subtitle {
+    font-size: 14px;
+    margin-bottom: 25px;
   }
 
-  .visible-mobile {
-    display: block;
+  .privacy-divider,
+  .terms-divider {
+    width: 80px;
+    height: 3px;
+  }
+
+  .privacy-section-title,
+  .terms-section-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .terms-subsection-title {
+    font-size: 18px;
+    margin: 20px 0 12px;
+  }
+
+  .privacy-text,
+  .terms-text {
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: left;
+  }
+
+  .privacy-list li,
+  .terms-list li {
+    font-size: 15px;
+    padding-left: 25px;
+    margin-bottom: 10px;
+  }
+
+  .privacy-contact,
+  .terms-contact {
+    padding: 20px;
+    margin-top: 15px;
+  }
+
+  .privacy-contact p,
+  .terms-contact p {
+    font-size: 15px;
+  }
+
+  .legal-scroll-top {
+    width: 45px;
+    height: 45px;
+    bottom: 25px;
+    right: 25px;
+    font-size: 18px;
+  }
+
+  /* Hover effects adjustment for touch devices */
+  .privacy-section:hover,
+  .terms-section:hover {
+    background: none;
+    padding: 0;
+    margin: 0 0 40px;
   }
 }
 
 @media (max-width: 480px) {
-  .form-section {
-    padding: 1.5rem;
+  .privacy-container,
+  .terms-container {
+    padding: 90px 20px 50px;
   }
 
-  .form-content h2 {
-    font-size: 1.25rem;
+  .privacy-content,
+  .terms-content {
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   }
 
-  button {
-    padding: 0.75rem;
+  .privacy-title,
+  .terms-title {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .privacy-subtitle,
+  .terms-subtitle {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .privacy-divider,
+  .terms-divider {
+    width: 60px;
+    height: 3px;
+  }
+
+  .privacy-section,
+  .terms-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+  }
+
+  .privacy-section-title,
+  .terms-section-title {
+    font-size: 18px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+  }
+
+  .terms-subsection-title {
+    font-size: 16px;
+    margin: 18px 0 10px;
+  }
+
+  .privacy-text,
+  .terms-text {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  .privacy-list li,
+  .terms-list li {
+    font-size: 14px;
+    padding-left: 22px;
+    margin-bottom: 8px;
+    line-height: 1.6;
+  }
+
+  .privacy-list li::before,
+  .terms-list li::before {
+    font-size: 16px;
+    left: 8px;
+  }
+
+  .privacy-contact,
+  .terms-contact {
+    padding: 18px;
+    border-radius: 10px;
+  }
+
+  .privacy-contact p,
+  .terms-contact p {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .privacy-footer,
+  .terms-footer {
+    margin-top: 40px;
+    padding-top: 25px;
+  }
+
+  .privacy-footer-text,
+  .terms-footer-text {
+    font-size: 13px;
+  }
+
+  .legal-scroll-top {
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 16px;
   }
 }
 
-/* About page responsive */
-@media (max-width: 768px) {
-  .about {
-    padding-top: 40px;
+@media (max-width: 320px) {
+  .privacy-container,
+  .terms-container {
+    padding: 85px 15px 40px;
   }
 
-  .judul-about {
-    font-size: 32px;
+  .privacy-content,
+  .terms-content {
+    padding: 25px 15px;
+    border-radius: 10px;
   }
 
-  .what-is-foodinary {
+  .privacy-title,
+  .terms-title {
     font-size: 24px;
+    margin-bottom: 10px;
   }
 
-  .paragraph-about {
-    padding: 30px 20px;
+  .privacy-subtitle,
+  .terms-subtitle {
+    font-size: 12px;
+  }
+
+  .privacy-section-title,
+  .terms-section-title {
     font-size: 16px;
   }
 
-  .team-header h1 {
+  .terms-subsection-title {
+    font-size: 15px;
+  }
+
+  .privacy-text,
+  .terms-text,
+  .privacy-list li,
+  .terms-list li {
+    font-size: 13px;
+  }
+
+  .privacy-contact,
+  .terms-contact {
+    padding: 15px;
+  }
+
+  .privacy-contact p,
+  .terms-contact p {
+    font-size: 13px;
+  }
+}
+
+/* Landscape phone adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .privacy-container,
+  .terms-container {
+    padding: 70px 20px 40px;
+  }
+
+  .privacy-title,
+  .terms-title {
     font-size: 24px;
   }
 
-  .team-header p {
-    font-size: 14px;
+  .legal-scroll-top {
+    bottom: 15px;
+    right: 15px;
   }
 }
 
-/* Dashboard specific responsive */
-@media (max-width: 992px) {
-  .db-stats-container {
-    flex-direction: column;
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .privacy-divider,
+  .terms-divider {
+    background: linear-gradient(90deg, #800e13, #640d14);
   }
 
-  .db-stat-card {
-    width: 100%;
+  .legal-scroll-top {
+    box-shadow: 0 4px 15px rgba(128, 14, 19, 0.4);
   }
 }
 
+/*------------------------------------------------------
+  GENERAL LAYOUT RESPONSIVE STYLES
+--------------------------------------------------------*/
+/* General Responsive Design */
 @media (max-width: 768px) {
-  .mobile-menu-toggle {
-    display: block;
+  .nav-container {
+    padding: 0 20px;
   }
 
-  .nav-menu {
-    position: fixed;
-    top: 85px;
-    left: 0;
-    right: 0;
-    background: white;
-    flex-direction: column;
-    padding: 20px;
-    gap: 20px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    transform: translateY(-150%);
-    transition: transform 0.3s ease;
-  }
-
-  .nav-menu.active {
-    transform: translateY(0);
-  }
-
-  .nav-buttons {
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-  }
-}
-
-@media (min-width: 768px) {
-  .image-section {
-    display: block;
-  }
-}
-
-@media (max-width: 576px) {
   .nav-menu {
     display: none;
   }
 
-  .nav-buttons {
-    gap: 10px;
-  }
-
-  .btn-outline,
-  .btn-primary {
-    padding: 8px 16px;
-    font-size: 14px;
+  .hero-container {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    gap: 40px;
+    text-align: center;
   }
 
   .hero-title {
-    font-size: 28px;
+    font-size: 40px;
   }
 
-  .hero-description {
-    font-size: 16px;
-  }
-
-  .section-title {
-    font-size: 24px;
-    margin-left: 0;
-    text-align: center;
+  .section-container {
+    padding: 0 20px;
   }
 
   .cuisine-grid {
     grid-template-columns: 1fr;
-    margin-left: 0;
-    margin-right: 0;
   }
 
-  .dietary-grid {
+  .footer-container {
     grid-template-columns: 1fr;
+    padding: 0 20px;
+    gap: 40px;
   }
 
   .tab-wrapper {
     flex-direction: column;
-  }
-
-  #drop-area {
-    width: 100%;
-  }
-
-  /* Team section adjustments */
-  .team-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Recipe finder adjustments */
-  .recipe-finder-filter-tabs {
-    flex-wrap: wrap;
-  }
-
-  .recipe-finder-recipe-grid {
-    padding: 0 10px;
-  }
-
-  .recipe-finder-recipes {
-    grid-template-columns: 1fr;
+    align-items: center;
   }
 }
 
+/* Container Responsive */
+@media (max-width: 768px) {
+  .container {
+    margin-left: 0;
+    /* Remove sidebar offset on smaller screens */
+    width: 100%;
+  }
+}
+
+/*------------------------------------------------------
+  HERO & CUISINE SECTIONS RESPONSIVE STYLES
+--------------------------------------------------------*/
+/* General Responsive Adjustments */
 @media (max-width: 1200px) {
   .hero-container,
   .section-container,
@@ -679,9 +1347,16 @@
   .hero-title {
     font-size: 48px;
   }
-
   .hero-images {
     height: 500px;
+  }
+
+  .food-image {
+    border-radius: 20px;
+  }
+
+  .overlay {
+    border-radius: 20px;
   }
 }
 
@@ -695,7 +1370,6 @@
   .hero-description {
     margin: 0 auto 40px;
   }
-
   .hero-images {
     height: 400px;
     margin-top: 40px;
@@ -778,57 +1452,127 @@
   }
 }
 
-@media (min-width: 768px) {
-  .container {
-    flex-direction: row;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    margin-left: 0; /* Remove sidebar offset on smaller screens */
-    width: 100%;
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .nav-container {
-    padding: 0 20px;
-  }
-
+@media (max-width: 576px) {
   .nav-menu {
     display: none;
   }
 
-  .hero-container {
-    grid-template-columns: 1fr;
-    padding: 0 20px;
-    gap: 40px;
-    text-align: center;
+  .nav-buttons {
+    gap: 10px;
+  }
+
+  .btn-outline,
+  .btn-primary {
+    padding: 8px 16px;
+    font-size: 14px;
   }
 
   .hero-title {
-    font-size: 40px;
+    font-size: 28px;
   }
 
-  .section-container {
-    padding: 0 20px;
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    margin-left: 0;
+    text-align: center;
   }
 
   .cuisine-grid {
     grid-template-columns: 1fr;
+    margin-left: 0;
+    margin-right: 0;
   }
 
-  .footer-container {
+  .dietary-grid {
     grid-template-columns: 1fr;
-    padding: 0 20px;
-    gap: 40px;
   }
-
   .tab-wrapper {
     flex-direction: column;
-    align-items: center;
+  }
+
+  #drop-area {
+    width: 100%;
+  }
+
+  /* Team section adjustments */
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Recipe finder adjustments */
+  .recipe-finder-filter-tabs {
+    flex-wrap: wrap;
+  }
+
+  .recipe-finder-recipe-grid {
+    padding: 0 10px;
+  }
+
+  .recipe-finder-recipes {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*------------------------------------------------------
+  ABOUT PAGE RESPONSIVE STYLES
+--------------------------------------------------------*/
+/* About page responsive */
+@media (max-width: 768px) {
+  .about {
+    padding-top: 40px;
+  }
+
+  .judul-about {
+    font-size: 32px;
+  }
+
+  .what-is-foodinary {
+    font-size: 24px;
+  }
+
+  .paragraph-about {
+    padding: 30px 20px;
+    font-size: 16px;
+  }
+
+  .team-section {
+    padding: 0 20px;
+  }
+
+  .team-header h1 {
+    font-size: 24px;
+  }
+
+  .team-header p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-section {
+    padding: 0 15px;
+  }
+
+  .team-grid {
+    gap: 15px;
+  }
+}
+
+/*------------------------------------------------------
+  DASHBOARD RESPONSIVE STYLES
+--------------------------------------------------------*/
+/* Dashboard specific responsive */
+@media (max-width: 992px) {
+  .db-stats-container {
+    flex-direction: column;
+  }
+
+  .db-stat-card {
+    width: 100%;
   }
 }
 
@@ -837,14 +1581,20 @@
     margin-left: 0;
     width: 100%;
   }
+
   .db-sidebar {
-    transform: translateX(-100%); /* Hide sidebar off-screen */
+    transform: translateX(-100%);
+    /* Hide sidebar off-screen */
   }
+
   .db-sidebar.active {
-    transform: translateX(0); /* Show sidebar when active */
+    transform: translateX(0);
+    /* Show sidebar when active */
   }
+
   .db-dashboard-subtitle {
-    display: none; /* Hide subtitle on mobile */
+    display: none;
+    /* Hide subtitle on mobile */
   }
 }
 
@@ -854,9 +1604,85 @@
   }
 }
 
-/* === DASHBOARD STYLES END === */
+/*------------------------------------------------------
+  FORM RESPONSIVE STYLES
+--------------------------------------------------------*/
+/* Form responsive adjustments */
+@media (max-width: 480px) {
+  .container {
+    margin-left: 0;
+    box-shadow: none;
+  }
+}
 
-/* Responsive adjustments */
+/*------------------------------------------------------
+  UTILITY CLASSES RESPONSIVE
+--------------------------------------------------------*/
+/* Utility Classes Responsive */
+@media (max-width: 768px) {
+  .hidden-mobile {
+    display: none;
+  }
+
+  .visible-mobile {
+    display: block;
+  }
+}
+
+/*------------------------------------------------------
+  MIN-WIDTH MEDIA QUERIES
+--------------------------------------------------------*/
+/* Min-width media queries */
+@media (min-width: 768px) {
+  /* Add any min-width specific styles here */
+}
+
+/*------------------------------------------------------
+  DASHBOARD ADDITIONAL STYLES
+--------------------------------------------------------*/
+/* Dashboard Media Queries */
+@media (max-width: 992px) {
+  .db-stats-container {
+    flex-direction: column;
+  }
+
+  .db-stat-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .db-main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .db-sidebar {
+    transform: translateX(-100%);
+    /* Hide sidebar off-screen */
+  }
+
+  .db-sidebar.active {
+    transform: translateX(0);
+    /* Show sidebar when active */
+  }
+
+  .db-dashboard-subtitle {
+    display: none;
+    /* Hide subtitle on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .db-dashboard-overview {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*------------------------------------------------------
+  CARD & DIETARY SECTION RESPONSIVE STYLES
+--------------------------------------------------------*/
+/* Card Media Queries */
 @media (max-width: 1024px) {
   .card-wrapper {
     flex: 1 1 calc(50% - 24px);
@@ -873,7 +1699,10 @@
   }
 }
 
-/* Responsive Design */
+/*------------------------------------------------------
+  ABOUT PAGE ADDITIONAL RESPONSIVE STYLES
+--------------------------------------------------------*/
+/* About Page Additional Media Queries */
 @media (max-width: 768px) {
   .about2 {
     padding: 0 20px;
@@ -906,93 +1735,5 @@
   .paragraph {
     font-size: 14px;
     padding: 20px 15px;
-  }
-}
-
-@media (max-width: 768px) {
-  .footer {
-    padding: 40px 0 20px;
-  }
-
-  .footer-container {
-    gap: 30px;
-  }
-
-  .footer-main {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .footer-brand h2 {
-    font-size: 20px;
-  }
-
-  .footer-social {
-    margin-top: 10px;
-  }
-
-  .footer-menu {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .footer-column h4 {
-    margin-bottom: 12px;
-  }
-
-  .footer-links {
-    gap: 8px;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 16px;
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  .footer-legal {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .legal-link {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer-brand h2 {
-    font-size: 18px;
-  }
-
-  .footer-social {
-    gap: 8px;
-  }
-
-  .social-link {
-    width: 30px;
-    height: 30px;
-    font-size: 16px;
-  }
-
-  .footer-menu {
-    gap: 16px;
-  }
-
-  .footer-column h4 {
-    font-size: 14px;
-  }
-
-  .footer-link {
-    font-size: 12px;
-  }
-
-  .footer-bottom p {
-    font-size: 11px;
   }
 }

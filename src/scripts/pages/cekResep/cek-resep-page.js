@@ -3,24 +3,27 @@ import Camera from "../../utils/camera.js";
 export default class CekResepPage {
   async render() {
     const token = localStorage.getItem('accessToken'); // sesuaikan key ACCESS_TOKEN_KEY-mu
-    const isLoggedIn = token && token !== 'null' && token !== 'undefined';
-
-    return `
+    const isLoggedIn = token && token !== 'null' && token !== 'undefined';    return `
       <!-- Navigation -->
-      <nav class="navigation">
-        <div class="nav-container">
-          <div class="logo">
+    <nav class="navigation">
+    <div class="nav-container">
+        <div class="logo">
             <a href="/">
-              <img src="/images/logo.png" alt="Foodinary Logo">
+                <img src="/images/logo.png" alt="Foodinary Logo">
             </a>
-          </div>
-          <div class="nav-menu">
+        </div>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </div>
+        <div class="nav-menu" id="nav-menu">
             <div class="nav-item"><a href="/">Home</a></div>
             <div class="nav-item"><a href="#/recipe">Recipe</a></div>
             <div class="nav-item active"><a href="#/cek-resep">Check Recipe</a></div>
             <div class="nav-item"><a href="#/about">About</a></div>
-          </div>
-          <div class="nav-buttons">
+        </div>
+          <div class="nav-buttons" id="nav-buttons">
             ${isLoggedIn
         ? `<a href="#/dashboard" class="btn-primary">Dashboard</a>`
         : `
@@ -28,8 +31,8 @@ export default class CekResepPage {
                   <a href="#/register" class="btn-primary">Sign Up</a>`
       }
           </div>
-        </div>
-      </nav>
+    </div>
+    </nav>
 
       <!-- Dietary Preferences Section -->
       <section class="dietary-section">
@@ -148,10 +151,45 @@ export default class CekResepPage {
         </div>
       </footer>
     `;
-  }
+  }    async afterRender() {
+        // Hamburger menu functionality
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navMenu = document.getElementById('nav-menu');
+        const navButtons = document.getElementById('nav-buttons');
 
-  async afterRender() {
-    const fileInput = document.getElementById("file-input");
+        if (hamburgerMenu) {
+            // Toggle menu visibility on hamburger click
+            hamburgerMenu.addEventListener('click', (event) => {
+                event.stopPropagation(); // Prevent event from bubbling up
+                navMenu.classList.toggle('active');
+                navButtons.classList.toggle('active');
+                hamburgerMenu.classList.toggle('active');
+            });
+
+            // Close menu when clicking anywhere outside
+            document.addEventListener('click', (event) => {
+                const isClickInsideNav = event.target.closest('.nav-container');
+                if (!isClickInsideNav && navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    navButtons.classList.remove('active');
+                    hamburgerMenu.classList.remove('active');
+                }
+            });
+
+            // Close menu when clicking on a nav link (after content is loaded)
+            setTimeout(() => {
+                const navLinks = document.querySelectorAll('.nav-item a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMenu.classList.remove('active');
+                        navButtons.classList.remove('active');
+                        hamburgerMenu.classList.remove('active');
+                    });
+                });
+            }, 100);
+        }
+
+        const fileInput = document.getElementById("file-input");
     const uploadBtn = document.getElementById("upload-btn");
     const cameraBtn = document.getElementById("camera-btn");
     const stopCameraBtn = document.getElementById("stop-camera-btn");

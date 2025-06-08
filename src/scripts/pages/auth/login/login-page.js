@@ -65,7 +65,7 @@ export default class LoginPage {
         </div>
 
         <div class="image-section">
-          <img src="images/auth-image.png" alt="Login Image" />
+          <img src="/images/auth-image.png" alt="Login Image" />
         </div>
       </section>
     `;
