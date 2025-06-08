@@ -145,11 +145,8 @@ export default class AboutPage {
               <h2>Foodinary - Discover the taste of Indonesia</h2>                        
             </div><br><br><br>
             <div class="footer-social">
-              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-              <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-            </div>
+            <a href="https://github.com/foodinary-project" class="social-link"><i class="fab fa-github"></i></a>          
+          </div>
           </div>
 
           <div class="footer-menu">

@@ -9,29 +9,30 @@ export default class RecipePage {
     return data.recipes;
   }
 
-  renderRecipeCards(recipes) {
-    return recipes
-      .map(
-        (recipe) => `
-            <div class="recipe-finder-recipe-card">
-              <img src="${recipe.gambar}" alt="${recipe.name}" class="recipe-finder-recipe-image">
-              <div class="recipe-finder-recipe-content">
-                <h3 class="recipe-finder-recipe-title">${recipe.name}</h3>
-                <p class="recipe-finder-recipe-description">${recipe.deskripsi.substring(0, 100)}...</p>
-                <div class="recipe-finder-recipe-actions">
-                  <button class="recipe-finder-recipe-btn">Recook now</button>
-                  <button class="recipe-finder-favorite-btn">
-                    <svg class="recipe-finder-heart-icon" viewBox="0 0 24 24">
-                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                    </svg>
-                  </button>
-                </div>
+ renderRecipeCards(recipes) {
+  return recipes
+    .map(
+      (recipe) => `
+          <div class="recipe-finder-recipe-card">
+            <img src="${recipe.gambar}" alt="${recipe.name}" class="recipe-finder-recipe-image">
+            <div class="recipe-finder-recipe-content">
+              <h3 class="recipe-finder-recipe-title">${recipe.name}</h3>
+              <p class="recipe-finder-recipe-description">${recipe.deskripsi.substring(0, 100)}...</p>
+              <div class="recipe-finder-recipe-actions">
+                <button class="recipe-finder-recipe-btn" data-id="${recipe.id}">Recook now</button>
+                <button class="recipe-finder-favorite-btn">
+                  <svg class="recipe-finder-heart-icon" viewBox="0 0 24 24">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                </button>
               </div>
             </div>
-          `
-      )
-      .join("");
-  }
+          </div>
+        `
+    )
+    .join("");
+}
+
 
   async render() {
     this.recipes = await this.getRecipes();
@@ -43,8 +44,8 @@ export default class RecipePage {
           <a href="/"><img src="/images/logo.png" alt="Foodinary Logo"></a>
         </div>
         <div class="nav-menu">
-          <div class="nav-item active"><a href="/">Home</a></div>
-          <div class="nav-item"><a href="#/recipe">Recipe</a></div>
+          <div class="nav-item "><a href="/">Home</a></div>
+          <div class="nav-item active"><a href="#/recipe">Recipe</a></div>
           <div class="nav-item"><a href="#/cek-resep">Check Recipe</a></div>
           <div class="nav-item"><a href="#/about">About</a></div>
         </div>
@@ -80,16 +81,7 @@ export default class RecipePage {
             <div class="recipe-finder-filter-tab">Manis</div>
           </div>
   
-          <div class="recipe-finder-main-content">
-            <div class="recipe-finder-sidebar">
-              <div class="recipe-finder-filter-section">
-                <div class="recipe-finder-filter-option"><input type="checkbox" id="vegan"><label for="vegan">Vegan</label></div>
-                <div class="recipe-finder-filter-option"><input type="checkbox" id="vegetarian"><label for="vegetarian">Vegetarian</label></div>
-                <div class="recipe-finder-filter-option"><input type="checkbox" id="gluten-free"><label for="gluten-free">Gluten-Free</label></div>
-                <div class="recipe-finder-filter-option"><input type="checkbox" id="dairy-free"><label for="dairy-free">Dairy-Free</label></div>
-              </div>
-            </div>
-  
+          <div class="recipe-finder-main-content">              
             <div class="recipe-finder-recipe-grid">
               <div class="recipe-finder-recipes" id="recipe-finder-recipes">
                 ${this.renderRecipeCards(this.recipes)}
@@ -105,10 +97,7 @@ export default class RecipePage {
             <h2>Foodinary - Discover the taste of Indonesia</h2>                        
           </div><br><br><br>
           <div class="footer-social">
-            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            <a href="https://github.com/foodinary-project" class="social-link"><i class="fab fa-github"></i></a>          
           </div>
         </div>
 
@@ -151,26 +140,60 @@ export default class RecipePage {
       `;
   }
 
-  async afterRender() {
+async afterRender() {
+  setTimeout(() => {
     const tabElements = document.querySelectorAll(".recipe-finder-filter-tab");
     const recipesContainer = document.getElementById("recipe-finder-recipes");
+    const searchInput = document.querySelector(".recipe-finder-search-input");
 
+    const handleRecookButton = () => {
+      const recookButtons = document.querySelectorAll(".recipe-finder-recipe-btn");
+      recookButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const id = btn.getAttribute("data-id");
+          if (id) {
+            window.location.hash = `#/detail?id=${id}`;
+          } else {
+            console.error("ID tidak ditemukan pada tombol:", btn);
+          }
+        });
+      });
+    };
+
+    // Inisialisasi pertama
+    handleRecookButton();
+
+    if (!searchInput) {
+      console.error("Search input not found.");
+      return;
+    }
+
+    // Filter berdasarkan rasa
     tabElements.forEach((tab) => {
       tab.addEventListener("click", () => {
-        // Toggle active class
         tabElements.forEach((t) => t.classList.remove("active"));
         tab.classList.add("active");
 
         const filter = tab.textContent.trim().toLowerCase();
-
         const filteredRecipes =
           filter === "all"
             ? this.recipes
             : this.recipes.filter((r) => r.rasa_dominan.toLowerCase() === filter);
 
-        // Render filtered cards
         recipesContainer.innerHTML = this.renderRecipeCards(filteredRecipes);
+        handleRecookButton(); // aktifkan ulang listener
       });
     });
-  }
+
+    // Fitur pencarian
+    searchInput.addEventListener("input", (e) => {
+      const keyword = e.target.value.toLowerCase();
+      const filteredRecipes = this.recipes.filter((recipe) =>
+        recipe.name.toLowerCase().includes(keyword)
+      );
+      recipesContainer.innerHTML = this.renderRecipeCards(filteredRecipes);
+      handleRecookButton(); // aktifkan ulang listener
+    });
+  }, 0);
+}
 }

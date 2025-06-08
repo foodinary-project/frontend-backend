@@ -36,7 +36,11 @@ export default class LoginPage {
               </div>
               <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Password" required />
+                <div class="password-wrapper">
+  <input type="password" id="password" placeholder="Password" required />
+  <i id="toggle-password" class="fa-solid fa-eye toggle-password"></i>
+</div>
+
               </div>
               <div class="checkbox-group">
                 <label>
@@ -68,6 +72,18 @@ export default class LoginPage {
   }
 
   async afterRender() {
+
+    const togglePassword = document.getElementById('toggle-password');
+const passwordInput = document.getElementById('password');
+
+togglePassword.addEventListener('click', () => {
+  const isPassword = passwordInput.type === 'password';
+  passwordInput.type = isPassword ? 'text' : 'password';
+
+  togglePassword.classList.toggle('fa-eye');
+  togglePassword.classList.toggle('fa-eye-slash');
+});
+
     // Tampilkan popup sukses jika ada dari registrasi
     const successMessage = localStorage.getItem('registrationSuccess');
     if (successMessage) {
