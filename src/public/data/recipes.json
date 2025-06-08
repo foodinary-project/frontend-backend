@@ -585,21 +585,35 @@
         "Saringan atau peniris",
         "Pisau dan talenan"
       ],
-      "bahan": {
-        "bahan kuah cuko": [
-          "3/4 liter air bersih",
-          "150 gr bawang putih (cincang halus)",
-          "60 gr air asam jawa",
-          "250 gr gula merah (sisir halus)",
-          "1 sdm ebi kering bubuk",
-          "100 gr cabe rawit (haluskan)"
-        ]
-      },
+      "bahan": [
+        "Bahan Pempek:",
+        "500 gram daging ikan tenggiri giling",
+        "200 gram tepung sagu/tapioka",
+        "1 butir telur",
+        "3 siung bawang putih (haluskan)",
+        "1 sdt garam",
+        "1/2 sdt penyedap rasa",
+        "100 ml air es",
+        "",
+        "Bahan Kuah Cuko:",
+        "3/4 liter air bersih",
+        "150 gram bawang putih (cincang halus)",
+        "60 gram air asam jawa",
+        "250 gram gula merah (sisir halus)",
+        "1 sdm ebi kering bubuk",
+        "100 gram cabe rawit (haluskan)"
+      ],
       "cara_membuat": [
-        "langkah-langkah membuat cuko",
-        "1.  Siapkan panci, lalu masukkan air, air asam jawa, dan gula merah, rebus sampai mendidih.",
-        "2.  Masukkan cabe rawit, bawang putih, ebi, dan garam, lalu aduk sampai tercampur merata.",
-        "3.  Angkat dari kompor, lalu biarkan hingga menjadi hangat."
+        "Langkah membuat Pempek:",
+        "1. Campur ikan tenggiri, bawang putih, garam, penyedap rasa, dan telur. Uleni hingga rata.",
+        "2. Tambahkan tepung sagu/tapioka dan air es sedikit demi sedikit sambil diuleni hingga kalis.",
+        "3. Bentuk adonan bulat/lonjong sesuai selera.",
+        "4. Rebus air hingga mendidih, masukkan pempek. Masak hingga mengapung. Angkat dan tiriskan.",
+        "",
+        "Langkah membuat Kuah Cuko:",
+        "1. Rebus air, air asam jawa, dan gula merah hingga mendidih.",
+        "2. Tambahkan cabe rawit, bawang putih cincang, ebi bubuk, dan garam. Aduk rata.",
+        "3. Angkat dan saring. Sajikan hangat dengan pempek."
       ],
       "sumber": "https://www.batamnews.co.id/berita-100117-rahasia-membuat-pempek-palembang-yang-enak-dan-empuk-intip-resepnya.html",
       "gambar": "https://img.freepik.com/premium-photo/pempek-empek-empek-traditional-food-from-south-sumatra-indonesia-fish-based-food_583400-4589.jpg"
@@ -620,41 +634,41 @@
         "Sendok sayur",
         "Mangkuk saji"
       ],
-      "bahan": {
-        "Bahan": [
-          "500 gram daging sandung lamur (brisket)",
-          "6 lembar daun jeruk",
-          "3 batang serai, memarkan",
-          "3 liter air",
-          "1 ruas lengkuas, memarkan"
-        ],
-        "Bumbu Halus": [
-          "8 siung bawang merah",
-          "5 siung bawang putih",
-          "4 buah kluwek ukuran sedang, ambil isinya",
-          "4 butir kemiri, sangrai",
-          "2 cm kunyit",
-          "1½ sdt ketumbar bubuk",
-          "1 sdt merica bubuk",
-          "1 cm jahe",
-          "1 batang daun bawang, iris",
-          "Garam secukupnya",
-          "Gula secukupnya",
-          "Bahan Pelengkap :",
-          "Bawang goreng",
-          "Tauge pendek",
-          "Sambal terasi",
-          "Kerupuk udang",
-          "Telur asin"
-        ]
-      },
+      "bahan": [
+        "Bahan Utama:",
+        "500 gram daging sandung lamur (brisket)",
+        "6 lembar daun jeruk",
+        "3 batang serai (memarkan)",
+        "3 liter air",
+        "1 ruas lengkuas (memarkan)",
+        "",
+        "Bumbu Halus:",
+        "8 siung bawang merah",
+        "5 siung bawang putih",
+        "4 buah kluwek (ambil isinya)",
+        "4 butir kemiri (sangrai)",
+        "2 cm kunyit",
+        "1½ sdt ketumbar bubuk",
+        "1 sdt merica bubuk",
+        "1 cm jahe",
+        "Garam secukupnya",
+        "Gula secukupnya",
+        "",
+        "Pelengkap:",
+        "Bawang goreng",
+        "Tauge pendek",
+        "Sambal terasi",
+        "Kerupuk udang",
+        "Telur asin",
+        "Irisan daun bawang"
+      ],
       "cara_membuat": [
-        "1. Rebus daging dalam air mendidih hingga setengah empuk, lalu angkat dan potong-potong seukuran satu suapan.",
-        "2. Saring kaldu hasil rebusan, kemudian masukkan kembali potongan daging bersama serai, daun jeruk, dan lengkuas.",
-        "3. Tumis bumbu halus dengan sedikit minyak hingga harum, lalu tuang ke dalam rebusan daging.",
-        "4. Masak hingga daging benar-benar empuk. Jika air mulai menyusut sementara daging belum lunak, tambahkan air dan lanjutkan memasak.",
-        "5. Menjelang matang, tambahkan irisan daun bawang.",
-        "6. Sajikan rawon bersama nasi hangat dan pelengkap seperti tauge pendek, sambal terasi, bawang goreng, kerupuk udang, dan telur asin."
+        "1. Rebus daging hingga setengah empuk. Potong dadu, saring kaldu.",
+        "2. Tumis bumbu halus hingga harum. Masukkan ke panci berisi daging dan kaldu.",
+        "3. Tambahkan serai, daun jeruk, lengkuas. Masak dengan api kecil hingga daging empuk.",
+        "4. Jika air menyusut, tambahkan air panas secukupnya.",
+        "5. Menjelang matang, masukkan irisan daun bawang.",
+        "6. Sajikan dengan nasi hangat, tauge, sambal, bawang goreng, kerupuk, dan telur asin."
       ],
       "sumber": "https://www.liputan6.com/hot/read/5332751/4-bumbu-rawon-daging-sapi-khas-jawa-timur-lengkap-dengan-resep-dan-cara-memasak?page=2",
       "gambar": "https://asset.kompas.com/crops/hNtKM00giVbyEov1LyRMTB65YP8=/0x38:1000x705/1200x800/data/photo/2023/09/08/64faa742ca9ae.jpg"
