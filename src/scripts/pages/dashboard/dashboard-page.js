@@ -1,6 +1,7 @@
 import { getLogout, checkAuthenticatedRoute } from '../../utils/auth';
 import { getMyUserInfo } from '../../data/api';
 import Swal from 'sweetalert2';
+import { getAllFavorites } from '../../data/database';
 
 export default class DashboardPage {
   async render() {
@@ -82,7 +83,7 @@ export default class DashboardPage {
                   <i class="fas fa-heart"></i>
                 </div>
                 <div class="db-stat-card-info">
-                  <span class="db-stat-value">357</span>
+                  <span class="db-stat-value" id="total-favorite-count">0</span>
                   <span class="db-stat-label">Total Favorite</span>
                 </div>
               </div>
@@ -128,6 +129,18 @@ export default class DashboardPage {
         }
       });
     }
+
+    // Hitung total favorite dari IndexedDB
+    try {
+      const favorites = await getAllFavorites();
+      const countElement = document.getElementById('total-favorite-count');
+      if (countElement) {
+        countElement.textContent = favorites.length;
+      }
+    } catch (error) {
+      console.error('Gagal mengambil total favorite:', error);
+    }
+
 
     // Ambil nama user dan foto profil dari API
     try {

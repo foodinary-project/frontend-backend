@@ -80,18 +80,24 @@ export default class AccountSettingsPage {
               <hr />
               <div class="form-group">
                 <label for="old-password">Current Password</label>
-                <input type="password" id="old-password" placeholder="Enter current password">
+                <div class="password-wrapper">
+                  <input type="password" id="old-password" placeholder="Enter current password" />
+                  <i class="fa-solid fa-eye toggle-password" data-toggle="old-password"></i>
+                </div>
               </div>
               <div class="form-group">
                 <label for="password">New Password</label>
                 <div class="password-wrapper">
-  <input type="password" id="password" placeholder="Password" required />
-  <i id="toggle-password" class="fa-solid fa-eye toggle-password"></i>
-</div>
+                  <input type="password" id="password" placeholder="Password" />
+                  <i class="fa-solid fa-eye toggle-password" data-toggle="password"></i>
+                </div>
               </div>
               <div class="form-group">
                 <label for="confirm-password">Confirm New Password</label>
-                <input type="password" id="confirm-password" placeholder="Re-enter new password">
+                <div class="password-wrapper">
+                  <input type="password" id="confirm-password" placeholder="Re-enter new password" />
+                  <i class="fa-solid fa-eye toggle-password" data-toggle="confirm-password"></i>
+                </div>
               </div>
               <button type="submit" class="update-btn">Update</button>
             </form>
@@ -102,17 +108,18 @@ export default class AccountSettingsPage {
   }
 
   async afterRender() {
+    // Toggle password visibility for all password fields
+    document.querySelectorAll('.toggle-password').forEach((icon) => {
+      icon.addEventListener('click', () => {
+        const inputId = icon.getAttribute('data-toggle');
+        const input = document.getElementById(inputId);
+        const isPassword = input.type === 'password';
 
-const togglePassword = document.getElementById('toggle-password');
-const passwordInput = document.getElementById('password');
-
-togglePassword.addEventListener('click', () => {
-  const isPassword = passwordInput.type === 'password';
-  passwordInput.type = isPassword ? 'text' : 'password';
-
-  togglePassword.classList.toggle('fa-eye');
-  togglePassword.classList.toggle('fa-eye-slash');
-});
+        input.type = isPassword ? 'text' : 'password';
+        icon.classList.toggle('fa-eye');
+        icon.classList.toggle('fa-eye-slash');
+      });
+    });
 
     if (!checkAuthenticatedRoute(this)) return;
 
@@ -194,7 +201,7 @@ togglePassword.addEventListener('click', () => {
             email,
             oldPassword,
             newPassword,
-            confirmNewPassword
+            confirmNewPassword,
           });
 
           if (result.ok) {
@@ -242,27 +249,22 @@ togglePassword.addEventListener('click', () => {
       overlay.classList.remove('active');
     };
 
-    // Function to manage avatar clickability based on screen size
     const manageAvatarClick = () => {
       const isMobile = window.matchMedia('(max-width: 768px)').matches;
-      // Remove existing listeners to prevent duplicates
       avatar.removeEventListener('click', toggleSidebar);
       overlay.removeEventListener('click', closeSidebar);
 
       if (isMobile && avatar && sidebar) {
-        avatar.style.cursor = 'pointer'; // Ensure cursor indicates clickability
+        avatar.style.cursor = 'pointer';
         avatar.addEventListener('click', toggleSidebar);
         overlay.addEventListener('click', closeSidebar);
       } else {
-        avatar.style.cursor = 'default'; // Non-clickable on desktop
-        closeSidebar(); // Ensure sidebar is closed if resizing to desktop
+        avatar.style.cursor = 'default';
+        closeSidebar();
       }
     };
 
-    // Initial check
     manageAvatarClick();
-
-    // Add resize listener to handle screen size changes
     window.addEventListener('resize', manageAvatarClick);
   }
 }

@@ -1,8 +1,11 @@
 import Camera from "../../utils/camera.js";
 
 export default class CekResepPage {
-    async render() {
-        return `
+  async render() {
+    const token = localStorage.getItem('accessToken'); // sesuaikan key ACCESS_TOKEN_KEY-mu
+    const isLoggedIn = token && token !== 'null' && token !== 'undefined';
+
+    return `
       <!-- Navigation -->
       <nav class="navigation">
         <div class="nav-container">
@@ -18,8 +21,12 @@ export default class CekResepPage {
             <div class="nav-item"><a href="#/about">About</a></div>
           </div>
           <div class="nav-buttons">
-            <a href="#/login" class="btn-outline">Login</a>
-            <a href="#/register" class="btn-primary">Sign Up</a>
+            ${isLoggedIn
+        ? `<a href="#/dashboard" class="btn-primary">Dashboard</a>`
+        : `
+                  <a href="#/login" class="btn-outline">Login</a>
+                  <a href="#/register" class="btn-primary">Sign Up</a>`
+      }
           </div>
         </div>
       </nav>
@@ -141,193 +148,193 @@ export default class CekResepPage {
         </div>
       </footer>
     `;
-    }
+  }
 
-    async afterRender() {
-        const fileInput = document.getElementById("file-input");
-        const uploadBtn = document.getElementById("upload-btn");
-        const cameraBtn = document.getElementById("camera-btn");
-        const stopCameraBtn = document.getElementById("stop-camera-btn");
-        const analyzeBtn = document.getElementById("analyze-btn");
-        const selectedFileName = document.getElementById("selected-file-name");
-        const cameraStream = document.getElementById("camera-stream");
-        const cameraCanvas = document.getElementById("camera-canvas");
-        const captureBtn = document.getElementById("capture-btn");
-        const previewImage = document.getElementById("preview-image");
-        const uploadInstruction = document.getElementById("upload-instruction");
-        const dropArea = document.getElementById("drop-area");
+  async afterRender() {
+    const fileInput = document.getElementById("file-input");
+    const uploadBtn = document.getElementById("upload-btn");
+    const cameraBtn = document.getElementById("camera-btn");
+    const stopCameraBtn = document.getElementById("stop-camera-btn");
+    const analyzeBtn = document.getElementById("analyze-btn");
+    const selectedFileName = document.getElementById("selected-file-name");
+    const cameraStream = document.getElementById("camera-stream");
+    const cameraCanvas = document.getElementById("camera-canvas");
+    const captureBtn = document.getElementById("capture-btn");
+    const previewImage = document.getElementById("preview-image");
+    const uploadInstruction = document.getElementById("upload-instruction");
+    const dropArea = document.getElementById("drop-area");
 
-        // Inisialisasi Camera instance
-        const camera = new Camera({
-            video: cameraStream,
-            cameraSelect: document.createElement("select"),
-            canvas: cameraCanvas,
-        });
+    // Inisialisasi Camera instance
+    const camera = new Camera({
+      video: cameraStream,
+      cameraSelect: document.createElement("select"),
+      canvas: cameraCanvas,
+    });
 
-        const showUploadInstruction = () => {
-            uploadInstruction.style.display = "block";
-            previewImage.style.display = "none";
-            cameraStream.style.display = "none";
-            analyzeBtn.hidden = true;
-        };
+    const showUploadInstruction = () => {
+      uploadInstruction.style.display = "block";
+      previewImage.style.display = "none";
+      cameraStream.style.display = "none";
+      analyzeBtn.hidden = true;
+    };
 
-        const hideUploadInstruction = () => {
-            uploadInstruction.style.display = "none";
-        };
+    const hideUploadInstruction = () => {
+      uploadInstruction.style.display = "none";
+    };
 
-        // Fungsi buka kamera
-        const openCamera = async () => {
-            cameraStream.hidden = false;
-            cameraStream.style.display = "block";
-            captureBtn.hidden = false;
-            cameraCanvas.hidden = true;
-            previewImage.style.display = "none";
-            selectedFileName.textContent = "";
-            analyzeBtn.hidden = true;
+    // Fungsi buka kamera
+    const openCamera = async () => {
+      cameraStream.hidden = false;
+      cameraStream.style.display = "block";
+      captureBtn.hidden = false;
+      cameraCanvas.hidden = true;
+      previewImage.style.display = "none";
+      selectedFileName.textContent = "";
+      analyzeBtn.hidden = true;
 
-            stopCameraBtn.hidden = false;
-            hideUploadInstruction();
+      stopCameraBtn.hidden = false;
+      hideUploadInstruction();
 
-            await camera.launch();
-        };
+      await camera.launch();
+    };
 
-        // Fungsi capture foto
-        const capturePhoto = async () => {
-            const blob = await camera.takePicture();
-            if (!blob) return alert("Failed to capture photo.");
+    // Fungsi capture foto
+    const capturePhoto = async () => {
+      const blob = await camera.takePicture();
+      if (!blob) return alert("Failed to capture photo.");
 
-            // Stop kamera
-            camera.stop();
-            stopCameraBtn.hidden = true;
+      // Stop kamera
+      camera.stop();
+      stopCameraBtn.hidden = true;
 
-            // Sembunyikan video dan tombol capture
-            cameraStream.style.display = "none";
-            cameraStream.hidden = true;
-            captureBtn.hidden = true;
-            cameraCanvas.hidden = true;
+      // Sembunyikan video dan tombol capture
+      cameraStream.style.display = "none";
+      cameraStream.hidden = true;
+      captureBtn.hidden = true;
+      cameraCanvas.hidden = true;
 
-            // Buat URL object untuk preview gambar
-            const imgURL = URL.createObjectURL(blob);
-            previewImage.src = imgURL;
-            previewImage.style.display = "block";
+      // Buat URL object untuk preview gambar
+      const imgURL = URL.createObjectURL(blob);
+      previewImage.src = imgURL;
+      previewImage.style.display = "block";
 
-            selectedFileName.textContent = "";
-            hideUploadInstruction();
-            analyzeBtn.hidden = false; // Show Analyze button after capturing photo
+      selectedFileName.textContent = "";
+      hideUploadInstruction();
+      analyzeBtn.hidden = false; // Show Analyze button after capturing photo
 
-            // Simpan blob ke file input untuk upload
-            const file = new File([blob], "captured-photo.jpg", {
-                type: "image/jpeg",
-            });
-            const dataTransfer = new DataTransfer();
-            dataTransfer.items.add(file);
-            fileInput.files = dataTransfer.files;
-        };
+      // Simpan blob ke file input untuk upload
+      const file = new File([blob], "captured-photo.jpg", {
+        type: "image/jpeg",
+      });
+      const dataTransfer = new DataTransfer();
+      dataTransfer.items.add(file);
+      fileInput.files = dataTransfer.files;
+    };
 
-        // Fungsi stop kamera manual
-        const stopCamera = () => {
-            camera.stop();
-            cameraStream.hidden = true;
-            cameraStream.style.display = "none";
-            cameraCanvas.hidden = true;
-            captureBtn.hidden = true;
-            stopCameraBtn.hidden = true;
-            analyzeBtn.hidden = true;
+    // Fungsi stop kamera manual
+    const stopCamera = () => {
+      camera.stop();
+      cameraStream.hidden = true;
+      cameraStream.style.display = "none";
+      cameraCanvas.hidden = true;
+      captureBtn.hidden = true;
+      stopCameraBtn.hidden = true;
+      analyzeBtn.hidden = true;
 
-            previewImage.style.display = "none";
-            selectedFileName.textContent = "";
-            showUploadInstruction();
-        };
+      previewImage.style.display = "none";
+      selectedFileName.textContent = "";
+      showUploadInstruction();
+    };
 
-        // Preview file upload
-        const previewUploadFile = (file) => {
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                previewImage.src = e.target.result;
-                previewImage.style.display = "block";
-                cameraStream.style.display = "none";
-                hideUploadInstruction();
-                analyzeBtn.hidden = false; // Show Analyze button after uploading file
-            };
-            reader.readAsDataURL(file);
-        };
+    // Preview file upload
+    const previewUploadFile = (file) => {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        previewImage.src = e.target.result;
+        previewImage.style.display = "block";
+        cameraStream.style.display = "none";
+        hideUploadInstruction();
+        analyzeBtn.hidden = false; // Show Analyze button after uploading file
+      };
+      reader.readAsDataURL(file);
+    };
 
-        // Fungsi untuk analisis gambar (placeholder)
-        const analyzeImage = () => {
-            if (fileInput.files.length === 0) {
-                alert("No image selected for analysis.");
-                return;
-            }
-            const file = fileInput.files[0];
-            // Placeholder untuk logika analisis gambar
-            console.log("Analyzing image:", file.name);
-            alert("Image analysis started for: " + file.name);
-            // TODO: Tambahkan logika untuk mengirim file ke API atau proses analisis
-            // Contoh: Kirim file ke server atau API untuk analisis resep
-            // const formData = new FormData();
-            // formData.append("image", file);
-            // fetch("https://api.example.com/analyze", { method: "POST", body: formData })
-            //     .then(response => response.json())
-            //     .then(data => console.log("Analysis result:", data))
-            //     .catch(error => console.error("Analysis failed:", error));
-        };
+    // Fungsi untuk analisis gambar (placeholder)
+    const analyzeImage = () => {
+      if (fileInput.files.length === 0) {
+        alert("No image selected for analysis.");
+        return;
+      }
+      const file = fileInput.files[0];
+      // Placeholder untuk logika analisis gambar
+      console.log("Analyzing image:", file.name);
+      alert("Image analysis started for: " + file.name);
+      // TODO: Tambahkan logika untuk mengirim file ke API atau proses analisis
+      // Contoh: Kirim file ke server atau API untuk analisis resep
+      // const formData = new FormData();
+      // formData.append("image", file);
+      // fetch("https://api.example.com/analyze", { method: "POST", body: formData })
+      //     .then(response => response.json())
+      //     .then(data => console.log("Analysis result:", data))
+      //     .catch(error => console.error("Analysis failed:", error));
+    };
 
-        // Drag and drop functionality
-        dropArea.addEventListener("dragover", (e) => {
-            e.preventDefault();
-            dropArea.style.border = "2px dashed #007bff"; // Visual feedback
-        });
+    // Drag and drop functionality
+    dropArea.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      dropArea.style.border = "2px dashed #007bff"; // Visual feedback
+    });
 
-        dropArea.addEventListener("dragleave", () => {
-            dropArea.style.border = "1px solid #ddd"; // Reset border
-        });
+    dropArea.addEventListener("dragleave", () => {
+      dropArea.style.border = "1px solid #ddd"; // Reset border
+    });
 
-        dropArea.addEventListener("drop", (e) => {
-            e.preventDefault();
-            dropArea.style.border = "1px solid #ddd"; // Reset border
+    dropArea.addEventListener("drop", (e) => {
+      e.preventDefault();
+      dropArea.style.border = "1px solid #ddd"; // Reset border
 
-            const files = e.dataTransfer.files;
-            if (files.length > 0) {
-                fileInput.files = files;
-                selectedFileName.textContent = "";
-                previewUploadFile(files[0]);
-            } else if (
-                cameraStream.srcObject &&
-                cameraStream.style.display !== "none"
-            ) {
-                // Handle camera stream being dragged into drop area
-                capturePhoto(); // Capture photo if camera stream is active
-            }
-        });
+      const files = e.dataTransfer.files;
+      if (files.length > 0) {
+        fileInput.files = files;
+        selectedFileName.textContent = "";
+        previewUploadFile(files[0]);
+      } else if (
+        cameraStream.srcObject &&
+        cameraStream.style.display !== "none"
+      ) {
+        // Handle camera stream being dragged into drop area
+        capturePhoto(); // Capture photo if camera stream is active
+      }
+    });
 
-        // Click drop area to trigger file input
-        dropArea.addEventListener("click", () => {
-            if (cameraStream.style.display === "none") {
-                fileInput.click(); // Open file input only if camera is not active
-            }
-        });
+    // Click drop area to trigger file input
+    dropArea.addEventListener("click", () => {
+      if (cameraStream.style.display === "none") {
+        fileInput.click(); // Open file input only if camera is not active
+      }
+    });
 
-        // Event listeners
-        cameraBtn.addEventListener("click", openCamera);
-        captureBtn.addEventListener("click", capturePhoto);
-        stopCameraBtn.addEventListener("click", stopCamera);
-        analyzeBtn.addEventListener("click", analyzeImage);
+    // Event listeners
+    cameraBtn.addEventListener("click", openCamera);
+    captureBtn.addEventListener("click", capturePhoto);
+    stopCameraBtn.addEventListener("click", stopCamera);
+    analyzeBtn.addEventListener("click", analyzeImage);
 
-        uploadBtn.addEventListener("click", () => {
-            fileInput.click();
-        });
+    uploadBtn.addEventListener("click", () => {
+      fileInput.click();
+    });
 
-        fileInput.addEventListener("change", () => {
-            if (fileInput.files.length > 0) {
-                selectedFileName.textContent = "";
-                previewUploadFile(fileInput.files[0]);
-            } else {
-                selectedFileName.textContent = "";
-                previewImage.style.display = "none";
-                cameraStream.style.display = "none";
-                analyzeBtn.hidden = true;
-                showUploadInstruction();
-            }
-        });
-    }
+    fileInput.addEventListener("change", () => {
+      if (fileInput.files.length > 0) {
+        selectedFileName.textContent = "";
+        previewUploadFile(fileInput.files[0]);
+      } else {
+        selectedFileName.textContent = "";
+        previewImage.style.display = "none";
+        cameraStream.style.display = "none";
+        analyzeBtn.hidden = true;
+        showUploadInstruction();
+      }
+    });
+  }
 }
