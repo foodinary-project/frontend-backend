@@ -1,0 +1,998 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+/* ========================================
+   RESPONSIVE DESIGN FOR MOBILE DEVICES
+   ======================================== */
+
+/* Tablet/Medium devices (max-width: 992px) */
+@media (max-width: 992px) {
+  /* Navigation adjustments */
+  .nav-container {
+    padding: 0 40px;
+  }
+
+  .hero-container,
+  .section-container,
+  .section-container-2 {
+    padding: 0 40px;
+  }
+
+  /* Hero section adjustments */
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .hero-description {
+    margin: 0 auto 40px;
+  }
+
+  .hero-images {
+    height: 400px;
+    margin-top: 40px;
+  }
+
+  /* Cuisine grid adjustments */
+  .cuisine-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  /* Footer adjustments */
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Dashboard stats container */
+  .db-stats-container {
+    flex-direction: column;
+  }
+
+  .db-stat-card {
+    width: 100%;
+  }
+
+  /* Recipe cards */
+  .card-wrapper {
+    flex: 1 1 calc(50% - 24px);
+  }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Navigation mobile menu */
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 85px;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-150%);
+    transition: transform 0.3s ease;
+    display: none;
+  }
+
+  .nav-menu.active {
+    transform: translateY(0);
+    display: flex;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .nav-container {
+    padding: 0 20px;
+  }
+
+  /* Hero section mobile */
+  .hero-container {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .hero-description {
+    font-size: 18px;
+  }
+
+  .hero-button {
+    padding: 16px 32px;
+    font-size: 18px;
+  }
+
+  /* Section containers */
+  .section-container,
+  .section-container-2 {
+    padding: 0 20px;
+  }
+
+  .section-title {
+    font-size: 32px;
+    margin-left: 20px;
+  }
+
+  /* Cuisine grid mobile */
+  .cuisine-grid {
+    margin-left: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+  }
+
+  /* Dietary grid mobile */
+  .dietary-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .dietary-section {
+    padding: 0 32px;
+  }
+
+  /* Tab wrapper mobile */
+  .tab-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Upload area mobile */
+  #drop-area {
+    width: 100%;
+  }
+
+  /* Footer mobile */
+  .footer {
+    padding: 40px 0 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    gap: 30px;
+  }
+
+  .footer-main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-brand h2 {
+    font-size: 20px;
+  }
+
+  .footer-social {
+    margin-top: 10px;
+  }
+
+  .footer-menu {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-column h4 {
+    margin-bottom: 12px;
+  }
+
+  .footer-links {
+    gap: 8px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .footer-legal {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .legal-link {
+    font-size: 12px;
+  }
+
+  /* Dashboard mobile */
+  .db-main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .db-sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .db-sidebar.active {
+    transform: translateX(0);
+  }
+
+  .db-dashboard-subtitle {
+    display: none;
+  }
+
+  /* Recipe finder mobile */
+  .recipe-finder-main-content {
+    flex-direction: column;
+  }
+
+  .recipe-finder-sidebar {
+    flex: none;
+  }
+
+  .recipe-finder-recipes {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .recipe-finder-filter-tabs {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  /* Form sections mobile */
+  .form-section {
+    padding: 1.5rem;
+    width: 100%;
+  }
+
+  .container {
+    margin-left: 0;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .image-section {
+    display: block;
+  }
+
+  /* About page mobile */
+  .about {
+    padding-top: 40px;
+  }
+
+  .judul-about {
+    font-size: 32px;
+  }
+
+  .what-is-foodinary {
+    font-size: 24px;
+  }
+
+  .paragraph-about {
+    padding: 30px 20px;
+    font-size: 16px;
+  }
+
+  .team-header h1 {
+    font-size: 24px;
+  }
+
+  .team-header p {
+    font-size: 14px;
+  }
+
+  /* About 2 section mobile */
+  .about2 {
+    padding: 0 20px;
+  }
+
+  .paragraph {
+    font-size: 16px;
+    padding: 30px 20px;
+    text-align: left;
+  }
+
+  /* Card wrapper mobile */
+  .card-wrapper {
+    flex: 1 1 100%;
+  }
+
+  /* Recipe detail modal mobile */
+  .recipe-detail-body {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  /* Foodinary experience mobile */
+  .foodinary-experience {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 20px;
+  }
+
+  /* Utility classes for mobile */
+  .hidden-mobile {
+    display: none;
+  }
+
+  .visible-mobile {
+    display: block;
+  }
+}
+
+/* Small mobile devices (max-width: 576px) */
+@media (max-width: 576px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-buttons {
+    gap: 10px;
+  }
+
+  .btn-outline,
+  .btn-primary {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .cuisine-grid {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .dietary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tab-wrapper {
+    flex-direction: column;
+  }
+
+  /* Team section mobile */
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Recipe finder mobile */
+  .recipe-finder-filter-tabs {
+    flex-wrap: wrap;
+  }
+
+  .recipe-finder-recipe-grid {
+    padding: 0 10px;
+  }
+
+  .recipe-finder-recipes {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Extra small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Form adjustments */
+  .form-section {
+    padding: 1.5rem;
+  }
+
+  .form-content h2 {
+    font-size: 1.25rem;
+  }
+
+  button {
+    padding: 0.75rem;
+  }
+
+  /* Dashboard adjustments */
+  .db-dashboard-overview {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer adjustments */
+  .footer-brand h2 {
+    font-size: 18px;
+  }
+
+  .footer-social {
+    gap: 8px;
+  }
+
+  .social-link {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .footer-menu {
+    gap: 16px;
+  }
+
+  .footer-column h4 {
+    font-size: 14px;
+  }
+
+  .footer-link {
+    font-size: 12px;
+  }
+
+  .footer-bottom p {
+    font-size: 11px;
+  }
+
+  /* About page adjustments */
+  .judul-about {
+    font-size: 28px;
+  }
+
+  .what-is-foodinary {
+    font-size: 20px;
+  }
+
+  .paragraph {
+    font-size: 14px;
+    padding: 20px 15px;
+  }
+}
+
+/* Existing responsive styles (kept for compatibility) */
+@media (max-width: 992px) {
+  .db-stats-container {
+    flex-direction: column;
+  }
+  .db-stat-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .recipe-finder-main-content {
+    flex-direction: column;
+  }
+
+  .recipe-finder-sidebar {
+    flex: none;
+  }
+
+  .recipe-finder-recipes {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .recipe-finder-filter-tabs {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+}
+
+@media (min-width: 768px) {
+  .form-section {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hidden-mobile {
+    display: none;
+  }
+
+  .visible-mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-section {
+    padding: 1.5rem;
+  }
+
+  .form-content h2 {
+    font-size: 1.25rem;
+  }
+
+  button {
+    padding: 0.75rem;
+  }
+}
+
+/* About page responsive */
+@media (max-width: 768px) {
+  .about {
+    padding-top: 40px;
+  }
+
+  .judul-about {
+    font-size: 32px;
+  }
+
+  .what-is-foodinary {
+    font-size: 24px;
+  }
+
+  .paragraph-about {
+    padding: 30px 20px;
+    font-size: 16px;
+  }
+
+  .team-header h1 {
+    font-size: 24px;
+  }
+
+  .team-header p {
+    font-size: 14px;
+  }
+}
+
+/* Dashboard specific responsive */
+@media (max-width: 992px) {
+  .db-stats-container {
+    flex-direction: column;
+  }
+
+  .db-stat-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 85px;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-150%);
+    transition: transform 0.3s ease;
+  }
+
+  .nav-menu.active {
+    transform: translateY(0);
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .image-section {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-buttons {
+    gap: 10px;
+  }
+
+  .btn-outline,
+  .btn-primary {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .cuisine-grid {
+    grid-template-columns: 1fr;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .dietary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tab-wrapper {
+    flex-direction: column;
+  }
+
+  #drop-area {
+    width: 100%;
+  }
+
+  /* Team section adjustments */
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Recipe finder adjustments */
+  .recipe-finder-filter-tabs {
+    flex-wrap: wrap;
+  }
+
+  .recipe-finder-recipe-grid {
+    padding: 0 10px;
+  }
+
+  .recipe-finder-recipes {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero-container,
+  .section-container,
+  .section-container-2 {
+    padding: 0 40px;
+  }
+
+  .nav-container {
+    padding: 0 40px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .hero-images {
+    height: 500px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-description {
+    margin: 0 auto 40px;
+  }
+
+  .hero-images {
+    height: 400px;
+    margin-top: 40px;
+  }
+
+  .cuisine-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 20px;
+  }
+
+  .hero-container,
+  .section-container,
+  .section-container-2 {
+    padding: 0 20px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .hero-description {
+    font-size: 18px;
+  }
+
+  .hero-button {
+    padding: 16px 32px;
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 32px;
+    margin-left: 20px;
+  }
+
+  .cuisine-grid {
+    margin-left: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+  }
+
+  .dietary-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    gap: 30px;
+  }
+
+  /* Dashboard adjustments */
+  .db-main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .db-sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .db-sidebar.active {
+    transform: translateX(0);
+  }
+
+  /* Login form adjustments */
+  .container {
+    margin-left: 0;
+    box-shadow: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-left: 0; /* Remove sidebar offset on smaller screens */
+    width: 100%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 20px;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .section-container {
+    padding: 0 20px;
+  }
+
+  .cuisine-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    gap: 40px;
+  }
+
+  .tab-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .db-main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+  .db-sidebar {
+    transform: translateX(-100%); /* Hide sidebar off-screen */
+  }
+  .db-sidebar.active {
+    transform: translateX(0); /* Show sidebar when active */
+  }
+  .db-dashboard-subtitle {
+    display: none; /* Hide subtitle on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .db-dashboard-overview {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === DASHBOARD STYLES END === */
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .card-wrapper {
+    flex: 1 1 calc(50% - 24px);
+  }
+}
+
+@media (max-width: 768px) {
+  .dietary-section {
+    padding: 0 32px;
+  }
+
+  .card-wrapper {
+    flex: 1 1 100%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about2 {
+    padding: 0 20px;
+  }
+
+  .judul-about {
+    font-size: 36px;
+  }
+
+  .what-is-foodinary {
+    font-size: 24px;
+  }
+
+  .paragraph {
+    font-size: 16px;
+    padding: 30px 20px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .judul-about {
+    font-size: 28px;
+  }
+
+  .what-is-foodinary {
+    font-size: 20px;
+  }
+
+  .paragraph {
+    font-size: 14px;
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0 20px;
+  }
+
+  .footer-container {
+    gap: 30px;
+  }
+
+  .footer-main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-brand h2 {
+    font-size: 20px;
+  }
+
+  .footer-social {
+    margin-top: 10px;
+  }
+
+  .footer-menu {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-column h4 {
+    margin-bottom: 12px;
+  }
+
+  .footer-links {
+    gap: 8px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .footer-legal {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .legal-link {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-brand h2 {
+    font-size: 18px;
+  }
+
+  .footer-social {
+    gap: 8px;
+  }
+
+  .social-link {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .footer-menu {
+    gap: 16px;
+  }
+
+  .footer-column h4 {
+    font-size: 14px;
+  }
+
+  .footer-link {
+    font-size: 12px;
+  }
+
+  .footer-bottom p {
+    font-size: 11px;
+  }
+}
