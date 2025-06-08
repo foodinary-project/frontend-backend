@@ -39,6 +39,9 @@ export default class PopularFoodPage {
   }
 
   async render() {
+    const token = localStorage.getItem('accessToken'); // sesuaikan dengan key token kamu
+    const isLoggedIn = token && token !== 'null' && token !== 'undefined';
+
     this.recipes = await this.getRecipes(); // simpan di variabel global
     return `
     <nav class="navigation">
@@ -53,8 +56,14 @@ export default class PopularFoodPage {
           <div class="nav-item"><a href="#/about">About</a></div>
         </div>
         <div class="nav-buttons">
-          <a href="#/login" class="btn-outline">Login</a>
-          <a href="#/register" class="btn-primary">Sign Up</a>
+          ${
+            isLoggedIn
+              ? `<a href="#/dashboard" class="btn-primary">Dashboard</a>`
+              : `
+                <a href="#/login" class="btn-outline">Login</a>
+                <a href="#/register" class="btn-primary">Sign Up</a>
+              `
+          }
         </div>
       </div>
     </nav>
@@ -164,8 +173,8 @@ export default class PopularFoodPage {
         const filtered = filter === "All"
           ? this.recipes
           : this.recipes.filter(
-              (r) => r.rasa_dominan.toLowerCase() === filter.toLowerCase()
-            );
+            (r) => r.rasa_dominan.toLowerCase() === filter.toLowerCase()
+          );
 
         const container = document.getElementById("recipe-card-row");
         container.innerHTML = this.renderRecipes(filtered);

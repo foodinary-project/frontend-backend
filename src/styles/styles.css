@@ -179,6 +179,7 @@ body {
   letter-spacing: -0.01em;
   margin-bottom: 40px;
 }
+
 .hero-title span {
   display: block;
   margin-bottom: -40px;
@@ -271,6 +272,7 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
+
 .section-container-2 {
   max-width: 1240px;
   margin: 0 auto;
@@ -1196,7 +1198,8 @@ body {
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
-  width: 250px; /* Fixed width to match image */
+  width: 250px;
+  /* Fixed width to match image */
 }
 
 .db-stat-card:hover {
@@ -1312,6 +1315,10 @@ body {
   margin-top: 13px;
 }
 
+.db-view-details-button {
+  margin-top: 13px;
+}
+
 .db-dashboard-subtitle {
   margin-top: 8px;
 }
@@ -1337,6 +1344,7 @@ body {
   .db-stats-container {
     flex-direction: column;
   }
+
   .db-stat-card {
     width: 100%;
   }
@@ -1347,14 +1355,20 @@ body {
     margin-left: 0;
     width: 100%;
   }
+
   .db-sidebar {
-    transform: translateX(-100%); /* Hide sidebar off-screen */
+    transform: translateX(-100%);
+    /* Hide sidebar off-screen */
   }
+
   .db-sidebar.active {
-    transform: translateX(0); /* Show sidebar when active */
+    transform: translateX(0);
+    /* Show sidebar when active */
   }
+
   .db-dashboard-subtitle {
-    display: none; /* Hide subtitle on mobile */
+    display: none;
+    /* Hide subtitle on mobile */
   }
 }
 
@@ -1539,13 +1553,20 @@ body {
 }
 
 .profile-image {
-  width: 150px; /* Sesuaikan ukuran sesuai kebutuhan */
-  height: 150px; /* Sesuaikan ukuran sesuai kebutuhan */
-  border-radius: 50%; /* Untuk membuat gambar bulat */
-  background-size: cover; /* Agar gambar menutupi seluruh area */
-  background-position: center; /* Posisi gambar di tengah */
-  background-repeat: no-repeat; /* Gambar tidak diulang */
-  margin: 0 auto; /* Untuk posisi tengah */
+  width: 150px;
+  /* Sesuaikan ukuran sesuai kebutuhan */
+  height: 150px;
+  /* Sesuaikan ukuran sesuai kebutuhan */
+  border-radius: 50%;
+  /* Untuk membuat gambar bulat */
+  background-size: cover;
+  /* Agar gambar menutupi seluruh area */
+  background-position: center;
+  /* Posisi gambar di tengah */
+  background-repeat: no-repeat;
+  /* Gambar tidak diulang */
+  margin: 0 auto;
+  /* Untuk posisi tengah */
 }
 
 .team-card h3 {
@@ -1808,6 +1829,9 @@ body {
   padding: 5px;
   border-radius: 50%;
   transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .recipe-finder-favorite-btn:hover {
@@ -1820,6 +1844,13 @@ body {
   stroke: #dc3545;
   fill: none;
   stroke-width: 2;
+  transition: fill 0.3s, stroke 0.3s;
+}
+
+/* Saat favorite aktif */
+.recipe-finder-favorite-btn.favorited .recipe-finder-heart-icon {
+  fill: #dc3545;
+  stroke: #dc3545;
 }
 
 /* Pagination */
@@ -1986,9 +2017,11 @@ body {
   0% {
     box-shadow: 0 0 0 0 rgba(255, 77, 77, 0.4);
   }
+
   70% {
     box-shadow: 0 0 0 6px rgba(255, 77, 77, 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(255, 77, 77, 0);
   }
@@ -2135,6 +2168,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -2202,16 +2236,22 @@ body {
 .container {
   max-width: 64rem;
   width: 100%;
-  display: flex; /* Moved from body */
-  align-items: center; /* Moved from body */
-  justify-content: center; /* Moved from body */
+  display: flex;
+  /* Moved from body */
+  align-items: center;
+  /* Moved from body */
+  justify-content: center;
+  /* Moved from body */
   flex-direction: column;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
   overflow: hidden;
-  min-height: 100vh; /* Ensure container takes full viewport height for centering */
-  margin: 0 auto; /* Center horizontally if needed */
-  margin-left: 250px; /* Offset for sidebar width */
+  min-height: 100vh;
+  /* Ensure container takes full viewport height for centering */
+  margin: 0 auto;
+  /* Center horizontally if needed */
+  margin-left: 250px;
+  /* Offset for sidebar width */
   animation: slideFadeInUp 0.5s ease-out both;
 }
 
@@ -2223,7 +2263,8 @@ body {
 
 @media (max-width: 768px) {
   .container {
-    margin-left: 0; /* Remove sidebar offset on smaller screens */
+    margin-left: 0;
+    /* Remove sidebar offset on smaller screens */
     width: 100%;
   }
 }
@@ -2520,6 +2561,7 @@ button:hover::before {
     opacity: 0;
     transform: translateY(30px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -2531,6 +2573,7 @@ button:hover::before {
     opacity: 0;
     transform: translateX(-30px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -2541,6 +2584,7 @@ button:hover::before {
   0% {
     box-shadow: 0 0 0 0 rgba(122, 18, 23, 0.3);
   }
+
   100% {
     box-shadow: 0 0 0 4px rgba(122, 18, 23, 0);
   }
@@ -2548,6 +2592,7 @@ button:hover::before {
 
 /* General Responsive Adjustments */
 @media (max-width: 1200px) {
+
   .hero-container,
   .section-container,
   .section-container-2 {

@@ -1,6 +1,10 @@
 
 export default class AboutPage {
   async render() {
+    const token = localStorage.getItem('accessToken'); // sesuaikan key ACCESS_TOKEN_KEY-mu
+    const isLoggedIn = token && token !== 'null' && token !== 'undefined';
+    
+    // Gunakan backtick (`) untuk template literal dan tambahkan return
     return `
       <!-- Navigation -->
     <nav class="navigation">
@@ -16,10 +20,14 @@ export default class AboutPage {
             <div class="nav-item"><a href="#/cek-resep">Check Recipe</a></div>
             <div class="nav-item active"><a href="#/about">About</a></div>
         </div>
-        <div class="nav-buttons">
-            <a href="#/login" class="btn-outline">Login</a>
-            <a href="#/register" class="btn-primary">Sign Up</a>
-        </div>
+          <div class="nav-buttons">
+            ${isLoggedIn
+        ? `<a href="#/dashboard" class="btn-primary">Dashboard</a>`
+        : `
+                  <a href="#/login" class="btn-outline">Login</a>
+                  <a href="#/register" class="btn-primary">Sign Up</a>`
+      }
+          </div>
     </div>
     </nav>
 
