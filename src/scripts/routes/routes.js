@@ -10,6 +10,7 @@ import FavoritePage from "../pages/favorite/favorite-page";
 import AccountSettingsPage from "../pages/accountSettings/account-settings-page";
 import AboutPage from "../pages/about/about-page";
 import RecipePage from "../pages/recipe/recipe-page";
+import DetailPage from "../pages/detail/detail-page";
 import NotFoundPage from "../pages/notfound/notfound-page";
 
 const routes = {
@@ -19,6 +20,7 @@ const routes = {
   "/popular-food": new PopularFoodPage(),
   "/about": new AboutPage(),
   "/recipe": new RecipePage(),
+  "/detail": new DetailPage(),
 
   // authentication routes
   "/login": new LoginPage(),

@@ -546,6 +546,97 @@ body {
   display: none;
 }
 
+.foodinary-experience {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.foodinary-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.foodinary-subtitle {
+  color: #a60f2d;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.foodinary-title {
+  font-size: 44px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+  color: #300000;
+}
+
+.foodinary-description {
+  color: #6e6e6e;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.foodinary-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.foodinary-feature {
+  display: flex;
+  align-items: center;
+  background-color: #faeceb;
+  padding: 14px 20px;
+  border-radius: 12px;
+  gap: 16px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #2e2e2e;
+}
+
+.foodinary-icon {
+  font-size: 20px;
+  color: #a60f2d;
+}
+
+.foodinary-badge {
+  background-color: #a60f2d;
+  color: white;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+.foodinary-soon {
+  opacity: 0.75;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+}
+
 /* popular-page */
 
 .dietary-section-popular-indonesian-food {
@@ -2753,4 +2844,115 @@ html,
 body {
   max-width: 100%;
   overflow-x: hidden;
+}
+
+/* detail */
+
+.recipe-detail-container {
+  position: relative;
+  max-width: 1100px;
+  margin: 7rem auto;
+  border-radius: 18px;
+  overflow: hidden;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Gambar background dengan blur dan gelap */
+.recipe-detail-image {
+  width: 100%;
+  object-fit: cover;
+  filter: blur(0.5px) brightness(50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Overlay teks di atas gambar */
+.recipe-detail-overlay {
+  position: relative;
+  z-index: 2;
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.recipe-detail-title {
+  font-size: 3rem;
+  font-weight: 1000;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.recipe-detail-meta {
+  font-size: 1rem;
+  color: #e5e7eb;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.recipe-detail-origin {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #d1d5db;
+  font-size: large;
+}
+
+/* Konten setelah overlay (bahan, alat, langkah) */
+.recipe-detail-content {
+  position: relative;
+  z-index: 3;
+  background-color: #fff;
+  padding: 2rem;
+  color: #1f2937;
+}
+
+/* Judul section */
+.recipe-detail-section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  border-bottom: 2px solid #fb2424;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.3rem;
+}
+
+/* List bahan dan langkah */
+.recipe-detail-list,
+.recipe-detail-steps {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.recipe-detail-list li,
+.recipe-detail-steps li {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+
+/* Sumber */
+.recipe-detail-source {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  text-align: right;
+  color: #6b7280;
+}
+
+.recipe-detail-source a {
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color 0.2s ease-in-out;
+}
+
+.recipe-detail-source a:hover {
+  color: #1d4ed8;
 }

@@ -2,14 +2,33 @@
   "recipes": [
     {
       "id": 1,
-      "name": "Bakso",
-      "rasa_dominan": "asin",
+      "name": "Bakso Sapi",
+      "rasa_dominan": "Asin",
       "asal_daerah": "Solo, Malang, Wonogiri",
-      "deskripsi": "Terbuat dari daging sapi giling yang dicampur dengan bumbu dan tepung tapioka, bakso kaya akan protein dan cocok dinikmati kapan saja.",
-      "alat": [],
-      "bahan": ["500 gram daging sapi giling", "100 gram es batu (dihancurkan kecil-kecil)"],
+      "deskripsi": "Bakso sapi adalah makanan khas Indonesia yang dibuat dari daging sapi giling, bumbu, dan tepung tapioka. Hidangan ini memiliki tekstur kenyal dan cita rasa gurih, cocok disajikan dengan kuah hangat, mi, dan pelengkap lainnya.",
+      "alat": [
+        "Blender atau food processor",
+        "Panci besar",
+        "Sendok bulat untuk membentuk bakso",
+        "Mangkuk"
+      ],
+      "bahan": [
+        "500 gram daging sapi giling",
+        "100 gram es batu (dihancurkan kecil-kecil)",
+        "4 siung bawang putih",
+        "1 sendok teh garam",
+        "1/2 sendok teh lada bubuk",
+        "1 butir putih telur",
+        "100 gram tepung tapioka",
+        "2 liter air untuk merebus"
+      ],
       "cara_membuat": [
-        "Masukkan daging sapi, bawang putih, garam, lada, putih telur, dan es batu ke dalam blender atau food processor. Haluskan hingga lembut"
+        "1. Masukkan daging sapi, bawang putih, garam, lada, putih telur, dan es batu ke dalam blender atau food processor. Haluskan hingga lembut.",
+        "2. Pindahkan adonan ke mangkuk, tambahkan tepung tapioka dan aduk rata hingga adonan bisa dibentuk.",
+        "3. Didihkan air dalam panci besar, lalu kecilkan api agar tidak mendidih terlalu kuat.",
+        "4. Bentuk adonan menjadi bola-bola bakso menggunakan sendok atau tangan yang dibasahi.",
+        "5. Masukkan bola bakso ke dalam air panas satu per satu. Masak hingga bakso mengapung sebagai tanda telah matang.",
+        "6. Angkat dan tiriskan bakso. Sajikan dengan kuah, mi, dan pelengkap sesuai selera."
       ],
       "sumber": "https://www.masakapahariini.com/resep/bakso-sapi/",
       "gambar": "https://awsimages.detik.net.id/community/media/visual/2019/08/12/dca21bf3-923c-486f-bc2e-a3dcd759b1df_43.jpeg?w=600&q=90"

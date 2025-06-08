@@ -96,10 +96,7 @@ export default class PopularFoodPage {
             <h2>Foodinary - Discover the taste of Indonesia</h2>                        
           </div><br><br><br>
           <div class="footer-social">
-            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            <a href="https://github.com/foodinary-project" class="social-link"><i class="fab fa-github"></i></a>          
           </div>
         </div>
 
@@ -107,7 +104,7 @@ export default class PopularFoodPage {
           <div class="footer-column">
             <h4>Popular Recipe</h4>
             <div class="footer-links">                
-              <a href="/#/tempe-mendoan" class="footer-link">Rendang Daging <span class="badge-hot">Hot</span></a>
+              <a href="#" class="footer-link">Rendang Daging <span class="badge-hot">Hot</span></a>
               <a href="/#/rawon" class="footer-link">Nasi Goreng</a>
               <a href="/#/sate" class="footer-link">Bakso</a>
             </div>

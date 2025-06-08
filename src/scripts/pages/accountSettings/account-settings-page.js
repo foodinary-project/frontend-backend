@@ -84,7 +84,10 @@ export default class AccountSettingsPage {
               </div>
               <div class="form-group">
                 <label for="password">New Password</label>
-                <input type="password" id="password" placeholder="Enter new password">
+                <div class="password-wrapper">
+  <input type="password" id="password" placeholder="Password" required />
+  <i id="toggle-password" class="fa-solid fa-eye toggle-password"></i>
+</div>
               </div>
               <div class="form-group">
                 <label for="confirm-password">Confirm New Password</label>
@@ -99,6 +102,18 @@ export default class AccountSettingsPage {
   }
 
   async afterRender() {
+
+const togglePassword = document.getElementById('toggle-password');
+const passwordInput = document.getElementById('password');
+
+togglePassword.addEventListener('click', () => {
+  const isPassword = passwordInput.type === 'password';
+  passwordInput.type = isPassword ? 'text' : 'password';
+
+  togglePassword.classList.toggle('fa-eye');
+  togglePassword.classList.toggle('fa-eye-slash');
+});
+
     if (!checkAuthenticatedRoute(this)) return;
 
     // Logout Handler

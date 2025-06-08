@@ -1,5 +1,4 @@
 import routes from '../routes/routes';
-import { getActiveRoute } from '../routes/url-parser';
 
 class App {
   #content = null;
@@ -8,9 +7,15 @@ class App {
     this.#content = content;
   }
 
+  #getActivePath() {
+    const hash = window.location.hash.slice(1); // hilangkan tanda '#'
+    const [path] = hash.split("?");             // ambil hanya path tanpa query
+    return path || "/";
+  }
+
   async renderPage() {
-    const url = getActiveRoute();
-    const page = routes[url] || routes["*"]; // fallback jika tidak cocok
+    const url = this.#getActivePath();
+    const page = routes[url] || routes["*"]; // fallback ke NotFoundPage
 
     this.#content.innerHTML = await page.render();
     await page.afterRender();

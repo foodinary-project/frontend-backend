@@ -86,46 +86,54 @@ export default class LandingPage {
             </div>
         </div>
         <div class="see-more">
-            <a href="/#/popular-food" class="see-more-link">See More</a>
+            <a href="/#/recipe" class="see-more-link">See More</a>
         </div>
-    </section>
+    </section>    
 
-    <!-- Dietary Preferences Section -->
-    <section class="dietary-section">
-        <div class="section-container-2">
-            <h2 class="dietary-title-lp">Preferences</h2>
-            <div class="dietary-divider"></div>
-            
-            <div class="tab-wrapper">
-                <div class="tab active">Vegetarian</div>
-                <div class="tab">Vegan</div>
-                <div class="tab">Gluten-Free</div>
-                <div class="tab">Halal</div>
-            </div>
-            
-            <div style="position: relative;">
-                <div class="dietary-grid" id="dietary-carousel">
-                    <div class="dietary-card">
-                        <img src="images/landing-page/sate.png" alt="Sate" class="dietary-image">
-                        <h3 class="dietary-name">Sate Madura</h3>
-                    </div>
-                    
-                    <div class="dietary-card">
-                        <img src="images/landing-page/gado-gado.jpg" alt="Gado-Gado" class="dietary-image">
-                        <h3 class="dietary-name">Gado-Gado</h3>
-                    </div>
-                    
-                    <div class="dietary-card">
-                        <img src="images/landing-page/soto-lamongan.jpeg" alt="Soto Lamongan" class="dietary-image">
-                        <h3 class="dietary-name">Soto Lamongan</h3>
-                    </div>
-                </div>
-                <button id="dietary-next-btn">
-                    &gt;
-                </button>
-            </div>
-        </div>        
-    </section>
+      <section class="foodinary-experience">
+    <div class="foodinary-left">
+      <h2 class="foodinary-subtitle">The Foodinary Experience</h2>
+      <h1 class="foodinary-title">
+        Explore Indonesian food<br />
+        learning experience in<br />
+        your kitchen
+      </h1>
+      <p class="foodinary-description">
+        Get 30+ of recipes from the best Indonesian chefs, with new recipes added every week. Whether you're a beginner or an experienced cook, Foodinary has something for everyone. Join our community of food lovers and start your culinary journey today!
+      </p>
+    </div>
+
+    <div class="foodinary-right">
+      <div class="foodinary-feature">
+        <div class="foodinary-icon">📸 </div>
+        <div class="foodinary-text">Snap it. Know it. Cook it. <span class="badge-hot">Hot</span></div>
+      </div>
+      <div class="foodinary-feature">
+        <div class="foodinary-icon">📅</div>
+        <div class="foodinary-text">New recipes every week</div>
+      </div>
+      <div class="foodinary-feature">
+        <div class="foodinary-icon">📹</div>
+        <div class="foodinary-text">More than 30+ Indonesian recipes</div>
+      </div>
+      <div class="foodinary-feature foodinary-soon">
+        <div class="foodinary-icon">📕</div>
+        <div class="foodinary-text">Downloadable PDF Recipe Books <span class="foodinary-badge">Coming Soon</span></div>
+      </div>
+      <div class="foodinary-feature foodinary-soon">
+        <div class="foodinary-icon">🍳</div>
+        <div class="foodinary-text">Learn with certified chefs <span class="foodinary-badge">Coming Soon</span></div>
+      </div>
+      <div class="foodinary-feature foodinary-soon">
+        <div class="foodinary-icon">👩‍🎓</div>
+        <div class="foodinary-text">Join our passionate community <span class="foodinary-badge">Coming Soon</span></div>
+      </div>
+      <div class="foodinary-feature foodinary-soon">
+  <div class="foodinary-icon">🤖</div>
+  <div class="foodinary-text">Chat with Nary – your culinary assistant <span class="foodinary-badge">Coming Soon</span></div>
+</div>
+    </div>
+  </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -135,11 +143,8 @@ export default class LandingPage {
               <h2>Foodinary - Discover the taste of Indonesia</h2>                        
             </div><br><br><br>
             <div class="footer-social">
-              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-              <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-            </div>
+            <a href="https://github.com/foodinary-project" class="social-link"><i class="fab fa-github"></i></a>          
+          </div>
           </div>
 
           <div class="footer-menu">
