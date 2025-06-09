@@ -1,5 +1,6 @@
 import CekResepPresenter from './cek-resep-presenter.js';
 import Camera from '../../utils/camera.js';
+import { addHistory } from '../../data/database';
 
 export default class CekResepPage {
   async render() {
@@ -115,6 +116,7 @@ export default class CekResepPage {
             <div class="nav-item"><a href="/">Home</a></div>
             <div class="nav-item"><a href="#/recipe">Recipe</a></div>
             <div class="nav-item active"><a href="#/cek-resep">Check Recipe</a></div>
+            <div class="nav-item"><a href="#/history">History</a></div>
             <div class="nav-item"><a href="#/about">About</a></div>
           </div>
           <div class="nav-buttons" id="nav-buttons">
@@ -135,68 +137,68 @@ export default class CekResepPage {
           <p class="dietary-title-desc">Please upload a photo of your Indonesian dish to discover the recipe!</p>         
         </div>   
         <div class="recipe-finder-upload-link">
-          <a href="/#/recipe">Or direct to this page to search your recipe</a>
+          <a href="/#/recipe">Or direct a link to this page to search your recipe</a>
         </div>
         <div class="upload-section">
-          <div id="drop-area">
-            <div id="upload-instruction">
-              <i class="fas fa-cloud-upload-alt icon-upload"></i><br>
-              Drag and drop a photo here.
+            <div id="drop-area">
+                <div id="upload-instruction">
+                  <i class="fas fa-cloud-upload-alt icon-upload"></i><br />
+                  Drag and drop your photo here
+                </div>
+                <img id="preview-image" src="" alt="Preview Image" height="200" style="margin-top: 40px; display: none; object-fit: contain; border: 1px solid #ddd;" />
+                <video id="camera" width="320" height="200" autoplay muted style="margin-top: 40px; display: none; object-fit: contain; border: 1px solid #ddd;" hidden></video>
             </div>
-            <img id="preview-image" width="320" height="200" style="margin-top:10px; display:none; object-fit:contain; border:1px solid #ddd;"/>
-            <video id="camera-stream" width="320" height="200" autoplay style="margin-top:10px; display:none; object-fit:contain; border:1px solid #ddd;" hidden></video>
-          </div>
-          <input 
-            type="file" 
-            id="file-input" 
-            accept="image/*" 
-            class="hidden-input"
-          >
-          <div class="upload-btn-group">
+            <input 
+              type="file" 
+              id="file-upload" 
+              accept="image/*" 
+              class="hidden-input"
+            />
+            <div class="upload-btn-group">
+              <button 
+                class="btn-primary"                    
+                id="upload-btn"
+              >
+                Upload
+              </button>
+              <button 
+                class="btn-primary custom-btn-outline"
+                id="camera-btn"
+              >
+                Camera
+              </button>
+              <button
+                class="btn-primary custom-btn-outline"
+                id="stop-camera-btn"
+                hidden
+              >
+                Stop
+              </button>
+              <button 
+                class="btn-primary"                    
+                id="analyze-btn"
+                hidden
+              >
+                Analyze
+              </button>
+              <button 
+                class="btn-primary custom-btn-outline"
+                id="clear-btn"
+                hidden
+              >
+                Clear
+              </button>
+            </div>
+            <div id="selected-file-name" class="selected-file-name"></div>
+            <div id="result-container" class="result-container" style="display: none;"></div>
+            <canvas id="camera-canvas" width="320" height="200" class="camera-canvas" hidden></canvas>
             <button 
-              class="btn-primary"                    
-              id="upload-btn"
-            >
-              Upload
-            </button>
-            <button 
-              class="btn-outline custom-outline-btn"
-              id="camera-btn"
-            >
-              Camera
-            </button>
-            <button
-              class="btn-outline custom-outline-btn"
-              id="stop-camera-btn"
+              id="capture-btn"
+              class="btn-primary"            
               hidden
             >
-              Stop
+              Ambil Foto
             </button>
-            <button 
-              class="btn-analyze"                    
-              id="analyze-btn"
-              hidden
-            >
-              Analyze
-            </button>
-            <button 
-              class="btn-outline custom-outline-btn"
-              id="clear-btn"
-              hidden
-            >
-              Clear
-            </button>
-          </div>
-          <div id="selected-file-name" class="selected-file-name"></div>
-          <div id="result-container" class="result-container" style="display: none;"></div>
-          <canvas id="camera-canvas" width="320" height="200" class="camera-canvas" hidden></canvas>
-          <button 
-            id="capture-btn"
-            class="btn-primary"            
-            hidden
-          >
-            Ambil Foto
-          </button>
         </div>        
       </section>
 
@@ -281,14 +283,14 @@ export default class CekResepPage {
       }, 100);
     }
 
-    const fileInput = document.getElementById("file-input");
+    const fileInput = document.getElementById("file-upload");
     const uploadBtn = document.getElementById("upload-btn");
     const cameraBtn = document.getElementById("camera-btn");
     const stopCameraBtn = document.getElementById("stop-camera-btn");
     const analyzeBtn = document.getElementById("analyze-btn");
     const clearBtn = document.getElementById("clear-btn");
     const selectedFileName = document.getElementById("selected-file-name");
-    const cameraStream = document.getElementById("camera-stream");
+    const cameraStream = document.getElementById("camera");
     const cameraCanvas = document.getElementById("camera-canvas");
     const captureBtn = document.getElementById("capture-btn");
     const previewImage = document.getElementById("preview-image");
@@ -395,6 +397,13 @@ export default class CekResepPage {
       reader.readAsDataURL(file);
     };
 
+    const generateUUID = () => {
+      return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        const r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+      });
+    };
+
     const analyzeImage = async () => {
       if (fileInput.files.length === 0) {
         resultContainer.innerHTML = '<p class="error">No image selected for analysis.</p>';
@@ -411,6 +420,16 @@ export default class CekResepPage {
         const signature = await CekResepPresenter.generateUploadSignature();
         const imageUrl = await CekResepPresenter.uploadToCloudinary(file, signature);
         const { foodName, recipe } = await CekResepPresenter.predictFood(imageUrl);
+
+        // Save to history
+        const historyEntry = {
+          id: generateUUID(),
+          imageUrl,
+          foodName,
+          recipe,
+          timestamp: Date.now(),
+        };
+        await addHistory(historyEntry);
 
         resultContainer.innerHTML = `
           <div class="result-text">
