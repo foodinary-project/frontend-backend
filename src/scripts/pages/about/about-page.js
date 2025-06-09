@@ -84,7 +84,7 @@ export default class AboutPage {
               <div class="profile-image" style="background-image: url('/images/meet-our-team/hafiz.png');"></div>
               <h3>Hafiz Aryan Siregar</h3>
               <div class="role">Project Leader</div>
-              <p class="description">Enjoys adventurous travel, seeks new cultures and offbeat destinations</p>
+              <p class="description">Universitas Islam Negeri Sultan Syarif Kasim Riau</p>
               <div class="social-links">
                 <a href="mailto:hafizaryansiregar@gmail.com"><i class="fas fa-envelope"></i></a>
                 <a href="https://github.com/hafizaryan"><i class="fab fa-github"></i></a>
@@ -95,7 +95,7 @@ export default class AboutPage {
               <div class="profile-image" style="background-image: url('/images/meet-our-team/dani.png');"></div>
               <h3>Dani Harmade</h3>
               <div class="role">Front End Developer</div>
-              <p class="description">Enjoys adventurous travel, seeks new cultures and offbeat destinations</p>
+              <p class="description">Universitas Islam Negeri Sultan Syarif Kasim Riau</p>
               <div class="social-links">
                 <a href="mailto:daniharmade@gmail.com"><i class="fas fa-envelope"></i></a>
                 <a href="https://github.com/daniharmade"><i class="fab fa-github"></i></a>
@@ -106,7 +106,7 @@ export default class AboutPage {
               <div class="profile-image" style="background-image: url('/images/meet-our-team/hapid.png');"></div>
               <h3>Hapid Ramdani</h3>
               <div class="role">Back End Developer</div>
-              <p class="description">Enjoy Coding process and always lack of knowledge</p>
+              <p class="description">Universitas Islam Negeri Sultan Syarif Kasim Riau</p>
               <div class="social-links">
                 <a href="mailto:hapidr24@gmail.com"><i class="fas fa-envelope"></i></a>
                 <a href="https://github.com/hpdrr"><i class="fab fa-github"></i></a>
@@ -117,7 +117,7 @@ export default class AboutPage {
               <div class="profile-image" style="background-image: url('/images/meet-our-team/laras.png');"></div>
               <h3>Dwi Laras Setyadita</h3>
               <div class="role">Project Manager</div>
-              <p class="description">Enjoys adventurous travel, seeks new cultures and offbeat destinations</p>
+              <p class="description">Universitas Negeri Yogyakarta</p>
               <div class="social-links">
                 <a href="mailto:larassetyadita@gmail.com"><i class="fas fa-envelope"></i></a>
                 <a href="https://github.com/LarasSetyadita"><i class="fab fa-github"></i></a>
@@ -128,7 +128,7 @@ export default class AboutPage {
               <div class="profile-image" style="background-image: url('/images/meet-our-team/NovrianPratama.jpg');"></div>
               <h3>Novrian Pratama</h3>
               <div class="role">Machine Learning Engineer</div>
-              <p class="description">Enjoys adventurous travel, seeks new cultures and offbeat destinations</p>
+              <p class="description">Universitas Islam Negeri Sultan Syarif Kasim Riau</p>
               <div class="social-links">
                 <a href="mailto:novrianprtama2@gmail.com"><i class="fas fa-envelope"></i></a>
                 <a href="https://github.com/NovrianPratama"><i class="fab fa-github"></i></a>
@@ -139,7 +139,7 @@ export default class AboutPage {
               <div class="profile-image" style="background-image: url('/images/meet-our-team/naia.png');"></div>
               <h3>Naia Shaffa Camila</h3>
               <div class="role">Machine Learning Engineer</div>
-              <p class="description">Enjoys adventurous travel, seeks new cultures and offbeat destinations</p>
+              <p class="description">Universitas Negeri Yogyakarta</p>
               <div class="social-links">
                 <a href="mailto:naiashaffa@gmail.com"><i class="fas fa-envelope"></i></a>
                 <a href="https://github.com/ShaffaCamila"><i class="fab fa-github"></i></a>
