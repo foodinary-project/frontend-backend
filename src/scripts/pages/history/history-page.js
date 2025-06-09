@@ -1,5 +1,6 @@
 import { getLogout, checkAuthenticatedRoute } from '../../utils/auth';
 import { getMyUserInfo } from '../../data/api';
+import HistoryPresenter from './history-presenter.js';
 import Swal from 'sweetalert2';
 
 export default class HistoryPage {
@@ -67,31 +68,11 @@ export default class HistoryPage {
               </p>
             </div>
             <div class="db-header-right">
-              <div class="db-user-greeting" id="user-greeting">
-              </div>
+              <div class="db-user-greeting" id="user-greeting"></div>
               <img src="images/users.jpeg" alt="User Avatar" class="db-user-avatar" id="user-avatar" role="button" aria-label="Toggle sidebar">
             </div>
           </header>
-
-          <section class="db-dashboard-overview">
-            <div class="db-overview-card">
-              <img src="images/food1.png" alt="Food Image" class="db-overview-image">
-              <div class="db-overview-content">
-                <p class="db-overview-title">Prediksi: Batagor</p>
-                <p class="db-overview-details">
-                  <strong>Resep:</strong><br>
-                  1. Kacang Merah<br>
-                  2. Bawang Putih<br>
-                  3. Siomay<br>
-                  4. Tahu<br>
-                  5. Batagor
-                </p>
-                <button class="db-delete-button" title="Delete History">
-                  <i class="fas fa-trash db-delete-icon"></i>
-                </button>
-              </div>
-            </div>
-          </section>
+          <section class="db-dashboard-overview" id="history-section"></section>
         </main>
       </div>
     `;
@@ -105,7 +86,6 @@ export default class HistoryPage {
     if (logoutBtn) {
       logoutBtn.addEventListener('click', async (event) => {
         event.preventDefault();
-
         const result = await Swal.fire({
           title: 'Are you sure?',
           text: 'You will be logged out from Foodinary.',
@@ -116,7 +96,6 @@ export default class HistoryPage {
           confirmButtonText: 'Yes, logout',
           cancelButtonText: 'Cancel',
         });
-
         if (result.isConfirmed) {
           getLogout();
           Swal.fire({
@@ -133,24 +112,23 @@ export default class HistoryPage {
       });
     }
 
-    // Ambil nama user dan tampilkan
+    // Fetch and display user info
     try {
       const response = await getMyUserInfo();
       if (response.ok && response.user && response.user.name) {
         const name = response.user.name;
         const greeting = document.getElementById('user-greeting');
         const avatar = document.getElementById('user-avatar');
-
         if (greeting) greeting.textContent = `${name}`;
         if (avatar && response.user.profilePictureUrl) avatar.src = response.user.profilePictureUrl;
       } else {
-        console.warn('Gagal mendapatkan data user:', response.message || response);
+        console.warn('Failed to fetch user data:', response.message || response);
       }
     } catch (error) {
-      console.error('Error mengambil info user:', error);
+      console.error('Error fetching user info:', error);
     }
 
-    // Sidebar Toggle Handler
+    // Sidebar toggle handler
     const avatar = document.getElementById('user-avatar');
     const sidebar = document.querySelector('.db-sidebar');
     const overlay = document.createElement('div');
@@ -167,27 +145,94 @@ export default class HistoryPage {
       overlay.classList.remove('active');
     };
 
-    // Function to manage avatar clickability based on screen size
     const manageAvatarClick = () => {
       const isMobile = window.matchMedia('(max-width: 768px)').matches;
-      // Remove existing listeners to prevent duplicates
       avatar.removeEventListener('click', toggleSidebar);
       overlay.removeEventListener('click', closeSidebar);
-
       if (isMobile && avatar && sidebar) {
-        avatar.style.cursor = 'pointer'; // Ensure cursor indicates clickability
+        avatar.style.cursor = 'pointer';
         avatar.addEventListener('click', toggleSidebar);
         overlay.addEventListener('click', closeSidebar);
       } else {
-        avatar.style.cursor = 'default'; // Non-clickable on desktop
-        closeSidebar(); // Ensure sidebar is closed if resizing to desktop
+        avatar.style.cursor = 'default';
+        closeSidebar();
       }
     };
 
-    // Initial check
     manageAvatarClick();
-
-    // Add resize listener to handle screen size changes
     window.addEventListener('resize', manageAvatarClick);
+
+    // Render history
+    const historySection = document.getElementById('history-section');
+    const renderHistory = async () => {
+      try {
+        const entries = await HistoryPresenter.getHistoryEntries();
+        if (entries.length === 0) {
+          historySection.innerHTML = '<p class="no-history">No history available.</p>';
+          return;
+        }
+
+        historySection.innerHTML = entries.map(entry => `
+          <div class="db-overview-card">
+            <img src="${entry.imageUrl}" alt="${entry.foodName}" class="db-overview-image">
+            <div class="db-overview-content">
+              <p class="db-overview-title">Prediksi: ${entry.foodName}</p>
+              <p class="db-overview-details">
+                <strong>Resep:</strong><br>
+                ${entry.formattedIngredients.map(item => item).join('<br>')}
+              </p>
+              <button class="db-delete-button" data-id="${entry.id}" title="Delete History">
+                <i class="fas fa-trash db-delete-icon"></i>
+              </button>
+            </div>
+          </div>
+        `).join('');
+
+        // Add delete button listeners
+        const deleteButtons = document.querySelectorAll('.db-delete-button');
+        deleteButtons.forEach(button => {
+          button.addEventListener('click', async () => {
+            const id = button.getAttribute('data-id');
+
+            const result = await Swal.fire({
+              title: 'Are you sure?',
+              text: 'You are about to delete this history entry.',
+              icon: 'warning',
+              showCancelButton: true,
+              confirmButtonColor: '#d33',
+              cancelButtonColor: '#3085d6',
+              confirmButtonText: 'Yes, delete it',
+              cancelButtonText: 'Cancel',
+            });
+
+            if (result.isConfirmed) {
+              try {
+                await HistoryPresenter.deleteHistoryEntry(id);
+                await renderHistory();
+                Swal.fire({
+                  title: 'Deleted',
+                  text: 'History entry has been successfully deleted.',
+                  icon: 'success',
+                  timer: 1500,
+                  showConfirmButton: false,
+                });
+              } catch (error) {
+                Swal.fire({
+                  title: 'Error',
+                  text: 'Failed to delete history entry.',
+                  icon: 'error',
+                  timer: 1500,
+                  showConfirmButton: false,
+                });
+              }
+            }
+          });
+        });
+      } catch (error) {
+        historySection.innerHTML = `<p class="no-history">Error loading history: ${error.message}</p>`;
+      }
+    };
+
+    await renderHistory();
   }
 }
