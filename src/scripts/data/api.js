@@ -7,6 +7,8 @@ const ENDPOINTS = {
   RESET_PASSWORD: `${BASE_URL}/reset-password`,
   MY_USER_INFO: `${BASE_URL}/profile`,
   UPDATE_PROFILE: `${BASE_URL}/update-profile`,
+  GENERATE_UPLOAD_SIGNATURE: `${BASE_URL}/generate-upload-signature`,
+  PREDICT: `${BASE_URL}/predict`,
 };
 
 export async function getRegistered({ name, email, password, confirmPassword }) {
