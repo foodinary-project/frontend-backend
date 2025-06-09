@@ -2,7 +2,7 @@
   "recipes": [
     {
       "id": 1,
-      "name": "bakso",
+      "name": "Bakso",
       "rasa_dominan": "Asin",
       "asal_daerah": "Solo, Malang, Wonogiri",
       "deskripsi": "Bakso sapi adalah makanan khas Indonesia yang dibuat dari daging sapi giling, bumbu, dan tepung tapioka. Hidangan ini memiliki tekstur kenyal dan cita rasa gurih, cocok disajikan dengan kuah hangat, mi, dan pelengkap lainnya.",
@@ -35,7 +35,7 @@
     },
     {
       "id": 2,
-      "name": "Ayam Goreng Lengkuas Kremes",
+      "name": "Ayam Goreng Bumbu Lengkuas",
       "rasa_dominan": "Gurih",
       "asal_daerah": "Jawa Tengah",
       "deskripsi": "Ayam Goreng Lengkuas adalah ayam khas Indonesia yang direbus dengan bumbu rempah dan parutan lengkuas, lalu digoreng hingga renyah. Ciri utamanya adalah aroma lengkuas yang kuat dan bumbunya yang kriuk.",
@@ -722,7 +722,7 @@
     },
     {
       "id": 18,
-      "name": "Sate kambing",
+      "name": "Sate",
       "rasa_dominan": "asin, pedas, manis",
       "asal_daerah": "Jawa Tengah dan Jawa Timur",
       "deskripsi": "Sate kambing merupakan salah satu olahan daging yang sangat populer, terutama saat perayaan Iduladha. Daging kambing yang diperoleh dari hewan kurban sering diolah menjadi berbagai hidangan lezat, dan sate menjadi pilihan favorit banyak orang. Namun, daging kambing dikenal memiliki tekstur yang lebih alot dan aroma khas yang bisa mengganggu jika tidak diolah dengan baik. Oleh karena itu, diperlukan tips khusus agar daging menjadi empuk dan tidak berbau. Penggunaan bumbu khas Nusantara seperti bumbu kecap, kacang, hingga racikan rempah-rempah lainnya menjadi kunci dalam menghasilkan cita rasa sate kambing yang menggugah selera.",
