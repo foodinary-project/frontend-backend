@@ -145,6 +145,18 @@ body {
   box-shadow: 0 4px 15px rgba(128, 14, 19, 0.3);
 }
 
+.btn-analyze {
+  background: #800e13;
+  color: white;
+  padding: 13px 35px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(128, 14, 19, 0.3);
+}
+
 #capture-btn {
   background: #800e13;
   color: white;

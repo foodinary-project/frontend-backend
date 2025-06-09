@@ -39,6 +39,12 @@ export default class FavoritesPage {
                 </a>
               </li>
               <li class="db-nav-item">
+  <a href="#/cek-resep">
+    <i class="fas fa-chart-line db-nav-icon"></i>
+    <span>Analyze</span>
+  </a>
+</li>
+              <li class="db-nav-item">
                 <a href="#" id="logout-btn">
                   <i class="fas fa-sign-out-alt db-nav-icon"></i>
                   <span>Logout</span>
