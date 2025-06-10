@@ -1,5 +1,4 @@
 <div align="center">
-  <img src="src/public/images/logo.png" alt="Foodinary Logo" width="120" height="120">
   
   # 🍲 Foodinary - Discover Indonesian Culinary Heritage
   
