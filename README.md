@@ -227,33 +227,6 @@ User Interaction → Page Component → API Layer → Backend → Database
 
 ---
 
-## 🖼 Screenshots
-
-<div align="center">
-  
-### 🏠 Landing Page
-![Landing Page](docs/screenshots/landing-page.png)
-*Beautiful hero section showcasing Indonesian culinary heritage*
-
-### 📸 AI Recipe Recognition
-
-![Recipe Recognition](docs/screenshots/ai-recognition.png)
-_Upload or capture photos for instant recipe identification_
-
-### 🍲 Recipe Discovery
-
-![Recipe Discovery](docs/screenshots/recipe-page.png)
-_Browse and filter through 30+ authentic Indonesian recipes_
-
-### 👤 User Dashboard
-
-![Dashboard](docs/screenshots/dashboard.png)
-_Personal dashboard with statistics and quick navigation_
-
-</div>
-
----
-
 ## 📄 Pages Documentation
 
 ### 🏠 **Landing Page** (`landing-page.js`)
