@@ -116,7 +116,6 @@ export default class CekResepPage {
             <div class="nav-item"><a href="/">Home</a></div>
             <div class="nav-item"><a href="#/recipe">Recipe</a></div>
             <div class="nav-item active"><a href="#/cek-resep">Check Recipe</a></div>
-            <div class="nav-item"><a href="#/history">History</a></div>
             <div class="nav-item"><a href="#/about">About</a></div>
           </div>
           <div class="nav-buttons" id="nav-buttons">
